@@ -6,7 +6,7 @@ import '../../theme/adm_tokens.dart';
 enum AdmButtonColor { primary, success, warning, danger, defaultColor }
 
 /// Button fill styles.
-enum AdmButtonFill { solid, outline, none }
+enum AdmButtonFill { solid, outline, none, ghost }
 
 /// Button sizes matching ant-design-mobile (mini / small / middle / large).
 enum AdmButtonSize { mini, small, middle, large }
@@ -40,34 +40,35 @@ class AdmButton extends StatefulWidget {
   final bool disabled;
   final bool loading;
   final bool block;
+  final EdgeInsets? padding;
   final Widget? loadingIndicator;
   final BorderRadius? borderRadius;
 
-  const AdmButton({
-    super.key,
-    this.child,
-    this.onPressed,
-    this.color = AdmButtonColor.defaultColor,
-    this.fill = AdmButtonFill.solid,
-    this.size = AdmButtonSize.middle,
-    this.disabled = false,
-    this.loading = false,
-    this.block = false,
-    this.loadingIndicator,
-    this.borderRadius,
-  });
+  const AdmButton(
+      {super.key,
+      this.child,
+      this.onPressed,
+      this.color = AdmButtonColor.defaultColor,
+      this.fill = AdmButtonFill.solid,
+      this.size = AdmButtonSize.middle,
+      this.disabled = false,
+      this.loading = false,
+      this.block = false,
+      this.loadingIndicator,
+      this.borderRadius,
+      this.padding});
 
   // ── Named constructors ─────────────────────────────────────────────────────
 
-  factory AdmButton.primary({
-    Key? key,
-    Widget? child,
-    VoidCallback? onPressed,
-    AdmButtonSize size = AdmButtonSize.middle,
-    bool disabled = false,
-    bool loading = false,
-    bool block = false,
-  }) =>
+  factory AdmButton.primary(
+          {Key? key,
+          Widget? child,
+          VoidCallback? onPressed,
+          AdmButtonSize size = AdmButtonSize.middle,
+          bool disabled = false,
+          bool loading = false,
+          bool block = false,
+          EdgeInsets? padding}) =>
       AdmButton(
         key: key,
         color: AdmButtonColor.primary,
@@ -76,18 +77,42 @@ class AdmButton extends StatefulWidget {
         loading: loading,
         block: block,
         onPressed: onPressed,
+        padding: padding,
         child: child,
       );
 
-  factory AdmButton.danger({
-    Key? key,
-    Widget? child,
-    VoidCallback? onPressed,
-    AdmButtonSize size = AdmButtonSize.middle,
-    bool disabled = false,
-    bool loading = false,
-    bool block = false,
-  }) =>
+  factory AdmButton.ghost(
+          {Key? key,
+          Widget? child,
+          VoidCallback? onPressed,
+          AdmButtonColor color = AdmButtonColor.defaultColor,
+          AdmButtonSize size = AdmButtonSize.middle,
+          bool disabled = false,
+          bool loading = false,
+          bool block = false,
+          EdgeInsets? padding}) =>
+      AdmButton(
+        key: key,
+        fill: AdmButtonFill.ghost,
+        color: color,
+        size: size,
+        disabled: disabled,
+        loading: loading,
+        block: block,
+        onPressed: onPressed,
+        padding: padding,
+        child: child,
+      );
+
+  factory AdmButton.danger(
+          {Key? key,
+          Widget? child,
+          VoidCallback? onPressed,
+          AdmButtonSize size = AdmButtonSize.middle,
+          bool disabled = false,
+          bool loading = false,
+          bool block = false,
+          EdgeInsets? padding}) =>
       AdmButton(
         key: key,
         color: AdmButtonColor.danger,
@@ -96,6 +121,7 @@ class AdmButton extends StatefulWidget {
         loading: loading,
         block: block,
         onPressed: onPressed,
+        padding: padding,
         child: child,
       );
 
@@ -117,17 +143,16 @@ class _AdmButtonState extends State<AdmButton> {
     final height = _resolveHeight(tokens);
     final padding = _resolvePadding();
     final fontSize = _resolveFontSize(tokens);
-    final br = widget.borderRadius ??
-        BorderRadius.circular(tokens.buttonBorderRadius);
+    final br =
+        widget.borderRadius ?? BorderRadius.circular(tokens.buttonBorderRadius);
 
     Widget content = widget.loading
         ? Row(
             mainAxisSize: MainAxisSize.min,
             children: [
               widget.loadingIndicator ??
-                  SizedBox(
-                    width: 16,
-                    height: 16,
+                  SizedBox.square(
+                    dimension: 16,
                     child: CircularProgressIndicator(
                       strokeWidth: 2,
                       valueColor: AlwaysStoppedAnimation(fgColor),
@@ -135,7 +160,7 @@ class _AdmButtonState extends State<AdmButton> {
                   ),
               if (widget.child != null)
                 Padding(
-                  padding: const EdgeInsets.only(left: 8),
+                  padding: widget.padding ?? const EdgeInsets.only(left: 8),
                   child: widget.child,
                 ),
             ],
@@ -185,7 +210,8 @@ class _AdmButtonState extends State<AdmButton> {
 
   Color _resolveBackgroundColor(AdmTokens t) {
     if (widget.fill == AdmButtonFill.outline ||
-        widget.fill == AdmButtonFill.none) {
+        widget.fill == AdmButtonFill.none ||
+        widget.fill == AdmButtonFill.ghost) {
       return Colors.transparent;
     }
     return switch (widget.color) {
@@ -198,6 +224,7 @@ class _AdmButtonState extends State<AdmButton> {
   }
 
   Color _resolveForegroundColor(AdmTokens t) {
+    if (widget.fill == AdmButtonFill.ghost) return t.colorTextWhite;
     if (widget.fill == AdmButtonFill.solid &&
         widget.color != AdmButtonColor.defaultColor) {
       return t.colorTextWhite;
@@ -213,6 +240,7 @@ class _AdmButtonState extends State<AdmButton> {
 
   Color? _resolveBorderColor(AdmTokens t) {
     if (widget.fill == AdmButtonFill.none) return null;
+    if (widget.fill == AdmButtonFill.ghost) return t.colorTextWhite;
     return switch (widget.color) {
       AdmButtonColor.primary => t.colorPrimary,
       AdmButtonColor.success => t.colorSuccess,
