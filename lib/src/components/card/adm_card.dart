@@ -46,7 +46,7 @@ class AdmCard extends StatelessWidget {
     final br = borderRadius ?? BorderRadius.circular(tokens.radiusLg);
     final bgColor = backgroundColor ?? tokens.colorBackground;
 
-    return Container(
+    return DecoratedBox(
       decoration: BoxDecoration(
         color: bgColor,
         borderRadius: br,
