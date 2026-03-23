@@ -6,7 +6,15 @@ import '../../theme/adm_tokens.dart';
 enum AdmButtonColor { primary, success, warning, danger, defaultColor }
 
 /// Button fill styles.
-enum AdmButtonFill { solid, outline, none, ghost }
+///
+/// | Value     | Background | Border | Text style       |
+/// |-----------|------------|--------|------------------|
+/// | `solid`   | filled     | none   | white            |
+/// | `outline` | transparent| color  | color            |
+/// | `none`    | transparent| none   | color            |
+/// | `ghost`   | transparent| white  | white            |
+/// | `link`    | transparent| none   | color + underline|
+enum AdmButtonFill { solid, outline, none, ghost, link }
 
 /// Button sizes matching ant-design-mobile (mini / small / middle / large).
 enum AdmButtonSize { mini, small, middle, large }
@@ -22,6 +30,11 @@ enum AdmButtonSize { mini, small, middle, large }
 /// AdmButton.primary(
 ///   onPressed: () {},
 ///   child: const Text('Primary'),
+/// )
+///
+/// AdmButton.link(
+///   onPressed: () {},
+///   child: const Text('Learn more'),
 /// )
 ///
 /// AdmButton(
@@ -125,12 +138,42 @@ class AdmButton extends StatefulWidget {
         child: child,
       );
 
+  /// A link-style button — no background, no border, underlined text.
+  ///
+  /// Defaults to [AdmButtonColor.primary]. Change [color] to use a different
+  /// semantic color:
+  /// ```dart
+  /// AdmButton.link(child: const Text('Cancel'), color: AdmButtonColor.danger)
+  /// ```
+  factory AdmButton.link(
+          {Key? key,
+          Widget? child,
+          VoidCallback? onPressed,
+          AdmButtonColor color = AdmButtonColor.primary,
+          AdmButtonSize size = AdmButtonSize.middle,
+          bool disabled = false,
+          bool loading = false,
+          EdgeInsets? padding}) =>
+      AdmButton(
+        key: key,
+        fill: AdmButtonFill.link,
+        color: color,
+        size: size,
+        disabled: disabled,
+        loading: loading,
+        onPressed: onPressed,
+        padding: padding,
+        child: child,
+      );
+
   @override
   State<AdmButton> createState() => _AdmButtonState();
 }
 
 class _AdmButtonState extends State<AdmButton> {
   bool _pressed = false;
+
+  bool get _isLink => widget.fill == AdmButtonFill.link;
 
   @override
   Widget build(BuildContext context) {
@@ -140,11 +183,14 @@ class _AdmButtonState extends State<AdmButton> {
     final fgColor = _resolveForegroundColor(tokens);
     final bgColor = _resolveBackgroundColor(tokens);
     final borderColor = _resolveBorderColor(tokens);
-    final height = _resolveHeight(tokens);
-    final padding = _resolvePadding();
+    final height = _isLink ? null : _resolveHeight(tokens);
+    final padding =
+        widget.padding ?? (_isLink ? EdgeInsets.zero : _resolvePadding());
     final fontSize = _resolveFontSize(tokens);
-    final br =
-        widget.borderRadius ?? BorderRadius.circular(tokens.buttonBorderRadius);
+    final br = widget.borderRadius ??
+        (_isLink
+            ? BorderRadius.zero
+            : BorderRadius.circular(tokens.buttonBorderRadius));
 
     Widget content = widget.loading
         ? Row(
@@ -194,6 +240,9 @@ class _AdmButtonState extends State<AdmButton> {
               fontSize: fontSize,
               color: isDisabled ? tokens.colorTextDisabled : fgColor,
               fontWeight: tokens.fontWeightMedium,
+              decoration:
+                  _isLink ? TextDecoration.underline : TextDecoration.none,
+              decorationColor: isDisabled ? tokens.colorTextDisabled : fgColor,
             ),
             child: Center(
               widthFactor: widget.block ? null : 1.0,
@@ -211,7 +260,8 @@ class _AdmButtonState extends State<AdmButton> {
   Color _resolveBackgroundColor(AdmTokens t) {
     if (widget.fill == AdmButtonFill.outline ||
         widget.fill == AdmButtonFill.none ||
-        widget.fill == AdmButtonFill.ghost) {
+        widget.fill == AdmButtonFill.ghost ||
+        widget.fill == AdmButtonFill.link) {
       return Colors.transparent;
     }
     return switch (widget.color) {
@@ -239,7 +289,8 @@ class _AdmButtonState extends State<AdmButton> {
   }
 
   Color? _resolveBorderColor(AdmTokens t) {
-    if (widget.fill == AdmButtonFill.none) return null;
+    if (widget.fill == AdmButtonFill.none || widget.fill == AdmButtonFill.link)
+      return null;
     if (widget.fill == AdmButtonFill.ghost) return t.colorTextWhite;
     return switch (widget.color) {
       AdmButtonColor.primary => t.colorPrimary,
