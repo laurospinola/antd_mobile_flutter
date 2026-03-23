@@ -23,21 +23,22 @@ class AdmCard extends StatelessWidget {
   final VoidCallback? onHeaderClick;
   final VoidCallback? onBodyClick;
   final VoidCallback? onFooterClick;
+  final BoxBorder? border;
 
-  const AdmCard({
-    super.key,
-    this.header,
-    this.headerExtra,
-    this.child,
-    this.footer,
-    this.footerExtra,
-    this.padding,
-    this.borderRadius,
-    this.backgroundColor,
-    this.onHeaderClick,
-    this.onBodyClick,
-    this.onFooterClick,
-  });
+  const AdmCard(
+      {super.key,
+      this.header,
+      this.headerExtra,
+      this.child,
+      this.footer,
+      this.footerExtra,
+      this.padding,
+      this.borderRadius,
+      this.backgroundColor,
+      this.onHeaderClick,
+      this.onBodyClick,
+      this.onFooterClick,
+      this.border});
 
   @override
   Widget build(BuildContext context) {
@@ -49,16 +50,9 @@ class AdmCard extends StatelessWidget {
       decoration: BoxDecoration(
         color: bgColor,
         borderRadius: br,
-        boxShadow: [
-          BoxShadow(
-            color: tokens.colorBoxShadow,
-            blurRadius: 8,
-            offset: const Offset(0, 2),
-          ),
-        ],
+        border: border,
       ),
       child: ClipRRect(
-        borderRadius: br,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           mainAxisSize: MainAxisSize.min,
@@ -100,8 +94,7 @@ class AdmCard extends StatelessWidget {
             if (child != null)
               _CardSection(
                 onTap: onBodyClick,
-                padding: padding ??
-                    EdgeInsets.all(tokens.spaceLg),
+                padding: padding ?? EdgeInsets.all(tokens.spaceLg),
                 child: child!,
               ),
             // Footer
