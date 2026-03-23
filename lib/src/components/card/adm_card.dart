@@ -52,85 +52,83 @@ class AdmCard extends StatelessWidget {
         borderRadius: br,
         border: border,
       ),
-      child: ClipRRect(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            // Header
-            if (header != null) ...[
-              _CardSection(
-                onTap: onHeaderClick,
-                padding: EdgeInsets.symmetric(
-                  horizontal: tokens.spaceLg,
-                  vertical: tokens.spaceSm + 2,
-                ),
-                child: Row(
-                  children: [
-                    Expanded(
-                      child: DefaultTextStyle(
-                        style: TextStyle(
-                          fontSize: tokens.fontSizeLg,
-                          fontWeight: tokens.fontWeightMedium,
-                          color: tokens.colorTextBase,
-                        ),
-                        child: header!,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          // Header
+          if (header != null) ...[
+            _CardSection(
+              onTap: onHeaderClick,
+              padding: EdgeInsets.symmetric(
+                horizontal: tokens.spaceLg,
+                vertical: tokens.spaceSm + 2,
+              ),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: DefaultTextStyle(
+                      style: TextStyle(
+                        fontSize: tokens.fontSizeLg,
+                        fontWeight: tokens.fontWeightMedium,
+                        color: tokens.colorTextBase,
                       ),
+                      child: header!,
                     ),
-                    if (headerExtra != null)
-                      DefaultTextStyle(
-                        style: TextStyle(
-                          fontSize: tokens.fontSizeSm,
-                          color: tokens.colorTextSecondary,
-                        ),
-                        child: headerExtra!,
+                  ),
+                  if (headerExtra != null)
+                    DefaultTextStyle(
+                      style: TextStyle(
+                        fontSize: tokens.fontSizeSm,
+                        color: tokens.colorTextSecondary,
                       ),
-                  ],
-                ),
-              ),
-              Divider(height: 1, thickness: 0.5, color: tokens.colorBorder),
-            ],
-            // Body
-            if (child != null)
-              _CardSection(
-                onTap: onBodyClick,
-                padding: padding ?? EdgeInsets.all(tokens.spaceLg),
-                child: child!,
-              ),
-            // Footer
-            if (footer != null) ...[
-              Divider(height: 1, thickness: 0.5, color: tokens.colorBorder),
-              _CardSection(
-                onTap: onFooterClick,
-                padding: EdgeInsets.symmetric(
-                  horizontal: tokens.spaceLg,
-                  vertical: tokens.spaceSm + 2,
-                ),
-                child: Row(
-                  children: [
-                    Expanded(
-                      child: DefaultTextStyle(
-                        style: TextStyle(
-                          fontSize: tokens.fontSizeSm,
-                          color: tokens.colorTextSecondary,
-                        ),
-                        child: footer!,
-                      ),
+                      child: headerExtra!,
                     ),
-                    if (footerExtra != null)
-                      DefaultTextStyle(
-                        style: TextStyle(
-                          fontSize: tokens.fontSizeSm,
-                          color: tokens.colorTextSecondary,
-                        ),
-                        child: footerExtra!,
-                      ),
-                  ],
-                ),
+                ],
               ),
-            ],
+            ),
+            Divider(height: 1, thickness: 0.5, color: tokens.colorBorder),
           ],
-        ),
+          // Body
+          if (child != null)
+            _CardSection(
+              onTap: onBodyClick,
+              padding: padding ?? EdgeInsets.all(tokens.spaceLg),
+              child: child!,
+            ),
+          // Footer
+          if (footer != null) ...[
+            Divider(height: 1, thickness: 0.5, color: tokens.colorBorder),
+            _CardSection(
+              onTap: onFooterClick,
+              padding: EdgeInsets.symmetric(
+                horizontal: tokens.spaceLg,
+                vertical: tokens.spaceSm + 2,
+              ),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: DefaultTextStyle(
+                      style: TextStyle(
+                        fontSize: tokens.fontSizeSm,
+                        color: tokens.colorTextSecondary,
+                      ),
+                      child: footer!,
+                    ),
+                  ),
+                  if (footerExtra != null)
+                    DefaultTextStyle(
+                      style: TextStyle(
+                        fontSize: tokens.fontSizeSm,
+                        color: tokens.colorTextSecondary,
+                      ),
+                      child: footerExtra!,
+                    ),
+                ],
+              ),
+            ),
+          ],
+        ],
       ),
     );
   }
