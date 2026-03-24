@@ -37,6 +37,12 @@ enum AdmButtonSize { mini, small, middle, large }
 ///   child: const Text('Learn more'),
 /// )
 ///
+/// AdmButton.icon(
+///   icon: const Icon(Icons.add),
+///   color: AdmButtonColor.primary,
+///   onPressed: () {},
+/// )
+///
 /// AdmButton(
 ///   color: AdmButtonColor.danger,
 ///   fill: AdmButtonFill.outline,
@@ -57,6 +63,9 @@ class AdmButton extends StatefulWidget {
   final Widget? loadingIndicator;
   final BorderRadius? borderRadius;
 
+  /// When set the button renders as a square icon-only button.
+  final Widget? icon;
+
   const AdmButton(
       {super.key,
       this.child,
@@ -69,7 +78,8 @@ class AdmButton extends StatefulWidget {
       this.block = false,
       this.loadingIndicator,
       this.borderRadius,
-      this.padding});
+      this.padding,
+      this.icon});
 
   // ── Named constructors ─────────────────────────────────────────────────────
 
@@ -138,6 +148,38 @@ class AdmButton extends StatefulWidget {
         child: child,
       );
 
+  /// A square icon-only button.
+  ///
+  /// ```dart
+  /// AdmButton.icon(
+  ///   icon: const Icon(Icons.add),
+  ///   color: AdmButtonColor.primary,
+  ///   onPressed: () {},
+  /// )
+  /// ```
+  factory AdmButton.icon({
+    Key? key,
+    required Widget icon,
+    VoidCallback? onPressed,
+    AdmButtonColor color = AdmButtonColor.defaultColor,
+    AdmButtonFill fill = AdmButtonFill.outline,
+    AdmButtonSize size = AdmButtonSize.middle,
+    bool disabled = false,
+    bool loading = false,
+    BorderRadius? borderRadius,
+  }) =>
+      AdmButton(
+        key: key,
+        icon: icon,
+        color: color,
+        fill: fill,
+        size: size,
+        disabled: disabled,
+        loading: loading,
+        borderRadius: borderRadius,
+        onPressed: onPressed,
+      );
+
   /// A link-style button — no background, no border, underlined text.
   ///
   /// Defaults to [AdmButtonColor.primary]. Change [color] to use a different
@@ -174,6 +216,7 @@ class _AdmButtonState extends State<AdmButton> {
   bool _pressed = false;
 
   bool get _isLink => widget.fill == AdmButtonFill.link;
+  bool get _isIcon => widget.icon != null;
 
   @override
   Widget build(BuildContext context) {
@@ -184,46 +227,73 @@ class _AdmButtonState extends State<AdmButton> {
     final bgColor = _resolveBackgroundColor(tokens);
     final borderColor = _resolveBorderColor(tokens);
     final height = _isLink ? null : _resolveHeight(tokens);
-    final padding =
-        widget.padding ?? (_isLink ? EdgeInsets.zero : _resolvePadding());
+    final padding = _isIcon
+        ? EdgeInsets.zero
+        : widget.padding ?? (_isLink ? EdgeInsets.zero : _resolvePadding());
     final fontSize = _resolveFontSize(tokens);
     final br = widget.borderRadius ??
-        (_isLink
-            ? BorderRadius.zero
-            : BorderRadius.circular(tokens.buttonBorderRadius));
+        (_isIcon
+            ? BorderRadius.circular(tokens.buttonBorderRadius)
+            : _isLink
+                ? BorderRadius.zero
+                : BorderRadius.circular(tokens.buttonBorderRadius));
 
-    Widget content = widget.loading
-        ? Row(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              widget.loadingIndicator ??
-                  SizedBox.square(
-                    dimension: 16,
-                    child: CircularProgressIndicator(
-                      strokeWidth: 2,
-                      valueColor: AlwaysStoppedAnimation(fgColor),
-                    ),
-                  ),
-              if (widget.child != null)
-                Padding(
-                  padding: widget.padding ?? const EdgeInsets.only(left: 8),
-                  child: widget.child,
+    // ── Content ──────────────────────────────────────────────────────────────
+    Widget content;
+    if (_isIcon) {
+      content = widget.loading
+          ? SizedBox.square(
+              dimension: _resolveIconSize(tokens),
+              child: CircularProgressIndicator(
+                strokeWidth: 2,
+                valueColor: AlwaysStoppedAnimation(
+                  isDisabled ? tokens.colorTextDisabled : fgColor,
                 ),
-            ],
-          )
-        : widget.child ?? const SizedBox.shrink();
+              ),
+            )
+          : IconTheme(
+              data: IconThemeData(
+                color: isDisabled ? tokens.colorTextDisabled : fgColor,
+                size: _resolveIconSize(tokens),
+              ),
+              child: widget.icon!,
+            );
+    } else if (widget.loading) {
+      content = Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          widget.loadingIndicator ??
+              SizedBox.square(
+                dimension: 16,
+                child: CircularProgressIndicator(
+                  strokeWidth: 2,
+                  valueColor: AlwaysStoppedAnimation(fgColor),
+                ),
+              ),
+          if (widget.child != null)
+            Padding(
+              padding: widget.padding ?? const EdgeInsets.only(left: 8),
+              child: widget.child,
+            ),
+        ],
+      );
+    } else {
+      content = widget.child ?? const SizedBox.shrink();
+    }
 
+    // ── Button shell ─────────────────────────────────────────────────────────
     Widget button = GestureDetector(
       onTapDown: isDisabled ? null : (_) => setState(() => _pressed = true),
       onTapUp: isDisabled ? null : (_) => setState(() => _pressed = false),
       onTapCancel: isDisabled ? null : () => setState(() => _pressed = false),
       onTap: isDisabled ? null : widget.onPressed,
       child: AnimatedOpacity(
-        opacity: _pressed ? 0.7 : 1.0,
+        opacity: isDisabled ? 0.45 : (_pressed ? 0.7 : 1.0),
         duration: tokens.animationDurationFast,
         child: AnimatedContainer(
           duration: tokens.animationDurationFast,
           height: height,
+          width: _isIcon ? height : null,
           padding: padding,
           decoration: BoxDecoration(
             color: isDisabled ? _disabledBg(tokens) : bgColor,
@@ -245,7 +315,7 @@ class _AdmButtonState extends State<AdmButton> {
               decorationColor: isDisabled ? tokens.colorTextDisabled : fgColor,
             ),
             child: Center(
-              widthFactor: widget.block ? null : 1.0,
+              widthFactor: (!_isIcon && widget.block) ? null : 1.0,
               child: content,
             ),
           ),
@@ -253,9 +323,16 @@ class _AdmButtonState extends State<AdmButton> {
       ),
     );
 
-    if (widget.block) return button;
+    if (!_isIcon && widget.block) return button;
     return IntrinsicWidth(child: button);
   }
+
+  double _resolveIconSize(AdmTokens t) => switch (widget.size) {
+        AdmButtonSize.mini => t.fontSizeMd,
+        AdmButtonSize.small => t.fontSizeLg,
+        AdmButtonSize.middle => t.fontSizeXl,
+        AdmButtonSize.large => t.fontSizeXxl,
+      };
 
   Color _resolveBackgroundColor(AdmTokens t) {
     if (widget.fill == AdmButtonFill.outline ||
@@ -289,8 +366,10 @@ class _AdmButtonState extends State<AdmButton> {
   }
 
   Color? _resolveBorderColor(AdmTokens t) {
-    if (widget.fill == AdmButtonFill.none || widget.fill == AdmButtonFill.link)
+    if (widget.fill == AdmButtonFill.none ||
+        widget.fill == AdmButtonFill.link) {
       return null;
+    }
     if (widget.fill == AdmButtonFill.ghost) return t.colorTextWhite;
     return switch (widget.color) {
       AdmButtonColor.primary => t.colorPrimary,
