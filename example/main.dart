@@ -499,7 +499,6 @@ class _FormsPageState extends State<_FormsPage> {
   bool _checkB = true;
   String _radio = 'option1';
   int _qty = 1;
-  final double _progress = 0.4;
 
   @override
   Widget build(BuildContext context) {

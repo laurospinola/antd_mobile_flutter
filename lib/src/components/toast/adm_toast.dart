@@ -40,7 +40,11 @@ class AdmToast {
     overlay.insert(_currentEntry!);
 
     if (type != AdmToastType.loading) {
-      Future.delayed(duration, () => hide(context));
+      Future.delayed(duration, () {
+        if (context.mounted) {
+          hide(context);
+        }
+      });
     }
   }
 
@@ -98,8 +102,8 @@ class _AdmToastWidgetState extends State<_AdmToastWidget>
             color: tokens.colorTextWhite, size: 36);
         break;
       case AdmToastType.fail:
-        icon = Icon(Icons.cancel_outlined,
-            color: tokens.colorTextWhite, size: 36);
+        icon =
+            Icon(Icons.cancel_outlined, color: tokens.colorTextWhite, size: 36);
         break;
       case AdmToastType.loading:
         icon = SizedBox(
@@ -107,8 +111,7 @@ class _AdmToastWidgetState extends State<_AdmToastWidget>
           height: 36,
           child: CircularProgressIndicator(
             strokeWidth: 3,
-            valueColor:
-                AlwaysStoppedAnimation(tokens.colorTextWhite),
+            valueColor: AlwaysStoppedAnimation(tokens.colorTextWhite),
           ),
         );
         break;
@@ -127,16 +130,14 @@ class _AdmToastWidgetState extends State<_AdmToastWidget>
           child: FadeTransition(
             opacity: _opacity,
             child: Container(
-              constraints:
-                  BoxConstraints(maxWidth: hasIcon ? 120 : 200),
+              constraints: BoxConstraints(maxWidth: hasIcon ? 120 : 200),
               padding: EdgeInsets.symmetric(
                 horizontal: tokens.spaceLg,
                 vertical: tokens.spaceMd,
               ),
               decoration: BoxDecoration(
                 color: const Color(0xCC1A1A1A),
-                borderRadius:
-                    BorderRadius.circular(tokens.radiusLg),
+                borderRadius: BorderRadius.circular(tokens.radiusLg),
               ),
               child: Column(
                 mainAxisSize: MainAxisSize.min,

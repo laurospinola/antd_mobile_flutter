@@ -51,8 +51,8 @@ class AdmThemeData {
         ),
       ),
       dividerColor: t.colorBorder,
-      splashColor: t.colorPrimary.withOpacity(0.08),
-      highlightColor: t.colorPrimary.withOpacity(0.04),
+      splashColor: t.colorPrimary.withValues(alpha: 0.08),
+      highlightColor: t.colorPrimary.withValues(alpha: 0.04),
     );
   }
 }

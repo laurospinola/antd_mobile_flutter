@@ -82,7 +82,7 @@ class AdmForm extends InheritedNotifier<AdmFormController> {
   }
 
   @override
-  bool updateShouldNotify(AdmForm old) => true;
+  bool updateShouldNotify(AdmForm oldWidget) => true;
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
