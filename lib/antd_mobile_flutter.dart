@@ -41,6 +41,7 @@ export 'src/components/radio/adm_radio.dart';
 export 'src/components/switch_widget/adm_switch.dart';
 export 'src/components/stepper/adm_stepper.dart';
 export 'src/components/form/adm_form.dart';
+export 'src/components/select/adm_select.dart';
 
 // ─── Feedback ──────────────────────────────────────────────────────────────
 export 'src/components/toast/adm_toast.dart';
