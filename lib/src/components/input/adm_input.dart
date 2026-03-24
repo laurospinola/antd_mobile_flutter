@@ -2,8 +2,20 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import '../../theme/adm_theme.dart';
 
+/// When validation is triggered automatically.
+///
+/// Pass one or both values to [AdmInput.validateTrigger].
+enum AdmInputValidateTrigger {
+  /// Validate every time the value changes.
+  onChange,
+
+  /// Validate when the field loses focus.
+  onBlur,
+}
+
 /// [AdmInput] — equivalent to ant-design-mobile's `<Input>`.
 ///
+/// ### Basic usage
 /// ```dart
 /// AdmInput(
 ///   label: const Text('Username'),
@@ -12,6 +24,26 @@ import '../../theme/adm_theme.dart';
 ///   clearable: true,
 ///   onChanged: (v) => print(v),
 /// )
+/// ```
+///
+/// ### With validation
+/// ```dart
+/// final _key = GlobalKey<AdmInputState>();
+///
+/// AdmInput(
+///   key: _key,
+///   label: const Text('Email'),
+///   placeholder: 'you@example.com',
+///   validator: (v) {
+///     if (v == null || v.isEmpty) return 'Required';
+///     if (!v.contains('@')) return 'Invalid email';
+///     return null;
+///   },
+///   validateTrigger: const {AdmInputValidateTrigger.onBlur},
+/// )
+///
+/// // Trigger validation imperatively (e.g. on form submit):
+/// final isValid = _key.currentState?.validate() ?? false;
 /// ```
 class AdmInput extends StatefulWidget {
   final String? placeholder;
@@ -31,8 +63,27 @@ class AdmInput extends StatefulWidget {
   final List<TextInputFormatter>? inputFormatters;
   final TextInputAction? textInputAction;
   final FocusNode? focusNode;
+
+  /// Static error message shown unconditionally (no validator needed).
   final String? errorMessage;
+
   final Color? backgroundColor;
+
+  /// Returns an error string to display, or `null` if the value is valid.
+  final String? Function(String? value)? validator;
+
+  /// When the [validator] runs automatically.
+  ///
+  /// Defaults to `{AdmInputValidateTrigger.onBlur}`.
+  final Set<AdmInputValidateTrigger> validateTrigger;
+
+  /// Controls when [TextFormField] auto-validates internally.
+  ///
+  /// Defaults to [AutovalidateMode.disabled] — validation is driven by
+  /// [validateTrigger] and the imperative [AdmInputState.validate] method.
+  /// Set to [AutovalidateMode.onUserInteraction] to also participate in
+  /// [Form] auto-validation.
+  final AutovalidateMode autovalidateMode;
 
   const AdmInput({
     super.key,
@@ -55,40 +106,92 @@ class AdmInput extends StatefulWidget {
     this.focusNode,
     this.errorMessage,
     this.backgroundColor,
+    this.validator,
+    this.validateTrigger = const {AdmInputValidateTrigger.onBlur},
+    this.autovalidateMode = AutovalidateMode.disabled,
   });
 
   @override
-  State<AdmInput> createState() => _AdmInputState();
+  AdmInputState createState() => AdmInputState();
 }
 
-class _AdmInputState extends State<AdmInput> {
+/// Public state — access via `GlobalKey<AdmInputState>` to call [validate].
+class AdmInputState extends State<AdmInput> {
   late TextEditingController _controller;
   late FocusNode _focusNode;
   bool _hasFocus = false;
   bool _obscure = true;
+
+  /// Validation error set by [validator] runs. `null` means valid / not yet run.
+  String? _validationError;
+
+  /// The error string to display — validator result takes priority over the
+  /// static [AdmInput.errorMessage].
+  String? get _displayError => _validationError ?? widget.errorMessage;
 
   @override
   void initState() {
     super.initState();
     _controller = widget.controller ?? TextEditingController();
     _focusNode = widget.focusNode ?? FocusNode();
-    _focusNode.addListener(() {
-      setState(() => _hasFocus = _focusNode.hasFocus);
-    });
+
+    _focusNode.addListener(_onFocusChange);
     _controller.addListener(() => setState(() {}));
   }
 
   @override
   void dispose() {
+    _focusNode.removeListener(_onFocusChange);
     if (widget.controller == null) _controller.dispose();
     if (widget.focusNode == null) _focusNode.dispose();
     super.dispose();
   }
 
+  void _onFocusChange() {
+    final hasFocus = _focusNode.hasFocus;
+    setState(() => _hasFocus = hasFocus);
+    if (!hasFocus &&
+        widget.validator != null &&
+        widget.validateTrigger.contains(AdmInputValidateTrigger.onBlur)) {
+      _runValidator(_controller.text);
+    }
+  }
+
+  void _onChanged(String value) {
+    widget.onChanged?.call(value);
+    if (widget.validator != null &&
+        widget.validateTrigger.contains(AdmInputValidateTrigger.onChange)) {
+      _runValidator(value);
+    } else if (_validationError != null) {
+      // Clear stale error as the user types, even when onChange isn't a trigger.
+      setState(() => _validationError = null);
+    }
+  }
+
+  void _runValidator(String value) {
+    final error = widget.validator?.call(value.isEmpty ? null : value);
+    setState(() => _validationError = error);
+  }
+
+  /// Runs the [validator] immediately and returns `true` if the field is valid.
+  ///
+  /// Call from a parent widget via `GlobalKey<AdmInputState>`:
+  /// ```dart
+  /// final isValid = _inputKey.currentState?.validate() ?? false;
+  /// ```
+  bool validate() {
+    if (widget.validator == null) return true;
+    _runValidator(_controller.text);
+    return _validationError == null;
+  }
+
+  /// Clears any active validation error.
+  void clearValidation() => setState(() => _validationError = null);
+
   @override
   Widget build(BuildContext context) {
     final tokens = AdmTheme.tokensOf(context);
-    final hasError = widget.errorMessage != null;
+    final hasError = _displayError != null;
     final borderColor = hasError
         ? tokens.colorDanger
         : (_hasFocus ? tokens.colorPrimary : tokens.colorBorder);
@@ -130,7 +233,7 @@ class _AdmInputState extends State<AdmInput> {
                 ),
               ],
               Expanded(
-                child: TextField(
+                child: TextFormField(
                   controller: _controller,
                   focusNode: _focusNode,
                   readOnly: widget.readOnly || widget.disabled,
@@ -140,7 +243,9 @@ class _AdmInputState extends State<AdmInput> {
                   keyboardType: widget.keyboardType,
                   inputFormatters: widget.inputFormatters,
                   textInputAction: widget.textInputAction,
-                  onChanged: widget.onChanged,
+                  onChanged: _onChanged,
+                  validator: widget.validator,
+                  autovalidateMode: widget.autovalidateMode,
                   style: TextStyle(
                     fontSize: tokens.fontSizeMd,
                     color: widget.disabled
@@ -156,6 +261,11 @@ class _AdmInputState extends State<AdmInput> {
                     border: InputBorder.none,
                     enabledBorder: InputBorder.none,
                     focusedBorder: InputBorder.none,
+                    // Suppress the built-in error display — AdmInput owns
+                    // the error UI via the row below the container.
+                    errorStyle: const TextStyle(height: 0, fontSize: 0),
+                    errorBorder: InputBorder.none,
+                    focusedErrorBorder: InputBorder.none,
                     counterText: '',
                     contentPadding: EdgeInsets.symmetric(
                       horizontal: tokens.spaceMd,
@@ -172,9 +282,11 @@ class _AdmInputState extends State<AdmInput> {
                     _controller.clear();
                     widget.onClear?.call();
                     widget.onChanged?.call('');
+                    if (widget.validator != null) _runValidator('');
                   },
                   child: Padding(
-                    padding: EdgeInsets.symmetric(horizontal: tokens.spaceSm),
+                    padding:
+                        EdgeInsets.symmetric(horizontal: tokens.spaceSm),
                     child: Icon(
                       Icons.cancel,
                       size: 16,
@@ -187,7 +299,8 @@ class _AdmInputState extends State<AdmInput> {
                 GestureDetector(
                   onTap: () => setState(() => _obscure = !_obscure),
                   child: Padding(
-                    padding: EdgeInsets.symmetric(horizontal: tokens.spaceSm),
+                    padding:
+                        EdgeInsets.symmetric(horizontal: tokens.spaceSm),
                     child: Icon(
                       _obscure
                           ? Icons.visibility_off_outlined
@@ -207,16 +320,35 @@ class _AdmInputState extends State<AdmInput> {
             ],
           ),
         ),
-        if (hasError) ...[
-          SizedBox(height: tokens.spaceXs),
-          Text(
-            widget.errorMessage!,
-            style: TextStyle(
-              fontSize: tokens.fontSizeSm,
-              color: tokens.colorDanger,
-            ),
-          ),
-        ],
+        // Error message
+        AnimatedSize(
+          duration: tokens.animationDurationFast,
+          alignment: Alignment.topLeft,
+          child: hasError
+              ? Padding(
+                  padding: EdgeInsets.only(top: tokens.spaceXs),
+                  child: Row(
+                    children: [
+                      Icon(
+                        Icons.error_outline,
+                        size: 12,
+                        color: tokens.colorDanger,
+                      ),
+                      SizedBox(width: tokens.spaceXs),
+                      Expanded(
+                        child: Text(
+                          _displayError!,
+                          style: TextStyle(
+                            fontSize: tokens.fontSizeSm,
+                            color: tokens.colorDanger,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                )
+              : const SizedBox.shrink(),
+        ),
       ],
     );
   }
