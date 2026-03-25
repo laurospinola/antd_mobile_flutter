@@ -43,6 +43,7 @@ export 'src/components/stepper/adm_stepper.dart';
 export 'src/components/form/adm_form.dart';
 export 'src/components/select/adm_select.dart';
 export 'src/components/otp_input/adm_otp_input.dart';
+export 'src/components/page_indicator/adm_page_indicator.dart';
 
 // ─── Feedback ──────────────────────────────────────────────────────────────
 export 'src/components/toast/adm_toast.dart';
