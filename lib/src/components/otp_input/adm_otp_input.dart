@@ -120,8 +120,7 @@ class AdmOtpInputState extends State<AdmOtpInput> {
   @override
   void initState() {
     super.initState();
-    _controllers =
-        List.generate(widget.length, (_) => TextEditingController());
+    _controllers = List.generate(widget.length, (_) => TextEditingController());
     _focusNodes = List.generate(widget.length, (_) => FocusNode());
 
     final initial = widget.value ?? widget.defaultValue ?? '';
@@ -138,8 +137,12 @@ class AdmOtpInputState extends State<AdmOtpInput> {
 
   @override
   void dispose() {
-    for (final c in _controllers) { c.dispose(); }
-    for (final f in _focusNodes) { f.dispose(); }
+    for (final c in _controllers) {
+      c.dispose();
+    }
+    for (final f in _focusNodes) {
+      f.dispose();
+    }
     super.dispose();
   }
 
@@ -151,9 +154,8 @@ class AdmOtpInputState extends State<AdmOtpInput> {
     }
   }
 
-  String _sanitize(String raw) => widget.digitsOnly
-      ? raw.replaceAll(RegExp(r'[^\d]'), '')
-      : raw;
+  String _sanitize(String raw) =>
+      widget.digitsOnly ? raw.replaceAll(RegExp(r'[^\d]'), '') : raw;
 
   // ── Event handlers ─────────────────────────────────────────────────────────
 
@@ -172,12 +174,10 @@ class AdmOtpInputState extends State<AdmOtpInput> {
       _controllers[index + j].text = value[j];
     }
 
-
     // Keep only the first char in the current cell
     if (_controllers[index].text.length > 1) {
       _controllers[index].text = value[0];
-      _controllers[index].selection =
-          const TextSelection.collapsed(offset: 1);
+      _controllers[index].selection = const TextSelection.collapsed(offset: 1);
     }
 
     // Advance focus
@@ -230,7 +230,9 @@ class AdmOtpInputState extends State<AdmOtpInput> {
 
   /// Clears all cells and resets validation state.
   void clear() {
-    for (final c in _controllers) { c.clear(); }
+    for (final c in _controllers) {
+      c.clear();
+    }
     setState(() => _validationError = null);
     widget.onChange?.call('');
   }
@@ -252,8 +254,7 @@ class AdmOtpInputState extends State<AdmOtpInput> {
           mainAxisSize: MainAxisSize.min,
           children: List.generate(widget.length, (i) {
             return Padding(
-              padding:
-                  EdgeInsets.only(right: i < widget.length - 1 ? gap : 0),
+              padding: EdgeInsets.only(right: i < widget.length - 1 ? gap : 0),
               child: _OtpCell(
                 controller: _controllers[i],
                 focusNode: _focusNodes[i],
@@ -374,6 +375,7 @@ class _OtpCellState extends State<_OtpCell> {
       duration: t.animationDurationFast,
       width: widget.size,
       height: widget.size,
+      alignment: AlignmentDirectional.center,
       decoration: BoxDecoration(
         color: widget.disabled ? t.colorFill : t.colorBackground,
         border: Border.all(

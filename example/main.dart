@@ -189,7 +189,6 @@ class _ComponentsPageState extends State<_ComponentsPage> {
                 child: const Text('Block Button'),
                 onPressed: () {}),
           ]),
-
           SizedBox(height: tokens.spaceXl),
           const _SectionTitle('Tags & Badges'),
           AdmSpace(wrap: true, gap: tokens.spaceSm, children: const [
@@ -202,9 +201,7 @@ class _ComponentsPageState extends State<_ComponentsPage> {
                 color: AdmTagColor.primary,
                 child: Text('Outline')),
             AdmTag(
-                round: true,
-                color: AdmTagColor.success,
-                child: Text('Pill')),
+                round: true, color: AdmTagColor.success, child: Text('Pill')),
             AdmTag(
                 closeable: true,
                 color: AdmTagColor.primary,
@@ -225,7 +222,6 @@ class _ComponentsPageState extends State<_ComponentsPage> {
               child: Icon(Icons.message_outlined, size: 28),
             ),
           ]),
-
           SizedBox(height: tokens.spaceXl),
           const _SectionTitle('Avatars'),
           AdmSpace(gap: tokens.spaceMd, children: [
@@ -255,7 +251,6 @@ class _ComponentsPageState extends State<_ComponentsPage> {
                 backgroundColor: tokens.colorPrimary,
                 size: AdmAvatarSize.large),
           ]),
-
           SizedBox(height: tokens.spaceXl),
           const _SectionTitle('Tabs'),
           AdmTabs(
@@ -282,21 +277,16 @@ class _ComponentsPageState extends State<_ComponentsPage> {
               child: Text('Content for tab ${_tabIndex + 1}'),
             ),
           ),
-
           SizedBox(height: tokens.spaceXl),
           const _SectionTitle('Steps'),
           AdmSteps(
             current: _stepIndex,
             items: const [
               AdmStepItem(
-                  title: Text('Order Placed'),
-                  description: Text('Jan 1')),
+                  title: Text('Order Placed'), description: Text('Jan 1')),
               AdmStepItem(
-                  title: Text('Processing'),
-                  description: Text('Jan 2')),
-              AdmStepItem(
-                  title: Text('Shipped'),
-                  description: Text('Pending')),
+                  title: Text('Processing'), description: Text('Jan 2')),
+              AdmStepItem(title: Text('Shipped'), description: Text('Pending')),
               AdmStepItem(title: Text('Delivered')),
             ],
           ),
@@ -316,34 +306,27 @@ class _ComponentsPageState extends State<_ComponentsPage> {
                     setState(() => _stepIndex = (_stepIndex + 1).clamp(0, 3)),
                 child: const Text('Next')),
           ]),
-
           SizedBox(height: tokens.spaceXl),
           const _SectionTitle('Progress'),
           AdmSpace(direction: Axis.vertical, gap: tokens.spaceMd, children: [
             const AdmProgress(percent: 0.3),
             const AdmProgress(percent: 0.6, status: AdmProgressStatus.active),
-            const AdmProgress(
-                percent: 1.0, status: AdmProgressStatus.success),
+            const AdmProgress(percent: 1.0, status: AdmProgressStatus.success),
             const AdmProgress(percent: 0.5, status: AdmProgressStatus.error),
             AdmSpace(gap: tokens.spaceXl, children: [
               AdmProgress.circle(percent: 0.75, size: 64),
               AdmProgress.circle(
-                  percent: 1.0,
-                  size: 64,
-                  status: AdmProgressStatus.success),
+                  percent: 1.0, size: 64, status: AdmProgressStatus.success),
               AdmProgress.circle(
-                  percent: 0.4,
-                  size: 64,
-                  status: AdmProgressStatus.error),
+                  percent: 0.4, size: 64, status: AdmProgressStatus.error),
             ]),
           ]),
-
           SizedBox(height: tokens.spaceXl),
           const _SectionTitle('Card'),
           AdmCard(
             header: const Text('Order Summary'),
-            headerExtra: const AdmTag(
-                color: AdmTagColor.success, child: Text('Paid')),
+            headerExtra:
+                const AdmTag(color: AdmTagColor.success, child: Text('Paid')),
             footer: const Text('Updated just now'),
             footerExtra: const Text('View all →'),
             child: Column(
@@ -362,7 +345,6 @@ class _ComponentsPageState extends State<_ComponentsPage> {
               ],
             ),
           ),
-
           SizedBox(height: tokens.spaceXl),
           const _SectionTitle('List'),
           AdmList(
@@ -379,8 +361,7 @@ class _ComponentsPageState extends State<_ComponentsPage> {
               AdmListItem(
                 prefix: const Icon(Icons.notifications_outlined),
                 title: const Text('Notifications'),
-                extra: AdmSwitch(
-                    checked: true, onChange: (_) {}),
+                extra: AdmSwitch(checked: true, onChange: (_) {}),
               ),
               AdmListItem(
                 prefix: const Icon(Icons.language_outlined),
@@ -398,7 +379,6 @@ class _ComponentsPageState extends State<_ComponentsPage> {
               ),
             ],
           ),
-
           SizedBox(height: tokens.spaceXl),
           const _SectionTitle('Swipe Actions'),
           AdmList(
@@ -445,11 +425,9 @@ class _ComponentsPageState extends State<_ComponentsPage> {
               ),
             ],
           ),
-
           SizedBox(height: tokens.spaceXl),
           const _SectionTitle('Skeleton'),
           AdmSkeleton.wrap(loading: true, child: const SizedBox.shrink()),
-
           SizedBox(height: tokens.spaceXl),
           const _SectionTitle('Empty'),
           AdmEmpty(
@@ -459,7 +437,6 @@ class _ComponentsPageState extends State<_ComponentsPage> {
                 child: const Text('Start Shopping'),
                 onPressed: () {}),
           ),
-
           SizedBox(height: tokens.spaceXl),
           const _SectionTitle('Result'),
           AdmResult(
@@ -473,7 +450,6 @@ class _ComponentsPageState extends State<_ComponentsPage> {
                 child: const Text('View Order'),
                 onPressed: () {}),
           ),
-
           SizedBox(height: tokens.spaceXxl),
         ],
       ),
@@ -516,7 +492,9 @@ class _FormsPageState extends State<_FormsPage> {
               name: 'email',
               label: const Text('Email'),
               required: true,
-              rules: [(v) => (v == null || v.isEmpty) ? 'Email is required' : null],
+              rules: [
+                (v) => (v == null || v.isEmpty) ? 'Email is required' : null
+              ],
               child: AdmInput(
                 placeholder: 'Enter your email',
                 prefix: const Icon(Icons.email_outlined),
@@ -556,7 +534,13 @@ class _FormsPageState extends State<_FormsPage> {
                 onChanged: (v) => _formCtrl.setField('bio', v),
               ),
             ),
-
+            AdmFormItem(
+                name: 'bio',
+                label: const Text('Bio'),
+                help: 'Max 200 characters',
+                child: AdmOtpInput(
+                  length: 6,
+                )),
             const _SectionTitle('Switch'),
             AdmFormItem(
               label: const Text('Enable notifications'),
@@ -572,7 +556,6 @@ class _FormsPageState extends State<_FormsPage> {
                 ),
               ]),
             ),
-
             const _SectionTitle('Checkbox'),
             AdmFormItem(
               label: const Text('Interests'),
@@ -593,7 +576,6 @@ class _FormsPageState extends State<_FormsPage> {
                 ],
               ),
             ),
-
             const _SectionTitle('Radio'),
             AdmFormItem(
               label: const Text('Subscription plan'),
@@ -607,7 +589,6 @@ class _FormsPageState extends State<_FormsPage> {
                 ],
               ),
             ),
-
             const _SectionTitle('Stepper'),
             AdmFormItem(
               label: const Text('Quantity'),
@@ -618,7 +599,6 @@ class _FormsPageState extends State<_FormsPage> {
                 onChange: (v) => setState(() => _qty = v),
               ),
             ),
-
             SizedBox(height: tokens.spaceLg),
             Row(children: [
               Expanded(
@@ -635,8 +615,7 @@ class _FormsPageState extends State<_FormsPage> {
                   onPressed: () {
                     if (_formCtrl.validate()) {
                       AdmToast.show(context,
-                          content: 'Submitted!',
-                          type: AdmToastType.success);
+                          content: 'Submitted!', type: AdmToastType.success);
                     } else {
                       AdmToast.show(context,
                           content: 'Please fix errors',
@@ -690,14 +669,13 @@ class _FeedbackPage extends StatelessWidget {
             color: tokens.colorDanger,
             background: tokens.colorDanger.withOpacity(0.08),
           ),
-
           SizedBox(height: tokens.spaceXl),
           const _SectionTitle('Toast'),
           AdmSpace(wrap: true, gap: tokens.spaceSm, children: [
             AdmButton(
               size: AdmButtonSize.small,
-              onPressed: () => AdmToast.show(context,
-                  content: 'This is a toast!'),
+              onPressed: () =>
+                  AdmToast.show(context, content: 'This is a toast!'),
               child: const Text('Info'),
             ),
             AdmButton(
@@ -721,13 +699,11 @@ class _FeedbackPage extends StatelessWidget {
                 AdmToast.show(context,
                     content: 'Loading…', type: AdmToastType.loading);
                 Future.delayed(
-                    const Duration(seconds: 2),
-                    () => AdmToast.hide(context));
+                    const Duration(seconds: 2), () => AdmToast.hide(context));
               },
               child: const Text('Loading (2s)'),
             ),
           ]),
-
           SizedBox(height: tokens.spaceXl),
           const _SectionTitle('Modal / Dialog'),
           AdmSpace(wrap: true, gap: tokens.spaceSm, children: [
@@ -759,7 +735,6 @@ class _FeedbackPage extends StatelessWidget {
               child: const Text('Confirm'),
             ),
           ]),
-
           SizedBox(height: tokens.spaceXl),
           const _SectionTitle('Action Sheet'),
           AdmButton(
@@ -769,18 +744,15 @@ class _FeedbackPage extends StatelessWidget {
               actions: [
                 AdmAction(
                   text: const Text('Share'),
-                  onPress: () =>
-                      AdmToast.show(context, content: 'Shared!'),
+                  onPress: () => AdmToast.show(context, content: 'Shared!'),
                 ),
                 AdmAction(
                   text: const Text('Save to Photos'),
-                  onPress: () =>
-                      AdmToast.show(context, content: 'Saved!'),
+                  onPress: () => AdmToast.show(context, content: 'Saved!'),
                 ),
                 AdmAction(
                   text: const Text('Copy Link'),
-                  onPress: () =>
-                      AdmToast.show(context, content: 'Copied!'),
+                  onPress: () => AdmToast.show(context, content: 'Copied!'),
                 ),
                 const AdmAction(
                   text: Text('Delete'),
@@ -790,7 +762,6 @@ class _FeedbackPage extends StatelessWidget {
             ),
             child: const Text('Show Action Sheet'),
           ),
-
           SizedBox(height: tokens.spaceXl),
           const _SectionTitle('Popup (Bottom Sheet)'),
           AdmButton(
@@ -832,7 +803,6 @@ class _FeedbackPage extends StatelessWidget {
             ),
             child: const Text('Show Bottom Popup'),
           ),
-
           SizedBox(height: tokens.spaceXl),
           const _SectionTitle('Loading'),
           AdmSpace(gap: tokens.spaceXl, children: [
@@ -841,7 +811,6 @@ class _FeedbackPage extends StatelessWidget {
             AdmLoading(color: tokens.colorDanger, size: 40),
             AdmLoading.dots(color: tokens.colorPrimary),
           ]),
-
           SizedBox(height: tokens.spaceXl),
           const _SectionTitle('Collapse'),
           const AdmCollapse(
@@ -867,7 +836,6 @@ class _FeedbackPage extends StatelessWidget {
               ),
             ],
           ),
-
           SizedBox(height: tokens.spaceXxl),
         ],
       ),
@@ -917,9 +885,7 @@ class _ProfilePage extends StatelessWidget {
                               color: tokens.colorTextSecondary)),
                       SizedBox(height: tokens.spaceSm),
                       AdmSpace(gap: tokens.spaceXs, children: const [
-                        AdmTag(
-                            color: AdmTagColor.primary,
-                            child: Text('Pro')),
+                        AdmTag(color: AdmTagColor.primary, child: Text('Pro')),
                         AdmTag(
                             color: AdmTagColor.success,
                             child: Text('Verified')),
