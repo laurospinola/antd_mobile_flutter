@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:qr/qr.dart';
+import 'package:qr_flutter/qr_flutter.dart';
 
 import '../../theme/adm_theme.dart';
 
@@ -15,8 +15,8 @@ enum AdmQrCodeErrorCorrectLevel { low, medium, quartile, high }
 
 /// [AdmQrCode] — renders a QR code from a string value.
 ///
-/// Uses the `qr` package to generate the module matrix and paints it
-/// via a [CustomPainter].
+/// Wraps `qr_flutter`'s [QrImageView] with theme integration and an
+/// optional embedded widget overlay.
 ///
 /// ```dart
 /// AdmQrCode(
@@ -25,10 +25,10 @@ enum AdmQrCodeErrorCorrectLevel { low, medium, quartile, high }
 /// )
 ///
 /// AdmQrCode(
-///   value: 'Hello World',
-///   size: 160,
-///   color: Colors.blue,
+///   value: 'https://example.com',
+///   size: 200,
 ///   errorCorrectLevel: AdmQrCodeErrorCorrectLevel.high,
+///   embeddedImage: FlutterLogo(size: 40),
 /// )
 /// ```
 class AdmQrCode extends StatelessWidget {
@@ -44,8 +44,8 @@ class AdmQrCode extends StatelessWidget {
   /// The color of the light modules / background. Defaults to transparent.
   final Color? backgroundColor;
 
-  /// Padding around the QR code (quiet zone). Defaults to 0.
-  final double padding;
+  /// Padding around the QR code (quiet zone). Defaults to `EdgeInsets.all(10)`.
+  final EdgeInsets padding;
 
   /// The border radius applied to the widget. Defaults to `tokens.radiusMd`.
   final BorderRadius? borderRadius;
@@ -60,24 +60,32 @@ class AdmQrCode extends StatelessWidget {
   /// The size of the embedded image as a fraction of [size]. Defaults to 0.25.
   final double embeddedImageSizeFraction;
 
+  /// The shape of the data modules. Defaults to [QrDataModuleShape.square].
+  final QrDataModuleShape dataModuleShape;
+
+  /// The shape of the eye (finder pattern). Defaults to [QrEyeShape.square].
+  final QrEyeShape eyeShape;
+
   const AdmQrCode({
     super.key,
     required this.value,
     this.size = 160,
     this.color,
     this.backgroundColor,
-    this.padding = 0,
+    this.padding = const EdgeInsets.all(10),
     this.borderRadius,
     this.errorCorrectLevel = AdmQrCodeErrorCorrectLevel.medium,
     this.embeddedImage,
     this.embeddedImageSizeFraction = 0.25,
+    this.dataModuleShape = QrDataModuleShape.square,
+    this.eyeShape = QrEyeShape.square,
   });
 
-  QrErrorCorrectLevel get _qrErrorLevel => switch (errorCorrectLevel) {
-        AdmQrCodeErrorCorrectLevel.low => QrErrorCorrectLevel.low,
-        AdmQrCodeErrorCorrectLevel.medium => QrErrorCorrectLevel.medium,
-        AdmQrCodeErrorCorrectLevel.quartile => QrErrorCorrectLevel.quartile,
-        AdmQrCodeErrorCorrectLevel.high => QrErrorCorrectLevel.high,
+  int get _qrErrorLevel => switch (errorCorrectLevel) {
+        AdmQrCodeErrorCorrectLevel.low => QrErrorCorrectLevel.L,
+        AdmQrCodeErrorCorrectLevel.medium => QrErrorCorrectLevel.M,
+        AdmQrCodeErrorCorrectLevel.quartile => QrErrorCorrectLevel.Q,
+        AdmQrCodeErrorCorrectLevel.high => QrErrorCorrectLevel.H,
       };
 
   @override
@@ -87,77 +95,33 @@ class AdmQrCode extends StatelessWidget {
     final bgColor = backgroundColor ?? Colors.transparent;
     final radius = borderRadius ?? BorderRadius.circular(tokens.radiusMd);
 
-    final qrCode = QrCode.fromData(
+    final qrWidget = QrImageView(
       data: value,
-      errorCorrectLevel: _qrErrorLevel,
+      size: size,
+      padding: padding,
+      backgroundColor: bgColor,
+      errorCorrectionLevel: _qrErrorLevel,
+      eyeStyle: QrEyeStyle(eyeShape: eyeShape, color: moduleColor),
+      dataModuleStyle: QrDataModuleStyle(
+        dataModuleShape: dataModuleShape,
+        color: moduleColor,
+      ),
     );
-    final qrImage = QrImage(qrCode);
 
     return ClipRRect(
       borderRadius: radius,
-      child: Container(
-        width: size,
-        height: size,
-        padding: EdgeInsets.all(padding),
-        color: bgColor,
-        child: Stack(
-          alignment: Alignment.center,
-          children: [
-            CustomPaint(
-              size: Size.square(size - padding * 2),
-              painter: _QrCodePainter(
-                qrImage: qrImage,
-                moduleColor: moduleColor,
-              ),
+      child: embeddedImage == null
+          ? qrWidget
+          : Stack(
+              alignment: Alignment.center,
+              children: [
+                qrWidget,
+                SizedBox.square(
+                  dimension: size * embeddedImageSizeFraction,
+                  child: embeddedImage!,
+                ),
+              ],
             ),
-            if (embeddedImage != null)
-              SizedBox.square(
-                dimension: (size - padding * 2) * embeddedImageSizeFraction,
-                child: embeddedImage!,
-              ),
-          ],
-        ),
-      ),
     );
   }
-}
-
-class _QrCodePainter extends CustomPainter {
-  final QrImage qrImage;
-  final Color moduleColor;
-
-  _QrCodePainter({
-    required this.qrImage,
-    required this.moduleColor,
-  });
-
-  @override
-  void paint(Canvas canvas, Size size) {
-    final moduleCount = qrImage.moduleCount;
-    final moduleSize = size.width / moduleCount;
-
-    final paint = Paint()
-      ..color = moduleColor
-      ..style = PaintingStyle.fill;
-
-    for (var row = 0; row < moduleCount; row++) {
-      for (var col = 0; col < moduleCount; col++) {
-        if (qrImage.isDark(row, col)) {
-          canvas.drawRect(
-            Rect.fromLTWH(
-              col * moduleSize,
-              row * moduleSize,
-              moduleSize,
-              moduleSize,
-            ),
-            paint,
-          );
-        }
-      }
-    }
-  }
-
-  @override
-  bool shouldRepaint(_QrCodePainter oldDelegate) =>
-      oldDelegate.moduleColor != moduleColor || oldDelegate.qrImage != qrImage;
 }

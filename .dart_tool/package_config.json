@@ -105,9 +105,15 @@
     },
     {
       "name": "qr",
-      "rootUri": "file:///C:/Users/lauro.spinola/AppData/Local/Pub/Cache/git/qr.dart-248ef5ba51726f24b4beeabdec9ef5348d4cf438/",
+      "rootUri": "file:///C:/Users/lauro.spinola/AppData/Local/Pub/Cache/hosted/pub.dev/qr-3.0.2",
       "packageUri": "lib/",
-      "languageVersion": "3.8"
+      "languageVersion": "3.4"
+    },
+    {
+      "name": "qr_flutter",
+      "rootUri": "file:///C:/Users/lauro.spinola/AppData/Local/Pub/Cache/hosted/pub.dev/qr_flutter-4.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
     },
     {
       "name": "sky_engine",
