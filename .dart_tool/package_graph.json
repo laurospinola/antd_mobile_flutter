@@ -7,7 +7,8 @@
       "name": "antd_mobile_flutter",
       "version": "0.1.0",
       "dependencies": [
-        "flutter"
+        "flutter",
+        "qr"
       ],
       "devDependencies": [
         "flutter_lints",
@@ -37,6 +38,13 @@
         "stream_channel",
         "test_api",
         "vector_math"
+      ]
+    },
+    {
+      "name": "qr",
+      "version": "3.1.0-wip",
+      "dependencies": [
+        "meta"
       ]
     },
     {

@@ -104,6 +104,12 @@
       "languageVersion": "3.4"
     },
     {
+      "name": "qr",
+      "rootUri": "file:///C:/Users/lauro.spinola/AppData/Local/Pub/Cache/git/qr.dart-248ef5ba51726f24b4beeabdec9ef5348d4cf438/",
+      "packageUri": "lib/",
+      "languageVersion": "3.8"
+    },
+    {
       "name": "sky_engine",
       "rootUri": "file:///C:/Users/lauro.spinola/flutter/bin/cache/pkg/sky_engine",
       "packageUri": "lib/",

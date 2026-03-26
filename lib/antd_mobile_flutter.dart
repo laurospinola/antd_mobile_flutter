@@ -45,6 +45,9 @@ export 'src/components/select/adm_select.dart';
 export 'src/components/otp_input/adm_otp_input.dart';
 export 'src/components/page_indicator/adm_page_indicator.dart';
 
+// ─── QR Code ──────────────────────────────────────────────────────────────
+export 'src/components/qr_code/adm_qr_code.dart';
+
 // ─── Feedback ──────────────────────────────────────────────────────────────
 export 'src/components/toast/adm_toast.dart';
 export 'src/components/modal/adm_modal.dart';
