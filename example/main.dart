@@ -262,20 +262,20 @@ class _ComponentsPageState extends State<_ComponentsPage> {
             ],
             activeIndex: _tabIndex,
             onChange: (i) => setState(() => _tabIndex = i),
-          ),
-          SizedBox(height: tokens.spaceMd),
-          AnimatedSwitcher(
-            duration: tokens.animationDurationMid,
-            child: Container(
-              key: ValueKey(_tabIndex),
-              padding: EdgeInsets.all(tokens.spaceMd),
-              decoration: BoxDecoration(
-                color: tokens.colorBackground,
-                borderRadius: BorderRadius.circular(tokens.radiusMd),
-                border: Border.all(color: tokens.colorBorder),
-              ),
-              child: Text('Content for tab ${_tabIndex + 1}'),
-            ),
+            tabViewHeight: 120,
+            children: List.generate(4, (i) {
+              const labels = ['All', 'Active', 'Pending', 'Done'];
+              return Container(
+                padding: EdgeInsets.all(tokens.spaceMd),
+                decoration: BoxDecoration(
+                  color: tokens.colorBackground,
+                  border: Border(
+                    top: BorderSide(color: tokens.colorBorder),
+                  ),
+                ),
+                child: Center(child: Text('Content for "${labels[i]}" tab')),
+              );
+            }),
           ),
           SizedBox(height: tokens.spaceXl),
           const _SectionTitle('Steps'),

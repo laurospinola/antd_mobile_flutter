@@ -17,7 +17,8 @@ class AdmTabItem {
 
 /// [AdmTabs] — equivalent to ant-design-mobile's `<Tabs>`.
 ///
-/// Horizontal tab bar with animated indicator and scrollable overflow.
+/// Horizontal tab bar with animated indicator, scrollable overflow, and
+/// swipe-to-switch support via [children] + [TabBarView].
 ///
 /// ```dart
 /// AdmTabs(
@@ -28,14 +29,26 @@ class AdmTabItem {
 ///   ],
 ///   activeIndex: _index,
 ///   onChange: (i) => setState(() => _index = i),
-///   child: IndexedStack(index: _index, children: [...]),
+///   children: const [Text('Fruit content'), Text('Veg content'), Text('Meat content')],
+///   tabViewHeight: 200,
 /// )
 /// ```
 class AdmTabs extends StatefulWidget {
   final List<AdmTabItem> tabs;
   final int activeIndex;
   final ValueChanged<int>? onChange;
+
+  /// Legacy single-child below the tab bar (no swipe support).
   final Widget? child;
+
+  /// When provided, renders a [TabBarView] enabling swipe-to-switch.
+  /// Must have the same length as [tabs].
+  final List<Widget>? children;
+
+  /// Height of the [TabBarView] area. Required when [children] is set and the
+  /// widget lives inside a scroll view. Defaults to 200.
+  final double tabViewHeight;
+
   final bool scrollable;
   final double? tabWidth;
   final Color? activeColor;
@@ -49,13 +62,18 @@ class AdmTabs extends StatefulWidget {
     required this.activeIndex,
     this.onChange,
     this.child,
+    this.children,
+    this.tabViewHeight = 200,
     this.scrollable = false,
     this.tabWidth,
     this.activeColor,
     this.inactiveColor,
     this.indicatorColor,
     this.indicatorHeight = 2.0,
-  });
+  }) : assert(
+          children == null || children.length == tabs.length,
+          'children length must match tabs length',
+        );
 
   @override
   State<AdmTabs> createState() => _AdmTabsState();
@@ -65,34 +83,60 @@ class _AdmTabsState extends State<AdmTabs>
     with SingleTickerProviderStateMixin {
   late TabController _controller;
 
+  // Tracks the last index we reported via onChange to avoid double-firing
+  // when both onTap and the controller listener would trigger.
+  int _lastReportedIndex = -1;
+
   @override
   void initState() {
     super.initState();
+    _lastReportedIndex = widget.activeIndex;
     _controller = TabController(
       length: widget.tabs.length,
       vsync: this,
       initialIndex: widget.activeIndex,
     );
+    _controller.addListener(_onControllerChange);
+  }
+
+  /// Fires when the controller settles on a new index (covers swipe gestures).
+  void _onControllerChange() {
+    if (_controller.indexIsChanging) return;
+    final newIndex = _controller.index;
+    if (newIndex == _lastReportedIndex) return;
+    if (widget.tabs[newIndex].disabled) {
+      // Revert swipe to a disabled tab.
+      _controller.animateTo(_lastReportedIndex);
+      return;
+    }
+    _lastReportedIndex = newIndex;
+    widget.onChange?.call(newIndex);
   }
 
   @override
   void didUpdateWidget(AdmTabs oldWidget) {
     super.didUpdateWidget(oldWidget);
-    if (oldWidget.activeIndex != widget.activeIndex) {
+    if (oldWidget.activeIndex != widget.activeIndex &&
+        widget.activeIndex != _controller.index) {
+      _lastReportedIndex = widget.activeIndex;
       _controller.animateTo(widget.activeIndex);
     }
     if (oldWidget.tabs.length != widget.tabs.length) {
+      _controller.removeListener(_onControllerChange);
       _controller.dispose();
+      _lastReportedIndex = widget.activeIndex;
       _controller = TabController(
         length: widget.tabs.length,
         vsync: this,
         initialIndex: widget.activeIndex,
       );
+      _controller.addListener(_onControllerChange);
     }
   }
 
   @override
   void dispose() {
+    _controller.removeListener(_onControllerChange);
     _controller.dispose();
     super.dispose();
   }
@@ -132,9 +176,14 @@ class _AdmTabsState extends State<AdmTabs>
             ? TabAlignment.start
             : TabAlignment.fill,
         onTap: (i) {
-          if (!widget.tabs[i].disabled) {
-            widget.onChange?.call(i);
+          if (widget.tabs[i].disabled) {
+            // Revert to the current valid index.
+            _controller.animateTo(_lastReportedIndex);
+            return;
           }
+          // Report immediately on tap; suppress the subsequent listener fire.
+          _lastReportedIndex = i;
+          widget.onChange?.call(i);
         },
         tabs: widget.tabs.map((tab) {
           Widget label = tab.title;
@@ -179,6 +228,24 @@ class _AdmTabsState extends State<AdmTabs>
       ),
     );
 
+    // --- TabBarView (swipe) mode ---
+    if (widget.children != null) {
+      return Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          tabBar,
+          SizedBox(
+            height: widget.tabViewHeight,
+            child: TabBarView(
+              controller: _controller,
+              children: widget.children!,
+            ),
+          ),
+        ],
+      );
+    }
+
+    // --- Legacy single-child mode ---
     if (widget.child == null) return tabBar;
 
     return Column(
