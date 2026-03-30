@@ -194,6 +194,7 @@ class _AdmTabsState extends State<AdmTabs> with SingleTickerProviderStateMixin {
         children: [
           tabBar,
           SizedBox(
+            height: widget.tabViewHeight,
             child: TabBarView(
               controller: _controller,
               children: widget.children!,
