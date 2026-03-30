@@ -147,7 +147,7 @@ class _AdmTabsState extends State<AdmTabs> with SingleTickerProviderStateMixin {
     final inactiveColor = widget.inactiveColor ?? tokens.colorTextSecondary;
     final indicatorColor = widget.indicatorColor ?? tokens.colorPrimary;
 
-    final tabBar = Container(
+    final tabBar = ColoredBox(
       color: tokens.colorBackground,
       child: TabBar(
         controller: _controller,
@@ -182,43 +182,7 @@ class _AdmTabsState extends State<AdmTabs> with SingleTickerProviderStateMixin {
           widget.onChange?.call(i);
         },
         tabs: widget.tabs.map((tab) {
-          Widget label = tab.title;
-          if (tab.dot || tab.badge != null) {
-            label = Stack(
-              clipBehavior: Clip.none,
-              children: [
-                tab.title,
-                Positioned(
-                  right: -8,
-                  top: 0,
-                  child: tab.dot
-                      ? Container(
-                          width: 6,
-                          height: 6,
-                          decoration: BoxDecoration(
-                            color: tokens.colorDanger,
-                            shape: BoxShape.circle,
-                          ),
-                        )
-                      : Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 1),
-                          decoration: BoxDecoration(
-                            color: tokens.colorDanger,
-                            borderRadius: BorderRadius.circular(99),
-                          ),
-                          child: DefaultTextStyle(
-                            style: TextStyle(
-                              color: tokens.colorTextWhite,
-                              fontSize: 10,
-                            ),
-                            child: tab.badge!,
-                          ),
-                        ),
-                ),
-              ],
-            );
-          }
-          return Tab(child: label);
+          return Tab(child: tab.title);
         }).toList(),
       ),
     );
@@ -229,9 +193,11 @@ class _AdmTabsState extends State<AdmTabs> with SingleTickerProviderStateMixin {
         mainAxisSize: MainAxisSize.min,
         children: [
           tabBar,
-          TabBarView(
-            controller: _controller,
-            children: widget.children!,
+          SizedBox(
+            child: TabBarView(
+              controller: _controller,
+              children: widget.children!,
+            ),
           ),
         ],
       );

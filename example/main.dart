@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:antd_mobile_flutter/antd_mobile_flutter.dart';
+import 'package:flutter/material.dart';
 
 void main() {
   runApp(const ShowcaseApp());
@@ -21,8 +21,7 @@ class _ShowcaseAppState extends State<ShowcaseApp> {
       data: _darkMode ? const AdmThemeData.dark() : const AdmThemeData(),
       child: MaterialApp(
         title: 'ADM Flutter Showcase',
-        theme: (_darkMode ? const AdmThemeData.dark() : const AdmThemeData())
-            .toMaterialTheme(),
+        theme: (_darkMode ? const AdmThemeData.dark() : const AdmThemeData()).toMaterialTheme(),
         debugShowCheckedModeBanner: false,
         home: ShowcaseHome(
           darkMode: _darkMode,
@@ -39,8 +38,7 @@ class ShowcaseHome extends StatefulWidget {
   final bool darkMode;
   final VoidCallback onToggleDark;
 
-  const ShowcaseHome(
-      {super.key, required this.darkMode, required this.onToggleDark});
+  const ShowcaseHome({super.key, required this.darkMode, required this.onToggleDark});
 
   @override
   State<ShowcaseHome> createState() => _ShowcaseHomeState();
@@ -71,9 +69,7 @@ class _ShowcaseHomeState extends State<ShowcaseHome> {
               child: Padding(
                 padding: const EdgeInsets.only(right: 16),
                 child: Icon(
-                  widget.darkMode
-                      ? Icons.light_mode_outlined
-                      : Icons.dark_mode_outlined,
+                  widget.darkMode ? Icons.light_mode_outlined : Icons.dark_mode_outlined,
                   color: tokens.colorTextBase,
                   size: 22,
                 ),
@@ -142,14 +138,8 @@ class _ComponentsPageState extends State<_ComponentsPage> {
           AdmSpace(direction: Axis.vertical, gap: tokens.spaceSm, children: [
             AdmSpace(wrap: true, gap: tokens.spaceSm, children: [
               AdmButton.primary(child: const Text('Primary'), onPressed: () {}),
-              AdmButton(
-                  color: AdmButtonColor.success,
-                  child: const Text('Success'),
-                  onPressed: () {}),
-              AdmButton(
-                  color: AdmButtonColor.warning,
-                  child: const Text('Warning'),
-                  onPressed: () {}),
+              AdmButton(color: AdmButtonColor.success, child: const Text('Success'), onPressed: () {}),
+              AdmButton(color: AdmButtonColor.warning, child: const Text('Warning'), onPressed: () {}),
               AdmButton.danger(child: const Text('Danger'), onPressed: () {}),
               AdmButton(child: const Text('Default'), onPressed: () {}),
             ]),
@@ -164,30 +154,14 @@ class _ComponentsPageState extends State<_ComponentsPage> {
                   color: AdmButtonColor.primary,
                   child: const Text('Ghost'),
                   onPressed: () {}),
+              AdmButton(size: AdmButtonSize.small, child: const Text('Small'), onPressed: () {}),
               AdmButton(
-                  size: AdmButtonSize.small,
-                  child: const Text('Small'),
-                  onPressed: () {}),
-              AdmButton(
-                  size: AdmButtonSize.mini,
-                  color: AdmButtonColor.primary,
-                  child: const Text('Mini'),
-                  onPressed: () {}),
-              AdmButton(
-                  disabled: true,
-                  child: const Text('Disabled'),
-                  onPressed: () {}),
-              AdmButton(
-                  loading: true,
-                  color: AdmButtonColor.primary,
-                  child: const Text('Loading'),
-                  onPressed: () {}),
+                  size: AdmButtonSize.mini, color: AdmButtonColor.primary, child: const Text('Mini'), onPressed: () {}),
+              AdmButton(disabled: true, child: const Text('Disabled'), onPressed: () {}),
+              AdmButton(loading: true, color: AdmButtonColor.primary, child: const Text('Loading'), onPressed: () {}),
             ]),
             AdmButton.primary(
-                block: true,
-                size: AdmButtonSize.large,
-                child: const Text('Block Button'),
-                onPressed: () {}),
+                block: true, size: AdmButtonSize.large, child: const Text('Block Button'), onPressed: () {}),
           ]),
           SizedBox(height: tokens.spaceXl),
           const _SectionTitle('Tags & Badges'),
@@ -196,16 +170,9 @@ class _ComponentsPageState extends State<_ComponentsPage> {
             AdmTag(color: AdmTagColor.success, child: Text('Success')),
             AdmTag(color: AdmTagColor.warning, child: Text('Warning')),
             AdmTag(color: AdmTagColor.danger, child: Text('Danger')),
-            AdmTag(
-                fill: AdmTagFill.outline,
-                color: AdmTagColor.primary,
-                child: Text('Outline')),
-            AdmTag(
-                round: true, color: AdmTagColor.success, child: Text('Pill')),
-            AdmTag(
-                closeable: true,
-                color: AdmTagColor.primary,
-                child: Text('Close me')),
+            AdmTag(fill: AdmTagFill.outline, color: AdmTagColor.primary, child: Text('Outline')),
+            AdmTag(round: true, color: AdmTagColor.success, child: Text('Pill')),
+            AdmTag(closeable: true, color: AdmTagColor.primary, child: Text('Close me')),
           ]),
           SizedBox(height: tokens.spaceMd),
           AdmSpace(gap: tokens.spaceXl, children: const [
@@ -225,26 +192,11 @@ class _ComponentsPageState extends State<_ComponentsPage> {
           SizedBox(height: tokens.spaceXl),
           const _SectionTitle('Avatars'),
           AdmSpace(gap: tokens.spaceMd, children: [
-            AdmAvatar(
-                text: 'AK',
-                backgroundColor: tokens.colorPrimary,
-                size: AdmAvatarSize.small),
-            AdmAvatar(
-                text: 'BC',
-                backgroundColor: tokens.colorSuccess,
-                size: AdmAvatarSize.middle),
-            AdmAvatar(
-                text: 'DE',
-                backgroundColor: tokens.colorWarning,
-                size: AdmAvatarSize.large),
-            AdmAvatar(
-                text: 'FG',
-                backgroundColor: tokens.colorDanger,
-                size: AdmAvatarSize.xl),
-            const AdmAvatar(
-                icon: Icon(Icons.person),
-                backgroundColor: AdmColors.grey6,
-                size: AdmAvatarSize.large),
+            AdmAvatar(text: 'AK', backgroundColor: tokens.colorPrimary, size: AdmAvatarSize.small),
+            AdmAvatar(text: 'BC', backgroundColor: tokens.colorSuccess, size: AdmAvatarSize.middle),
+            AdmAvatar(text: 'DE', backgroundColor: tokens.colorWarning, size: AdmAvatarSize.large),
+            AdmAvatar(text: 'FG', backgroundColor: tokens.colorDanger, size: AdmAvatarSize.xl),
+            const AdmAvatar(icon: Icon(Icons.person), backgroundColor: AdmColors.grey6, size: AdmAvatarSize.large),
             AdmAvatar(
                 text: 'SQ',
                 shape: AdmAvatarShape.square,
@@ -253,39 +205,40 @@ class _ComponentsPageState extends State<_ComponentsPage> {
           ]),
           SizedBox(height: tokens.spaceXl),
           const _SectionTitle('Tabs'),
-          AdmTabs(
-            tabs: const [
-              AdmTabItem(title: Text('All')),
-              AdmTabItem(title: Text('Active'), dot: true),
-              AdmTabItem(title: Text('Pending')),
-              AdmTabItem(title: Text('Done')),
-            ],
-            activeIndex: _tabIndex,
-            onChange: (i) => setState(() => _tabIndex = i),
-            tabViewHeight: 120,
-            children: List.generate(4, (i) {
-              const labels = ['All', 'Active', 'Pending', 'Done'];
-              return Container(
-                padding: EdgeInsets.all(tokens.spaceMd),
-                decoration: BoxDecoration(
-                  color: tokens.colorBackground,
-                  border: Border(
-                    top: BorderSide(color: tokens.colorBorder),
+          SizedBox(
+           
+            child: AdmTabs(
+              tabs: const [
+                AdmTabItem(title: Text('All')),
+                AdmTabItem(title: Text('Active'), dot: true),
+                AdmTabItem(title: Text('Pending')),
+                AdmTabItem(title: Text('Done')),
+              ],
+              activeIndex: _tabIndex,
+              onChange: (i) => setState(() => _tabIndex = i),
+              tabViewHeight: 120,
+              children: List.generate(4, (i) {
+                const labels = ['All', 'Active', 'Pending', 'Done'];
+                return Container(
+                  padding: EdgeInsets.all(tokens.spaceMd),
+                  decoration: BoxDecoration(
+                    color: tokens.colorBackground,
+                    border: Border(
+                      top: BorderSide(color: tokens.colorBorder),
+                    ),
                   ),
-                ),
-                child: Center(child: Text('Content for "${labels[i]}" tab')),
-              );
-            }),
+                  child: Center(child: Text('Content for "${labels[i]}" tab')),
+                );
+              }),
+            ),
           ),
           SizedBox(height: tokens.spaceXl),
           const _SectionTitle('Steps'),
           AdmSteps(
             current: _stepIndex,
             items: const [
-              AdmStepItem(
-                  title: Text('Order Placed'), description: Text('Jan 1')),
-              AdmStepItem(
-                  title: Text('Processing'), description: Text('Jan 2')),
+              AdmStepItem(title: Text('Order Placed'), description: Text('Jan 1')),
+              AdmStepItem(title: Text('Processing'), description: Text('Jan 2')),
               AdmStepItem(title: Text('Shipped'), description: Text('Pending')),
               AdmStepItem(title: Text('Delivered')),
             ],
@@ -295,15 +248,13 @@ class _ComponentsPageState extends State<_ComponentsPage> {
             AdmButton(
                 size: AdmButtonSize.small,
                 disabled: _stepIndex == 0,
-                onPressed: () =>
-                    setState(() => _stepIndex = (_stepIndex - 1).clamp(0, 3)),
+                onPressed: () => setState(() => _stepIndex = (_stepIndex - 1).clamp(0, 3)),
                 child: const Text('Back')),
             AdmButton(
                 size: AdmButtonSize.small,
                 color: AdmButtonColor.primary,
                 disabled: _stepIndex == 3,
-                onPressed: () =>
-                    setState(() => _stepIndex = (_stepIndex + 1).clamp(0, 3)),
+                onPressed: () => setState(() => _stepIndex = (_stepIndex + 1).clamp(0, 3)),
                 child: const Text('Next')),
           ]),
           SizedBox(height: tokens.spaceXl),
@@ -315,18 +266,15 @@ class _ComponentsPageState extends State<_ComponentsPage> {
             const AdmProgress(percent: 0.5, status: AdmProgressStatus.error),
             AdmSpace(gap: tokens.spaceXl, children: [
               AdmProgress.circle(percent: 0.75, size: 64),
-              AdmProgress.circle(
-                  percent: 1.0, size: 64, status: AdmProgressStatus.success),
-              AdmProgress.circle(
-                  percent: 0.4, size: 64, status: AdmProgressStatus.error),
+              AdmProgress.circle(percent: 1.0, size: 64, status: AdmProgressStatus.success),
+              AdmProgress.circle(percent: 0.4, size: 64, status: AdmProgressStatus.error),
             ]),
           ]),
           SizedBox(height: tokens.spaceXl),
           const _SectionTitle('Card'),
           AdmCard(
             header: const Text('Order Summary'),
-            headerExtra:
-                const AdmTag(color: AdmTagColor.success, child: Text('Paid')),
+            headerExtra: const AdmTag(color: AdmTagColor.success, child: Text('Paid')),
             footer: const Text('Updated just now'),
             footerExtra: const Text('View all →'),
             child: Column(
@@ -334,14 +282,10 @@ class _ComponentsPageState extends State<_ComponentsPage> {
               children: [
                 Text('3 items  •  \$129.00',
                     style: TextStyle(
-                        fontSize: tokens.fontSizeLg,
-                        fontWeight: tokens.fontWeightBold,
-                        color: tokens.colorTextBase)),
+                        fontSize: tokens.fontSizeLg, fontWeight: tokens.fontWeightBold, color: tokens.colorTextBase)),
                 SizedBox(height: tokens.spaceXs),
                 Text('Estimated delivery: Jan 10',
-                    style: TextStyle(
-                        fontSize: tokens.fontSizeSm,
-                        color: tokens.colorTextSecondary)),
+                    style: TextStyle(fontSize: tokens.fontSizeSm, color: tokens.colorTextSecondary)),
               ],
             ),
           ),
@@ -432,18 +376,14 @@ class _ComponentsPageState extends State<_ComponentsPage> {
           const _SectionTitle('Empty'),
           AdmEmpty(
             description: const Text('No orders yet'),
-            child: AdmButton.primary(
-                size: AdmButtonSize.small,
-                child: const Text('Start Shopping'),
-                onPressed: () {}),
+            child: AdmButton.primary(size: AdmButtonSize.small, child: const Text('Start Shopping'), onPressed: () {}),
           ),
           SizedBox(height: tokens.spaceXl),
           const _SectionTitle('Result'),
           AdmResult(
             status: AdmResultStatus.success,
             title: const Text('Payment Complete'),
-            description:
-                const Text('Your order #1234 has been placed successfully.'),
+            description: const Text('Your order #1234 has been placed successfully.'),
             child: AdmButton(
                 fill: AdmButtonFill.outline,
                 color: AdmButtonColor.primary,
@@ -492,9 +432,7 @@ class _FormsPageState extends State<_FormsPage> {
               name: 'email',
               label: const Text('Email'),
               required: true,
-              rules: [
-                (v) => (v == null || v.isEmpty) ? 'Email is required' : null
-              ],
+              rules: [(v) => (v == null || v.isEmpty) ? 'Email is required' : null],
               child: AdmInput(
                 placeholder: 'Enter your email',
                 prefix: const Icon(Icons.email_outlined),
@@ -614,12 +552,9 @@ class _FormsPageState extends State<_FormsPage> {
                   block: true,
                   onPressed: () {
                     if (_formCtrl.validate()) {
-                      AdmToast.show(context,
-                          content: 'Submitted!', type: AdmToastType.success);
+                      AdmToast.show(context, content: 'Submitted!', type: AdmToastType.success);
                     } else {
-                      AdmToast.show(context,
-                          content: 'Please fix errors',
-                          type: AdmToastType.fail);
+                      AdmToast.show(context, content: 'Please fix errors', type: AdmToastType.fail);
                     }
                   },
                   child: const Text('Submit'),
@@ -651,8 +586,7 @@ class _FeedbackPage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const _SectionTitle('Notice Bar'),
-          const AdmNoticeBar(
-              content: Text('System upgrade scheduled for tonight 10 PM.')),
+          const AdmNoticeBar(content: Text('System upgrade scheduled for tonight 10 PM.')),
           SizedBox(height: tokens.spaceSm),
           AdmNoticeBar(
             icon: const Icon(Icons.info_outline),
@@ -674,32 +608,27 @@ class _FeedbackPage extends StatelessWidget {
           AdmSpace(wrap: true, gap: tokens.spaceSm, children: [
             AdmButton(
               size: AdmButtonSize.small,
-              onPressed: () =>
-                  AdmToast.show(context, content: 'This is a toast!'),
+              onPressed: () => AdmToast.show(context, content: 'This is a toast!'),
               child: const Text('Info'),
             ),
             AdmButton(
               size: AdmButtonSize.small,
               color: AdmButtonColor.success,
-              onPressed: () => AdmToast.show(context,
-                  content: 'Saved!', type: AdmToastType.success),
+              onPressed: () => AdmToast.show(context, content: 'Saved!', type: AdmToastType.success),
               child: const Text('Success'),
             ),
             AdmButton(
               size: AdmButtonSize.small,
               color: AdmButtonColor.danger,
-              onPressed: () => AdmToast.show(context,
-                  content: 'Failed!', type: AdmToastType.fail),
+              onPressed: () => AdmToast.show(context, content: 'Failed!', type: AdmToastType.fail),
               child: const Text('Fail'),
             ),
             AdmButton(
               size: AdmButtonSize.small,
               color: AdmButtonColor.warning,
               onPressed: () {
-                AdmToast.show(context,
-                    content: 'Loading…', type: AdmToastType.loading);
-                Future.delayed(
-                    const Duration(seconds: 2), () => AdmToast.hide(context));
+                AdmToast.show(context, content: 'Loading…', type: AdmToastType.loading);
+                Future.delayed(const Duration(seconds: 2), () => AdmToast.hide(context));
               },
               child: const Text('Loading (2s)'),
             ),
@@ -724,12 +653,10 @@ class _FeedbackPage extends StatelessWidget {
                 final result = await AdmModal.confirm(
                   context,
                   title: const Text('Delete item?'),
-                  content: const Text(
-                      'This will permanently remove the item from your account.'),
+                  content: const Text('This will permanently remove the item from your account.'),
                 );
                 if (result && context.mounted) {
-                  AdmToast.show(context,
-                      content: 'Deleted!', type: AdmToastType.success);
+                  AdmToast.show(context, content: 'Deleted!', type: AdmToastType.success);
                 }
               },
               child: const Text('Confirm'),
@@ -782,12 +709,9 @@ class _FeedbackPage extends StatelessWidget {
                         borderRadius: BorderRadius.circular(2),
                       ),
                     ),
-                    const Text('Bottom Popup',
-                        style: TextStyle(
-                            fontSize: 17, fontWeight: FontWeight.w600)),
+                    const Text('Bottom Popup', style: TextStyle(fontSize: 17, fontWeight: FontWeight.w600)),
                     const SizedBox(height: 12),
-                    const Text('This is a custom popup content area.',
-                        textAlign: TextAlign.center),
+                    const Text('This is a custom popup content area.', textAlign: TextAlign.center),
                     const SizedBox(height: 24),
                     SizedBox(
                       width: double.infinity,
@@ -880,15 +804,11 @@ class _ProfilePage extends StatelessWidget {
                               color: tokens.colorTextBase)),
                       SizedBox(height: tokens.spaceXs),
                       Text('john.doe@example.com',
-                          style: TextStyle(
-                              fontSize: tokens.fontSizeSm,
-                              color: tokens.colorTextSecondary)),
+                          style: TextStyle(fontSize: tokens.fontSizeSm, color: tokens.colorTextSecondary)),
                       SizedBox(height: tokens.spaceSm),
                       AdmSpace(gap: tokens.spaceXs, children: const [
                         AdmTag(color: AdmTagColor.primary, child: Text('Pro')),
-                        AdmTag(
-                            color: AdmTagColor.success,
-                            child: Text('Verified')),
+                        AdmTag(color: AdmTagColor.success, child: Text('Verified')),
                       ]),
                     ],
                   ),
@@ -1000,13 +920,9 @@ class _StatCell extends StatelessWidget {
       children: [
         Text(value,
             style: TextStyle(
-                fontSize: tokens.fontSizeXxl,
-                fontWeight: tokens.fontWeightBold,
-                color: tokens.colorTextBase)),
+                fontSize: tokens.fontSizeXxl, fontWeight: tokens.fontWeightBold, color: tokens.colorTextBase)),
         SizedBox(height: tokens.spaceXs),
-        Text(label,
-            style: TextStyle(
-                fontSize: tokens.fontSizeSm, color: tokens.colorTextTertiary)),
+        Text(label, style: TextStyle(fontSize: tokens.fontSizeSm, color: tokens.colorTextTertiary)),
       ],
     );
   }
