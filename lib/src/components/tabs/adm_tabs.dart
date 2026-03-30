@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../../theme/adm_theme.dart';
 
 class AdmTabItem {
@@ -79,8 +80,7 @@ class AdmTabs extends StatefulWidget {
   State<AdmTabs> createState() => _AdmTabsState();
 }
 
-class _AdmTabsState extends State<AdmTabs>
-    with SingleTickerProviderStateMixin {
+class _AdmTabsState extends State<AdmTabs> with SingleTickerProviderStateMixin {
   late TabController _controller;
 
   // Tracks the last index we reported via onChange to avoid double-firing
@@ -116,8 +116,7 @@ class _AdmTabsState extends State<AdmTabs>
   @override
   void didUpdateWidget(AdmTabs oldWidget) {
     super.didUpdateWidget(oldWidget);
-    if (oldWidget.activeIndex != widget.activeIndex &&
-        widget.activeIndex != _controller.index) {
+    if (oldWidget.activeIndex != widget.activeIndex && widget.activeIndex != _controller.index) {
       _lastReportedIndex = widget.activeIndex;
       _controller.animateTo(widget.activeIndex);
     }
@@ -145,8 +144,7 @@ class _AdmTabsState extends State<AdmTabs>
   Widget build(BuildContext context) {
     final tokens = AdmTheme.tokensOf(context);
     final activeColor = widget.activeColor ?? tokens.colorPrimary;
-    final inactiveColor =
-        widget.inactiveColor ?? tokens.colorTextSecondary;
+    final inactiveColor = widget.inactiveColor ?? tokens.colorTextSecondary;
     final indicatorColor = widget.indicatorColor ?? tokens.colorPrimary;
 
     final tabBar = Container(
@@ -172,9 +170,7 @@ class _AdmTabsState extends State<AdmTabs>
           insets: const EdgeInsets.symmetric(horizontal: 12),
         ),
         dividerColor: tokens.colorBorder,
-        tabAlignment: widget.scrollable || widget.tabs.length > 4
-            ? TabAlignment.start
-            : TabAlignment.fill,
+        tabAlignment: widget.scrollable || widget.tabs.length > 4 ? TabAlignment.start : TabAlignment.fill,
         onTap: (i) {
           if (widget.tabs[i].disabled) {
             // Revert to the current valid index.
@@ -205,8 +201,7 @@ class _AdmTabsState extends State<AdmTabs>
                           ),
                         )
                       : Container(
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 4, vertical: 1),
+                          padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 1),
                           decoration: BoxDecoration(
                             color: tokens.colorDanger,
                             borderRadius: BorderRadius.circular(99),
@@ -234,12 +229,9 @@ class _AdmTabsState extends State<AdmTabs>
         mainAxisSize: MainAxisSize.min,
         children: [
           tabBar,
-          SizedBox(
-            height: widget.tabViewHeight,
-            child: TabBarView(
-              controller: _controller,
-              children: widget.children!,
-            ),
+          TabBarView(
+            controller: _controller,
+            children: widget.children!,
           ),
         ],
       );
