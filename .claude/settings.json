@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:icons.obra.studio)",
+      "Read(//c/Users/lauro.spinola/Documents/sita/antd_mobile_flutter/{\n  if \\(match\\($0, /^  static const IconData \\([a-z_0-9]+\\) =/, arr\\)\\) {\n    name = arr[1]\n    svg = name\n    gsub\\(/_/assets/icons/**)",
+      "Bash(mv lib/src/theme/adm_icons_new.dart lib/src/theme/adm_icons.dart)",
+      "Read(//c/Users/lauro.spinola/Documents/sita/**)",
+      "Read(//c/Users/lauro.spinola/Documents/sita/antd_mobile_flutter/{\n  if \\(match\\($0, /^  / !/[/]/\\(/, arr\\)\\) next\n  if \\(match\\($0, /^  static const IconData \\([a-z_0-9]+\\) =/, arr\\)\\) {\n    name = arr[1]\n    svg = name\n    gsub\\(/_/, \"-\", svg\\)\n    print \"  / ![]\\(\" \"https:/raw.githubusercontent.com/lucide-icons/lucide/main/icons/**)",
+      "Bash(powershell -Command \"Get-ChildItem 'C:\\\\Users\\\\lauro.spinola\\\\Documents\\\\sita\\\\antd_mobile_flutter\\\\assets' -Recurse | Select-Object -First 5\")",
+      "Bash(powershell -Command \"Get-Content 'C:\\\\Users\\\\lauro.spinola\\\\Documents\\\\sita\\\\antd_mobile_flutter\\\\assets\\\\fonts\\\\config.json' | ConvertFrom-Json | Select-Object -First 1\")",
+      "Bash(powershell -Command \"\\(Get-Content 'C:\\\\Users\\\\lauro.spinola\\\\Documents\\\\sita\\\\antd_mobile_flutter\\\\assets\\\\fonts\\\\config.json' | ConvertFrom-Json\\).glyphs | Select-Object -First 3 | ConvertTo-Json\")"
+    ]
+  }
+}

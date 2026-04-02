@@ -11,1617 +11,4836 @@
 ///      fonts:
 ///       - asset: fonts/AdmIcons.ttf
 ///
-/// 
+///
 ///
 // ignore_for_file: constant_identifier_names
+library;
 
 import 'package:flutter/widgets.dart';
 
+/// all the icons can be found here https://icons.obra.studio/
 class AdmIcons {
   AdmIcons._();
 
   static const _kFontFam = 'AdmIcons';
   static const String? _kFontPkg = null;
 
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/a-arrow-down.svg)
+
+  /// <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" > <g class="oi-ad"> <path class="oi-vector" d="M6 15.1362L6.54122 13.6704M10.8319 15.1362L10.2118 13.6704M10.2118 13.6704L8.3387 9.24304C8.30752 9.16934 8.20223 9.17179 8.17451 9.24686L6.54122 13.6704M10.2118 13.6704H6.54122" stroke="#000000" stroke-width="1.5" stroke-linecap="round" /> <path class="oi-vector" d="M13.0312 15.0343V9H15.0866C16.8821 9 18 10.6609 18 12.0184C18 13.7153 17.007 15.0343 15.0866 15.0343H13.0312Z" stroke="#000000" stroke-width="1.5" stroke-miterlimit="2.16568" stroke-linecap="round" stroke-linejoin="round" /> <path class="oi-box" d="M20 5H4C3.44772 5 3 5.44772 3 6V18C3 18.5523 3.44772 19 4 19H20C20.5523 19 21 18.5523 21 18V6C21 5.44772 20.5523 5 20 5Z" stroke="#000000" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" /> </g> </svg>
   static const IconData a_arrow_down = IconData(0xe800, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/a-arrow-up.svg)
   static const IconData a_arrow_up = IconData(0xe801, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/accessibility.svg)
+  /// 
+    /// <i class="material-icons-sharp md-36">123</i> &#x2014; material icon named "123" (sharp).
+  /// <img src=https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/accessibility.svg>
   static const IconData accessibility = IconData(0xe802, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/activity.svg)
   static const IconData activity = IconData(0xe803, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/air-vent.svg)
+  /// /**![clear](data:image/svg+xml;base64,PHN2ZwogIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICB3aWR0aD0iMjQiCiAgaGVpZ2h0PSIyNCIKICB2aWV3Qm94PSIwIDAgMjQgMjQiCiAgZmlsbD0ibm9uZSIKICBzdHJva2U9ImN1cnJlbnRDb2xvciIKICBzdHJva2Utd2lkdGg9IjIiCiAgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIgogIHN0cm9rZS1saW5lam9pbj0icm91bmQiCj4KICA8cGF0aCBkPSJNMTggMTcuNWEyLjUgMi41IDAgMSAxLTQgMi4wM1YxMiIgLz4KICA8cGF0aCBkPSJNNiAxMkg0YTIgMiAwIDAgMS0yLTJWNWEyIDIgMCAwIDEgMi0yaDE2YTIgMiAwIDAgMSAyIDJ2NWEyIDIgMCAwIDEtMiAyaC0yIiAvPgogIDxwYXRoIGQ9Ik02IDhoMTIiIC8+CiAgPHBhdGggZD0iTTYuNiAxNS41NzJBMiAyIDAgMSAwIDEwIDE3di01IiAvPgo8L3N2Zz4K+) */
   static const IconData air_vent = IconData(0xe804, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/a-large-small.svg)
   static const IconData a_large_small = IconData(0xe805, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/airplay.svg)
   static const IconData airplay = IconData(0xe806, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/alarm-clock.svg)
   static const IconData alarm_clock = IconData(0xe807, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/alarm-clock-check.svg)
   static const IconData alarm_clock_check = IconData(0xe808, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/alarm-clock-minus.svg)
   static const IconData alarm_clock_minus = IconData(0xe809, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/alarm-clock-off.svg)
   static const IconData alarm_clock_off = IconData(0xe80a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/alarm-clock-plus.svg)
   static const IconData alarm_clock_plus = IconData(0xe80b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/alarm-smoke.svg)
   static const IconData alarm_smoke = IconData(0xe80c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/album.svg)
   static const IconData album = IconData(0xe80d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/align-center.svg)
   static const IconData align_center = IconData(0xe80e, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/align-center-vertical.svg)
   static const IconData align_center_vertical = IconData(0xe80f, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/align-center-horizontal.svg)
   static const IconData align_center_horizontal = IconData(0xe810, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/align-end-vertical.svg)
   static const IconData align_end_vertical = IconData(0xe811, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/align-end-horizontal.svg)
   static const IconData align_end_horizontal = IconData(0xe812, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  static const IconData align_horizontal_distribute_center = IconData(0xe813, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  static const IconData align_horizontal_distribute_end = IconData(0xe814, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  static const IconData align_horizontal_distribute_start = IconData(0xe815, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  static const IconData align_horizontal_justify_center = IconData(0xe816, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  static const IconData align_horizontal_justify_start = IconData(0xe817, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/align-horizontal-distribute-center.svg)
+  static const IconData align_horizontal_distribute_center =
+      IconData(0xe813, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/align-horizontal-distribute-end.svg)
+  static const IconData align_horizontal_distribute_end =
+      IconData(0xe814, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/align-horizontal-distribute-start.svg)
+  static const IconData align_horizontal_distribute_start =
+      IconData(0xe815, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/align-horizontal-justify-center.svg)
+  static const IconData align_horizontal_justify_center =
+      IconData(0xe816, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/align-horizontal-justify-start.svg)
+  static const IconData align_horizontal_justify_start =
+      IconData(0xe817, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/align-horizontal-justify-end.svg)
   static const IconData align_horizontal_justify_end = IconData(0xe818, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/align-horizontal-space-around.svg)
   static const IconData align_horizontal_space_around = IconData(0xe819, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  static const IconData align_horizontal_space_between = IconData(0xe81a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/align-horizontal-space-between.svg)
+  static const IconData align_horizontal_space_between =
+      IconData(0xe81a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/align-justify.svg)
   static const IconData align_justify = IconData(0xe81b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/align-right.svg)
   static const IconData align_right = IconData(0xe81c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/align-start-vertical.svg)
   static const IconData align_start_vertical = IconData(0xe81d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/align-left.svg)
   static const IconData align_left = IconData(0xe81e, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  static const IconData align_vertical_distribute_center = IconData(0xe81f, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/align-vertical-distribute-center.svg)
+  static const IconData align_vertical_distribute_center =
+      IconData(0xe81f, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/align-start-horizontal.svg)
   static const IconData align_start_horizontal = IconData(0xe820, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/align-vertical-distribute-end.svg)
   static const IconData align_vertical_distribute_end = IconData(0xe821, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  static const IconData align_vertical_distribute_start = IconData(0xe822, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/align-vertical-distribute-start.svg)
+  static const IconData align_vertical_distribute_start =
+      IconData(0xe822, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/align-vertical-justify-center.svg)
   static const IconData align_vertical_justify_center = IconData(0xe823, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/align-vertical-justify-end.svg)
   static const IconData align_vertical_justify_end = IconData(0xe824, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/align-vertical-space-between.svg)
   static const IconData align_vertical_space_between = IconData(0xe825, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/align-vertical-space-around.svg)
   static const IconData align_vertical_space_around = IconData(0xe826, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/align-vertical-justify-start.svg)
   static const IconData align_vertical_justify_start = IconData(0xe827, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/ambulance.svg)
   static const IconData ambulance = IconData(0xe828, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/ampersand.svg)
   static const IconData ampersand = IconData(0xe829, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/amphora.svg)
   static const IconData amphora = IconData(0xe82a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/ampersands.svg)
   static const IconData ampersands = IconData(0xe82b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/anchor.svg)
   static const IconData anchor = IconData(0xe82c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/angry.svg)
   static const IconData angry = IconData(0xe82d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/annoyed.svg)
   static const IconData annoyed = IconData(0xe82e, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/antenna.svg)
   static const IconData antenna = IconData(0xe82f, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/aperture.svg)
   static const IconData aperture = IconData(0xe830, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/apple.svg)
   static const IconData apple = IconData(0xe831, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/anvil.svg)
   static const IconData anvil = IconData(0xe832, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/app-window.svg)
   static const IconData app_window = IconData(0xe833, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/app-window-mac.svg)
   static const IconData app_window_mac = IconData(0xe834, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/archive.svg)
   static const IconData archive = IconData(0xe835, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/archive-restore.svg)
   static const IconData archive_restore = IconData(0xe836, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/archive-x.svg)
   static const IconData archive_x = IconData(0xe837, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/armchair.svg)
   static const IconData armchair = IconData(0xe838, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/arrow-big-down.svg)
   static const IconData arrow_big_down = IconData(0xe839, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/arrow-big-left.svg)
   static const IconData arrow_big_left = IconData(0xe83a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/arrow-big-down-dash.svg)
   static const IconData arrow_big_down_dash = IconData(0xe83b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/arrow-big-left-dash.svg)
   static const IconData arrow_big_left_dash = IconData(0xe83c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/arrow-big-right.svg)
   static const IconData arrow_big_right = IconData(0xe83d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/arrow-big-up.svg)
   static const IconData arrow_big_up = IconData(0xe83e, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/arrow-big-right-dash.svg)
   static const IconData arrow_big_right_dash = IconData(0xe83f, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/arrow-big-up-dash.svg)
   static const IconData arrow_big_up_dash = IconData(0xe840, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/arrow-down-0-1.svg)
   static const IconData arrow_down_0_1 = IconData(0xe841, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/arrow-down-1-0.svg)
   static const IconData arrow_down_1_0 = IconData(0xe842, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/arrow-down-a-z.svg)
   static const IconData arrow_down_a_z = IconData(0xe843, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/arrow-down.svg)
   static const IconData arrow_down = IconData(0xe844, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/arrow-down-narrow-wide.svg)
   static const IconData arrow_down_narrow_wide = IconData(0xe845, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/arrow-down-to-line.svg)
   static const IconData arrow_down_to_line = IconData(0xe846, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/arrow-down-to-dot.svg)
   static const IconData arrow_down_to_dot = IconData(0xe847, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/arrow-down-left.svg)
   static const IconData arrow_down_left = IconData(0xe848, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/arrow-down-from-line.svg)
   static const IconData arrow_down_from_line = IconData(0xe849, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/arrow-down-right.svg)
   static const IconData arrow_down_right = IconData(0xe84a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/arrow-down-up.svg)
   static const IconData arrow_down_up = IconData(0xe84b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/arrow-down-wide-narrow.svg)
   static const IconData arrow_down_wide_narrow = IconData(0xe84c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/arrow-down-z-a.svg)
   static const IconData arrow_down_z_a = IconData(0xe84d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/arrow-left.svg)
   static const IconData arrow_left = IconData(0xe84e, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/arrow-left-from-line.svg)
   static const IconData arrow_left_from_line = IconData(0xe84f, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/arrow-left-right.svg)
   static const IconData arrow_left_right = IconData(0xe850, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/arrow-left-to-line.svg)
   static const IconData arrow_left_to_line = IconData(0xe851, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/arrow-right.svg)
   static const IconData arrow_right = IconData(0xe852, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/arrow-right-from-line.svg)
   static const IconData arrow_right_from_line = IconData(0xe853, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/arrow-right-left.svg)
   static const IconData arrow_right_left = IconData(0xe854, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/arrow-right-to-line.svg)
   static const IconData arrow_right_to_line = IconData(0xe855, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/arrows-up-from-line.svg)
   static const IconData arrows_up_from_line = IconData(0xe856, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/arrow-up.svg)
   static const IconData arrow_up = IconData(0xe857, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/arrow-up-0-1.svg)
   static const IconData arrow_up_0_1 = IconData(0xe858, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/arrow-up-a-z.svg)
   static const IconData arrow_up_a_z = IconData(0xe859, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/arrow-up-1-0.svg)
   static const IconData arrow_up_1_0 = IconData(0xe85a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/arrow-up-down.svg)
   static const IconData arrow_up_down = IconData(0xe85b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/arrow-up-from-dot.svg)
   static const IconData arrow_up_from_dot = IconData(0xe85c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/arrow-up-left.svg)
   static const IconData arrow_up_left = IconData(0xe85d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/arrow-up-from-line.svg)
   static const IconData arrow_up_from_line = IconData(0xe85e, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/arrow-up-narrow-wide.svg)
   static const IconData arrow_up_narrow_wide = IconData(0xe85f, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/arrow-up-right.svg)
   static const IconData arrow_up_right = IconData(0xe860, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/arrow-up-to-line.svg)
   static const IconData arrow_up_to_line = IconData(0xe861, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/arrow-up-wide-narrow.svg)
   static const IconData arrow_up_wide_narrow = IconData(0xe862, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/arrow-up-z-a.svg)
   static const IconData arrow_up_z_a = IconData(0xe863, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/asterisk.svg)
   static const IconData asterisk = IconData(0xe864, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/atom.svg)
   static const IconData atom = IconData(0xe865, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/at-sign.svg)
   static const IconData at_sign = IconData(0xe866, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/audio-lines.svg)
   static const IconData audio_lines = IconData(0xe867, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/audio-waveform.svg)
   static const IconData audio_waveform = IconData(0xe868, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/award.svg)
   static const IconData award = IconData(0xe869, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/axe.svg)
   static const IconData axe = IconData(0xe86a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/axis-3d.svg)
   static const IconData axis_3d = IconData(0xe86b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/baby.svg)
   static const IconData baby = IconData(0xe86c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/backpack.svg)
   static const IconData backpack = IconData(0xe86d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/badge.svg)
   static const IconData badge = IconData(0xe86e, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/badge-alert.svg)
   static const IconData badge_alert = IconData(0xe86f, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/badge-cent.svg)
   static const IconData badge_cent = IconData(0xe870, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/badge-check.svg)
   static const IconData badge_check = IconData(0xe871, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/badge-dollar-sign.svg)
   static const IconData badge_dollar_sign = IconData(0xe872, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/badge-euro.svg)
   static const IconData badge_euro = IconData(0xe873, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/badge-help.svg)
   static const IconData badge_help = IconData(0xe874, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/badge-indian-rupee.svg)
   static const IconData badge_indian_rupee = IconData(0xe875, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/badge-info.svg)
   static const IconData badge_info = IconData(0xe876, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/badge-japanese-yen.svg)
   static const IconData badge_japanese_yen = IconData(0xe877, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/badge-minus.svg)
   static const IconData badge_minus = IconData(0xe878, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/badge-percent.svg)
   static const IconData badge_percent = IconData(0xe879, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/badge-plus.svg)
   static const IconData badge_plus = IconData(0xe87a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/badge-pound-sterling.svg)
   static const IconData badge_pound_sterling = IconData(0xe87b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/badge-russian-ruble.svg)
   static const IconData badge_russian_ruble = IconData(0xe87c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/badge-swiss-franc.svg)
   static const IconData badge_swiss_franc = IconData(0xe87d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/badge-x.svg)
   static const IconData badge_x = IconData(0xe87e, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/baggage-claim.svg)
   static const IconData baggage_claim = IconData(0xe87f, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/ban.svg)
   static const IconData ban = IconData(0xe880, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/banana.svg)
   static const IconData banana = IconData(0xe881, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/bandage.svg)
   static const IconData bandage = IconData(0xe882, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/banknote.svg)
   static const IconData banknote = IconData(0xe883, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/banknote-arrow-down.svg)
   static const IconData banknote_arrow_down = IconData(0xe884, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/banknote-arrow-up.svg)
   static const IconData banknote_arrow_up = IconData(0xe885, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/banknote-x.svg)
   static const IconData banknote_x = IconData(0xe886, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/barcode.svg)
   static const IconData barcode = IconData(0xe887, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/baseline.svg)
   static const IconData baseline = IconData(0xe888, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/bath.svg)
   static const IconData bath = IconData(0xe889, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/battery.svg)
   static const IconData battery = IconData(0xe88a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/battery-charging.svg)
   static const IconData battery_charging = IconData(0xe88b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/battery-full.svg)
   static const IconData battery_full = IconData(0xe88c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/battery-low.svg)
   static const IconData battery_low = IconData(0xe88d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/battery-medium.svg)
   static const IconData battery_medium = IconData(0xe88e, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/battery-plus.svg)
   static const IconData battery_plus = IconData(0xe88f, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/battery-warning.svg)
   static const IconData battery_warning = IconData(0xe890, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/beaker.svg)
   static const IconData beaker = IconData(0xe891, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/bean.svg)
   static const IconData bean = IconData(0xe892, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/bean-off.svg)
   static const IconData bean_off = IconData(0xe893, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/bed.svg)
   static const IconData bed = IconData(0xe894, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/bed-double.svg)
   static const IconData bed_double = IconData(0xe895, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/bed-single.svg)
   static const IconData bed_single = IconData(0xe896, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/beef.svg)
   static const IconData beef = IconData(0xe897, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/beer.svg)
   static const IconData beer = IconData(0xe898, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/beer-off.svg)
   static const IconData beer_off = IconData(0xe899, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/bell.svg)
   static const IconData bell = IconData(0xe89a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/bell-dot.svg)
   static const IconData bell_dot = IconData(0xe89b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/bell-electric.svg)
   static const IconData bell_electric = IconData(0xe89c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/bell-minus.svg)
   static const IconData bell_minus = IconData(0xe89d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/bell-off.svg)
   static const IconData bell_off = IconData(0xe89e, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/bell-plus.svg)
   static const IconData bell_plus = IconData(0xe89f, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/bell-ring.svg)
   static const IconData bell_ring = IconData(0xe8a0, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/between-horizontal-end.svg)
   static const IconData between_horizontal_end = IconData(0xe8a1, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/between-horizontal-start.svg)
   static const IconData between_horizontal_start = IconData(0xe8a2, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/between-vertical-end.svg)
   static const IconData between_vertical_end = IconData(0xe8a3, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/between-vertical-start.svg)
   static const IconData between_vertical_start = IconData(0xe8a4, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/biceps-flexed.svg)
   static const IconData biceps_flexed = IconData(0xe8a5, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/bike.svg)
   static const IconData bike = IconData(0xe8a6, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/binary.svg)
   static const IconData binary = IconData(0xe8a7, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/binoculars.svg)
   static const IconData binoculars = IconData(0xe8a8, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/biohazard.svg)
   static const IconData biohazard = IconData(0xe8a9, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/bird.svg)
   static const IconData bird = IconData(0xe8aa, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/bitcoin.svg)
   static const IconData bitcoin = IconData(0xe8ab, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/blend.svg)
   static const IconData blend = IconData(0xe8ac, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/blinds.svg)
   static const IconData blinds = IconData(0xe8ad, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/blocks.svg)
   static const IconData blocks = IconData(0xe8ae, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/bluetooth.svg)
   static const IconData bluetooth = IconData(0xe8af, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/bluetooth-connected.svg)
   static const IconData bluetooth_connected = IconData(0xe8b0, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/bluetooth-off.svg)
   static const IconData bluetooth_off = IconData(0xe8b1, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/bluetooth-searching.svg)
   static const IconData bluetooth_searching = IconData(0xe8b2, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/bold.svg)
   static const IconData bold = IconData(0xe8b3, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/bolt.svg)
   static const IconData bolt = IconData(0xe8b4, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/bomb.svg)
   static const IconData bomb = IconData(0xe8b5, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/bone.svg)
   static const IconData bone = IconData(0xe8b6, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/book.svg)
   static const IconData book = IconData(0xe8b7, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/book-a.svg)
   static const IconData book_a = IconData(0xe8b8, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/book-audio.svg)
   static const IconData book_audio = IconData(0xe8b9, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/book-check.svg)
   static const IconData book_check = IconData(0xe8ba, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/book-copy.svg)
   static const IconData book_copy = IconData(0xe8bb, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/book-dashed.svg)
   static const IconData book_dashed = IconData(0xe8bc, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/book-down.svg)
   static const IconData book_down = IconData(0xe8bd, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/book-headphones.svg)
   static const IconData book_headphones = IconData(0xe8be, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/book-heart.svg)
   static const IconData book_heart = IconData(0xe8bf, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/book-image.svg)
   static const IconData book_image = IconData(0xe8c0, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/book-key.svg)
   static const IconData book_key = IconData(0xe8c1, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/book-lock.svg)
   static const IconData book_lock = IconData(0xe8c2, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/bookmark.svg)
   static const IconData bookmark = IconData(0xe8c3, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/bookmark-check.svg)
   static const IconData bookmark_check = IconData(0xe8c4, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/book-marked.svg)
   static const IconData book_marked = IconData(0xe8c5, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/bookmark-minus.svg)
   static const IconData bookmark_minus = IconData(0xe8c6, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/bookmark-plus.svg)
   static const IconData bookmark_plus = IconData(0xe8c7, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/bookmark-x.svg)
   static const IconData bookmark_x = IconData(0xe8c8, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/book-minus.svg)
   static const IconData book_minus = IconData(0xe8c9, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/book-open.svg)
   static const IconData book_open = IconData(0xe8ca, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/book-open-check.svg)
   static const IconData book_open_check = IconData(0xe8cb, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/book-open-text.svg)
   static const IconData book_open_text = IconData(0xe8cc, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/book-plus.svg)
   static const IconData book_plus = IconData(0xe8cd, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/book-text.svg)
   static const IconData book_text = IconData(0xe8ce, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/book-type.svg)
   static const IconData book_type = IconData(0xe8cf, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/book-up.svg)
   static const IconData book_up = IconData(0xe8d0, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/book-up-2.svg)
   static const IconData book_up_2 = IconData(0xe8d1, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/book-user.svg)
   static const IconData book_user = IconData(0xe8d2, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/book-x.svg)
   static const IconData book_x = IconData(0xe8d3, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/boom-box.svg)
   static const IconData boom_box = IconData(0xe8d4, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/bot.svg)
   static const IconData bot = IconData(0xe8d5, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/bot-message-square.svg)
   static const IconData bot_message_square = IconData(0xe8d6, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/bot-off.svg)
   static const IconData bot_off = IconData(0xe8d7, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/bow-arrow.svg)
   static const IconData bow_arrow = IconData(0xe8d8, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/box.svg)
   static const IconData box = IconData(0xe8d9, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/boxes.svg)
   static const IconData boxes = IconData(0xe8da, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/braces.svg)
   static const IconData braces = IconData(0xe8db, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/brackets.svg)
   static const IconData brackets = IconData(0xe8dc, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/brain.svg)
   static const IconData brain = IconData(0xe8dd, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/brain-circuit.svg)
   static const IconData brain_circuit = IconData(0xe8de, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/brain-cog.svg)
   static const IconData brain_cog = IconData(0xe8df, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/brick-wall.svg)
   static const IconData brick_wall = IconData(0xe8e0, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/brick-wall-fire.svg)
   static const IconData brick_wall_fire = IconData(0xe8e1, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/briefcase.svg)
   static const IconData briefcase = IconData(0xe8e2, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/briefcase-business.svg)
   static const IconData briefcase_business = IconData(0xe8e3, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/briefcase-conveyor-belt.svg)
   static const IconData briefcase_conveyor_belt = IconData(0xe8e4, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/briefcase-medical.svg)
   static const IconData briefcase_medical = IconData(0xe8e5, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/bring-to-front.svg)
   static const IconData bring_to_front = IconData(0xe8e6, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/brush.svg)
   static const IconData brush = IconData(0xe8e7, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/brush-cleaning.svg)
   static const IconData brush_cleaning = IconData(0xe8e8, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/bubbles.svg)
   static const IconData bubbles = IconData(0xe8e9, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/bug.svg)
   static const IconData bug = IconData(0xe8ea, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/bug-off.svg)
   static const IconData bug_off = IconData(0xe8eb, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/bug-play.svg)
   static const IconData bug_play = IconData(0xe8ec, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/building.svg)
   static const IconData building = IconData(0xe8ed, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/building-2.svg)
   static const IconData building_2 = IconData(0xe8ee, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/bus.svg)
   static const IconData bus = IconData(0xe8ef, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/bus-front.svg)
   static const IconData bus_front = IconData(0xe8f0, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/cable.svg)
   static const IconData cable = IconData(0xe8f1, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/cable-car.svg)
   static const IconData cable_car = IconData(0xe8f2, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/cake.svg)
   static const IconData cake = IconData(0xe8f3, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/cake-slice.svg)
   static const IconData cake_slice = IconData(0xe8f4, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/calculator.svg)
   static const IconData calculator = IconData(0xe8f5, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/calendar.svg)
   static const IconData calendar = IconData(0xe8f6, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/calendar-1.svg)
   static const IconData calendar_1 = IconData(0xe8f7, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/calendar-arrow-down.svg)
   static const IconData calendar_arrow_down = IconData(0xe8f8, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/calendar-arrow-up.svg)
   static const IconData calendar_arrow_up = IconData(0xe8f9, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/calendar-check.svg)
   static const IconData calendar_check = IconData(0xe8fa, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/calendar-check-2.svg)
   static const IconData calendar_check_2 = IconData(0xe8fb, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/calendar-clock.svg)
   static const IconData calendar_clock = IconData(0xe8fc, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/calendar-cog.svg)
   static const IconData calendar_cog = IconData(0xe8fd, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/calendar-days.svg)
   static const IconData calendar_days = IconData(0xe8fe, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/calendar-fold.svg)
   static const IconData calendar_fold = IconData(0xe8ff, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/calendar-heart.svg)
   static const IconData calendar_heart = IconData(0xe900, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/calendar-minus.svg)
   static const IconData calendar_minus = IconData(0xe901, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/calendar-minus-2.svg)
   static const IconData calendar_minus_2 = IconData(0xe902, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/calendar-off.svg)
   static const IconData calendar_off = IconData(0xe903, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/calendar-plus.svg)
   static const IconData calendar_plus = IconData(0xe904, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/calendar-plus-2.svg)
   static const IconData calendar_plus_2 = IconData(0xe905, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/calendar-range.svg)
   static const IconData calendar_range = IconData(0xe906, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/calendar-search.svg)
   static const IconData calendar_search = IconData(0xe907, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/calendar-sync.svg)
   static const IconData calendar_sync = IconData(0xe908, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/calendar-x.svg)
   static const IconData calendar_x = IconData(0xe909, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/calendar-x-2.svg)
   static const IconData calendar_x_2 = IconData(0xe90a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/camera.svg)
   static const IconData camera = IconData(0xe90b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/camera-off.svg)
   static const IconData camera_off = IconData(0xe90c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/candy.svg)
   static const IconData candy = IconData(0xe90d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/candy-cane.svg)
   static const IconData candy_cane = IconData(0xe90e, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/candy-off.svg)
   static const IconData candy_off = IconData(0xe90f, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/cannabis.svg)
   static const IconData cannabis = IconData(0xe910, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/captions.svg)
   static const IconData captions = IconData(0xe911, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/captions-off.svg)
   static const IconData captions_off = IconData(0xe912, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/car.svg)
   static const IconData car = IconData(0xe913, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/caravan.svg)
   static const IconData caravan = IconData(0xe914, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/car-front.svg)
   static const IconData car_front = IconData(0xe915, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/carrot.svg)
   static const IconData carrot = IconData(0xe916, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/car-taxi-front.svg)
   static const IconData car_taxi_front = IconData(0xe917, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/case-lower.svg)
   static const IconData case_lower = IconData(0xe918, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/case-sensitive.svg)
   static const IconData case_sensitive = IconData(0xe919, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/case-upper.svg)
   static const IconData case_upper = IconData(0xe91a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/cassette-tape.svg)
   static const IconData cassette_tape = IconData(0xe91b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/cast.svg)
   static const IconData cast = IconData(0xe91c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/castle.svg)
   static const IconData castle = IconData(0xe91d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/cat.svg)
   static const IconData cat = IconData(0xe91e, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/cctv.svg)
   static const IconData cctv = IconData(0xe91f, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/chart-area.svg)
   static const IconData chart_area = IconData(0xe920, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/chart-bar.svg)
   static const IconData chart_bar = IconData(0xe921, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/chart-bar-big.svg)
   static const IconData chart_bar_big = IconData(0xe922, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/chart-bar-decreasing.svg)
   static const IconData chart_bar_decreasing = IconData(0xe923, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/chart-bar-increasing.svg)
   static const IconData chart_bar_increasing = IconData(0xe924, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/chart-bar-stacked.svg)
   static const IconData chart_bar_stacked = IconData(0xe925, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/chart-candlestick.svg)
   static const IconData chart_candlestick = IconData(0xe926, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/chart-column.svg)
   static const IconData chart_column = IconData(0xe927, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/chart-column-big.svg)
   static const IconData chart_column_big = IconData(0xe928, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/chart-column-decreasing.svg)
   static const IconData chart_column_decreasing = IconData(0xe929, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/chart-column-increasing.svg)
   static const IconData chart_column_increasing = IconData(0xe92a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/chart-column-stacked.svg)
   static const IconData chart_column_stacked = IconData(0xe92b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/chart-gantt.svg)
   static const IconData chart_gantt = IconData(0xe92c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/chart-line.svg)
   static const IconData chart_line = IconData(0xe92d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/chart-network.svg)
   static const IconData chart_network = IconData(0xe92e, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/chart-no-axes-column.svg)
   static const IconData chart_no_axes_column = IconData(0xe92f, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  static const IconData chart_no_axes_column_decreasing = IconData(0xe930, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  static const IconData chart_no_axes_column_increasing = IconData(0xe931, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/chart-no-axes-column-decreasing.svg)
+  static const IconData chart_no_axes_column_decreasing =
+      IconData(0xe930, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/chart-no-axes-column-increasing.svg)
+  static const IconData chart_no_axes_column_increasing =
+      IconData(0xe931, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/chart-no-axes-combined.svg)
   static const IconData chart_no_axes_combined = IconData(0xe932, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/chart-no-axes-gantt.svg)
   static const IconData chart_no_axes_gantt = IconData(0xe933, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/chart-pie.svg)
   static const IconData chart_pie = IconData(0xe934, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/chart-scatter.svg)
   static const IconData chart_scatter = IconData(0xe935, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/chart-spline.svg)
   static const IconData chart_spline = IconData(0xe936, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/check.svg)
   static const IconData check = IconData(0xe937, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/check-check.svg)
   static const IconData check_check = IconData(0xe938, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/check-line.svg)
   static const IconData check_line = IconData(0xe939, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/chef-hat.svg)
   static const IconData chef_hat = IconData(0xe93a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/cherry.svg)
   static const IconData cherry = IconData(0xe93b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/chevron-down.svg)
   static const IconData chevron_down = IconData(0xe93c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/chevron-first.svg)
   static const IconData chevron_first = IconData(0xe93d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/chevron-last.svg)
   static const IconData chevron_last = IconData(0xe93e, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/chevron-left.svg)
   static const IconData chevron_left = IconData(0xe93f, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/chevron-right.svg)
   static const IconData chevron_right = IconData(0xe940, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/chevrons-down.svg)
   static const IconData chevrons_down = IconData(0xe941, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/chevrons-down-up.svg)
   static const IconData chevrons_down_up = IconData(0xe942, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/chevrons-left.svg)
   static const IconData chevrons_left = IconData(0xe943, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/chevrons-left-right.svg)
   static const IconData chevrons_left_right = IconData(0xe944, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/chevrons-left-right-ellipsis.svg)
   static const IconData chevrons_left_right_ellipsis = IconData(0xe945, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/chevrons-right.svg)
   static const IconData chevrons_right = IconData(0xe946, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/chevrons-right-left.svg)
   static const IconData chevrons_right_left = IconData(0xe947, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/chevrons-up.svg)
   static const IconData chevrons_up = IconData(0xe948, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/chevrons-up-down.svg)
   static const IconData chevrons_up_down = IconData(0xe949, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/chevron-up.svg)
   static const IconData chevron_up = IconData(0xe94a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/chrome.svg)
   static const IconData chrome = IconData(0xe94b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/church.svg)
   static const IconData church = IconData(0xe94c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/cigarette.svg)
   static const IconData cigarette = IconData(0xe94d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/cigarette-off.svg)
   static const IconData cigarette_off = IconData(0xe94e, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/circle.svg)
   static const IconData circle = IconData(0xe94f, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/circle-alert.svg)
   static const IconData circle_alert = IconData(0xe950, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/circle-arrow-down.svg)
   static const IconData circle_arrow_down = IconData(0xe951, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/circle-arrow-left.svg)
   static const IconData circle_arrow_left = IconData(0xe952, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/circle-arrow-out-down-left.svg)
   static const IconData circle_arrow_out_down_left = IconData(0xe953, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/circle-arrow-out-down-right.svg)
   static const IconData circle_arrow_out_down_right = IconData(0xe954, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/circle-arrow-out-up-left.svg)
   static const IconData circle_arrow_out_up_left = IconData(0xe955, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/circle-arrow-out-up-right.svg)
   static const IconData circle_arrow_out_up_right = IconData(0xe956, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/circle-arrow-right.svg)
   static const IconData circle_arrow_right = IconData(0xe957, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/circle-arrow-up.svg)
   static const IconData circle_arrow_up = IconData(0xe958, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/circle-check.svg)
   static const IconData circle_check = IconData(0xe959, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/circle-check-big.svg)
   static const IconData circle_check_big = IconData(0xe95a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/circle-chevron-down.svg)
   static const IconData circle_chevron_down = IconData(0xe95b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/circle-chevron-left.svg)
   static const IconData circle_chevron_left = IconData(0xe95c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/circle-chevron-right.svg)
   static const IconData circle_chevron_right = IconData(0xe95d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/circle-chevron-up.svg)
   static const IconData circle_chevron_up = IconData(0xe95e, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/circle-dashed.svg)
   static const IconData circle_dashed = IconData(0xe95f, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/circle-divide.svg)
   static const IconData circle_divide = IconData(0xe960, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/circle-dollar-sign.svg)
   static const IconData circle_dollar_sign = IconData(0xe961, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/circle-dot.svg)
   static const IconData circle_dot = IconData(0xe962, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/circle-dot-dashed.svg)
   static const IconData circle_dot_dashed = IconData(0xe963, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/circle-ellipsis.svg)
   static const IconData circle_ellipsis = IconData(0xe964, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/circle-equal.svg)
   static const IconData circle_equal = IconData(0xe965, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/circle-fading-arrow-up.svg)
   static const IconData circle_fading_arrow_up = IconData(0xe966, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/circle-fading-plus.svg)
   static const IconData circle_fading_plus = IconData(0xe967, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/circle-gauge.svg)
   static const IconData circle_gauge = IconData(0xe968, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/circle-help.svg)
   static const IconData circle_help = IconData(0xe969, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/circle-minus.svg)
   static const IconData circle_minus = IconData(0xe96a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/circle-off.svg)
   static const IconData circle_off = IconData(0xe96b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/circle-parking.svg)
   static const IconData circle_parking = IconData(0xe96c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/circle-parking-off.svg)
   static const IconData circle_parking_off = IconData(0xe96d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/circle-pause.svg)
   static const IconData circle_pause = IconData(0xe96e, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/circle-percent.svg)
   static const IconData circle_percent = IconData(0xe96f, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/circle-play.svg)
   static const IconData circle_play = IconData(0xe970, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/circle-plus.svg)
   static const IconData circle_plus = IconData(0xe971, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/circle-pound-sterling.svg)
   static const IconData circle_pound_sterling = IconData(0xe972, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/circle-power.svg)
   static const IconData circle_power = IconData(0xe973, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/circle-slash.svg)
   static const IconData circle_slash = IconData(0xe974, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/circle-slash-2.svg)
   static const IconData circle_slash_2 = IconData(0xe975, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/circle-small.svg)
   static const IconData circle_small = IconData(0xe976, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/circle-stop.svg)
   static const IconData circle_stop = IconData(0xe977, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/circle-user.svg)
   static const IconData circle_user = IconData(0xe978, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/circle-user-round.svg)
   static const IconData circle_user_round = IconData(0xe979, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/circle-x.svg)
   static const IconData circle_x = IconData(0xe97a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/circuit-board.svg)
   static const IconData circuit_board = IconData(0xe97b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/citrus.svg)
   static const IconData citrus = IconData(0xe97c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/clapperboard.svg)
   static const IconData clapperboard = IconData(0xe97d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/clipboard.svg)
   static const IconData clipboard = IconData(0xe97e, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/clipboard-check.svg)
   static const IconData clipboard_check = IconData(0xe97f, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/clipboard-copy.svg)
   static const IconData clipboard_copy = IconData(0xe980, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/clipboard-list.svg)
   static const IconData clipboard_list = IconData(0xe981, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/clipboard-minus.svg)
   static const IconData clipboard_minus = IconData(0xe982, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/clipboard-paste.svg)
   static const IconData clipboard_paste = IconData(0xe983, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/clipboard-pen.svg)
   static const IconData clipboard_pen = IconData(0xe984, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/clipboard-pen-line.svg)
   static const IconData clipboard_pen_line = IconData(0xe985, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/clipboard-plus.svg)
   static const IconData clipboard_plus = IconData(0xe986, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/clipboard-type.svg)
   static const IconData clipboard_type = IconData(0xe987, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/clipboard-x.svg)
   static const IconData clipboard_x = IconData(0xe988, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/clock.svg)
   static const IconData clock = IconData(0xe989, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/clock-1.svg)
   static const IconData clock_1 = IconData(0xe98a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/clock-1-1.svg)
   static const IconData clock_1_1 = IconData(0xe98b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/clock-2.svg)
   static const IconData clock_2 = IconData(0xe98c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/clock-3.svg)
   static const IconData clock_3 = IconData(0xe98d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/clock-4.svg)
   static const IconData clock_4 = IconData(0xe98e, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/clock-5.svg)
   static const IconData clock_5 = IconData(0xe98f, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/clock-6.svg)
   static const IconData clock_6 = IconData(0xe990, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/clock-7.svg)
   static const IconData clock_7 = IconData(0xe991, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/clock-8.svg)
   static const IconData clock_8 = IconData(0xe992, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/clock-9.svg)
   static const IconData clock_9 = IconData(0xe993, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/clock-10.svg)
   static const IconData clock_10 = IconData(0xe994, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/clock-11.svg)
   static const IconData clock_11 = IconData(0xe995, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/clock-12.svg)
   static const IconData clock_12 = IconData(0xe996, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/clock-alert.svg)
   static const IconData clock_alert = IconData(0xe997, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/clock-arrow-down.svg)
   static const IconData clock_arrow_down = IconData(0xe998, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/clock-arrow-up.svg)
   static const IconData clock_arrow_up = IconData(0xe999, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/clock-fading.svg)
   static const IconData clock_fading = IconData(0xe99a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/clock-plus.svg)
   static const IconData clock_plus = IconData(0xe99b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/cloud.svg)
   static const IconData cloud = IconData(0xe99c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/cloud-alert.svg)
   static const IconData cloud_alert = IconData(0xe99d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/cloud-check.svg)
   static const IconData cloud_check = IconData(0xe99e, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/cloud-cog.svg)
   static const IconData cloud_cog = IconData(0xe99f, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/cloud-download.svg)
   static const IconData cloud_download = IconData(0xe9a0, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/cloud-drizzle.svg)
   static const IconData cloud_drizzle = IconData(0xe9a1, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/cloud-fog.svg)
   static const IconData cloud_fog = IconData(0xe9a2, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/cloud-hail.svg)
   static const IconData cloud_hail = IconData(0xe9a3, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/cloud-lightning.svg)
   static const IconData cloud_lightning = IconData(0xe9a4, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/cloud-moon.svg)
   static const IconData cloud_moon = IconData(0xe9a5, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/cloud-moon-rain.svg)
   static const IconData cloud_moon_rain = IconData(0xe9a6, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/cloud-off.svg)
   static const IconData cloud_off = IconData(0xe9a7, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/cloud-rain.svg)
   static const IconData cloud_rain = IconData(0xe9a8, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/cloud-rain-wind.svg)
   static const IconData cloud_rain_wind = IconData(0xe9a9, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/cloud-snow.svg)
   static const IconData cloud_snow = IconData(0xe9aa, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/cloud-sun.svg)
   static const IconData cloud_sun = IconData(0xe9ab, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/cloud-sun-rain.svg)
   static const IconData cloud_sun_rain = IconData(0xe9ac, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/cloud-upload.svg)
   static const IconData cloud_upload = IconData(0xe9ad, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/cloudy.svg)
   static const IconData cloudy = IconData(0xe9ae, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/clover.svg)
   static const IconData clover = IconData(0xe9af, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/club.svg)
   static const IconData club = IconData(0xe9b0, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/code.svg)
   static const IconData code = IconData(0xe9b1, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/codepen.svg)
   static const IconData codepen = IconData(0xe9b2, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/codesandbox.svg)
   static const IconData codesandbox = IconData(0xe9b3, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/code-xml.svg)
   static const IconData code_xml = IconData(0xe9b4, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/coffee.svg)
   static const IconData coffee = IconData(0xe9b5, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/cog.svg)
   static const IconData cog = IconData(0xe9b6, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/coins.svg)
   static const IconData coins = IconData(0xe9b7, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/columns.svg)
   static const IconData columns = IconData(0xe9b8, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/columns-2.svg)
   static const IconData columns_2 = IconData(0xe9b9, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/columns-3.svg)
   static const IconData columns_3 = IconData(0xe9ba, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/columns-3-cog.svg)
   static const IconData columns_3_cog = IconData(0xe9bb, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/columns-4.svg)
   static const IconData columns_4 = IconData(0xe9bc, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/combine.svg)
   static const IconData combine = IconData(0xe9bd, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/command.svg)
   static const IconData command = IconData(0xe9be, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/compass.svg)
   static const IconData compass = IconData(0xe9bf, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/component.svg)
   static const IconData component = IconData(0xe9c0, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/computer.svg)
   static const IconData computer = IconData(0xe9c1, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/concierge-bell.svg)
   static const IconData concierge_bell = IconData(0xe9c2, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/cone.svg)
   static const IconData cone = IconData(0xe9c3, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/construction.svg)
   static const IconData construction = IconData(0xe9c4, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/contact.svg)
   static const IconData contact = IconData(0xe9c5, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/contact-round.svg)
   static const IconData contact_round = IconData(0xe9c6, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/container.svg)
   static const IconData container = IconData(0xe9c7, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/contrast.svg)
   static const IconData contrast = IconData(0xe9c8, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/cookie.svg)
   static const IconData cookie = IconData(0xe9c9, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/cooking-pot.svg)
   static const IconData cooking_pot = IconData(0xe9ca, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/copy.svg)
   static const IconData copy = IconData(0xe9cb, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/copy-check.svg)
   static const IconData copy_check = IconData(0xe9cc, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/copyleft.svg)
   static const IconData copyleft = IconData(0xe9cd, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/copy-minus.svg)
   static const IconData copy_minus = IconData(0xe9ce, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/copy-plus.svg)
   static const IconData copy_plus = IconData(0xe9cf, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/copyright.svg)
   static const IconData copyright = IconData(0xe9d0, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/copy-slash.svg)
   static const IconData copy_slash = IconData(0xe9d1, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/copy-x.svg)
   static const IconData copy_x = IconData(0xe9d2, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/corner-down-left.svg)
   static const IconData corner_down_left = IconData(0xe9d3, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/corner-down-right.svg)
   static const IconData corner_down_right = IconData(0xe9d4, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/corner-left-down.svg)
   static const IconData corner_left_down = IconData(0xe9d5, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/corner-left-up.svg)
   static const IconData corner_left_up = IconData(0xe9d6, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/corner-right-down.svg)
   static const IconData corner_right_down = IconData(0xe9d7, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/corner-right-up.svg)
   static const IconData corner_right_up = IconData(0xe9d8, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/corner-up-left.svg)
   static const IconData corner_up_left = IconData(0xe9d9, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/corner-up-right.svg)
   static const IconData corner_up_right = IconData(0xe9da, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/cpu.svg)
   static const IconData cpu = IconData(0xe9db, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/creative-commons.svg)
   static const IconData creative_commons = IconData(0xe9dc, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/credit-card.svg)
   static const IconData credit_card = IconData(0xe9dd, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/croissant.svg)
   static const IconData croissant = IconData(0xe9de, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/crop.svg)
   static const IconData crop = IconData(0xe9df, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/cross.svg)
   static const IconData cross = IconData(0xe9e0, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/crosshair.svg)
   static const IconData crosshair = IconData(0xe9e1, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/crown.svg)
   static const IconData crown = IconData(0xe9e2, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/cuboid.svg)
   static const IconData cuboid = IconData(0xe9e3, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/cup-soda.svg)
   static const IconData cup_soda = IconData(0xe9e4, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/currency.svg)
   static const IconData currency = IconData(0xe9e5, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/cylinder.svg)
   static const IconData cylinder = IconData(0xe9e6, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/dam.svg)
   static const IconData dam = IconData(0xe9e7, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/database.svg)
   static const IconData database = IconData(0xe9e8, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/database-backup.svg)
   static const IconData database_backup = IconData(0xe9e9, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/database-zap.svg)
   static const IconData database_zap = IconData(0xe9ea, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/decimals-arrow-left.svg)
   static const IconData decimals_arrow_left = IconData(0xe9eb, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/decimals-arrow-right.svg)
   static const IconData decimals_arrow_right = IconData(0xe9ec, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/delete.svg)
   static const IconData delete = IconData(0xe9ed, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/dessert.svg)
   static const IconData dessert = IconData(0xe9ee, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/diameter.svg)
   static const IconData diameter = IconData(0xe9ef, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/diamond.svg)
   static const IconData diamond = IconData(0xe9f0, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/diamond-minus.svg)
   static const IconData diamond_minus = IconData(0xe9f1, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/diamond-percent.svg)
   static const IconData diamond_percent = IconData(0xe9f2, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/diamond-plus.svg)
   static const IconData diamond_plus = IconData(0xe9f3, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/dice-1.svg)
   static const IconData dice_1 = IconData(0xe9f4, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/dice-2.svg)
   static const IconData dice_2 = IconData(0xe9f5, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/dice-3.svg)
   static const IconData dice_3 = IconData(0xe9f6, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/dice-4.svg)
   static const IconData dice_4 = IconData(0xe9f7, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/dice-5.svg)
   static const IconData dice_5 = IconData(0xe9f8, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/dice-6.svg)
   static const IconData dice_6 = IconData(0xe9f9, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/dices.svg)
   static const IconData dices = IconData(0xe9fa, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/diff.svg)
   static const IconData diff = IconData(0xe9fb, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/disc.svg)
   static const IconData disc = IconData(0xe9fc, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/disc-2.svg)
   static const IconData disc_2 = IconData(0xe9fd, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/disc-3.svg)
   static const IconData disc_3 = IconData(0xe9fe, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/disc-album.svg)
   static const IconData disc_album = IconData(0xe9ff, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/divide.svg)
   static const IconData divide = IconData(0xea00, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/dna.svg)
   static const IconData dna = IconData(0xea01, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/dna-off.svg)
   static const IconData dna_off = IconData(0xea02, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/dock.svg)
   static const IconData dock = IconData(0xea03, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/dog.svg)
   static const IconData dog = IconData(0xea04, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/dollar-sign.svg)
   static const IconData dollar_sign = IconData(0xea05, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/donut.svg)
   static const IconData donut = IconData(0xea06, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/door-closed.svg)
   static const IconData door_closed = IconData(0xea07, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/door-closed-locked.svg)
   static const IconData door_closed_locked = IconData(0xea08, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/door-open.svg)
   static const IconData door_open = IconData(0xea09, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/dot.svg)
   static const IconData dot = IconData(0xea0a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/download.svg)
   static const IconData download = IconData(0xea0b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/drafting-compass.svg)
   static const IconData drafting_compass = IconData(0xea0c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/drama.svg)
   static const IconData drama = IconData(0xea0d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/dribbble.svg)
   static const IconData dribbble = IconData(0xea0e, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/drill.svg)
   static const IconData drill = IconData(0xea0f, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/droplet.svg)
   static const IconData droplet = IconData(0xea10, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/droplet-off.svg)
   static const IconData droplet_off = IconData(0xea11, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/droplets.svg)
   static const IconData droplets = IconData(0xea12, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/drum.svg)
   static const IconData drum = IconData(0xea13, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/drumstick.svg)
   static const IconData drumstick = IconData(0xea14, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/dumbbell.svg)
   static const IconData dumbbell = IconData(0xea15, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/ear.svg)
   static const IconData ear = IconData(0xea16, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/ear-off.svg)
   static const IconData ear_off = IconData(0xea17, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/earth.svg)
   static const IconData earth = IconData(0xea18, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/earth-lock.svg)
   static const IconData earth_lock = IconData(0xea19, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/eclipse.svg)
   static const IconData eclipse = IconData(0xea1a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/egg.svg)
   static const IconData egg = IconData(0xea1b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/egg-fried.svg)
   static const IconData egg_fried = IconData(0xea1c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/egg-off.svg)
   static const IconData egg_off = IconData(0xea1d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/ellipsis.svg)
   static const IconData ellipsis = IconData(0xea1e, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/ellipsis-vertical.svg)
   static const IconData ellipsis_vertical = IconData(0xea1f, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/equal.svg)
   static const IconData equal = IconData(0xea20, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/equal-approximately.svg)
   static const IconData equal_approximately = IconData(0xea21, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/equal-not.svg)
   static const IconData equal_not = IconData(0xea22, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/eraser.svg)
   static const IconData eraser = IconData(0xea23, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/ethernet-port.svg)
   static const IconData ethernet_port = IconData(0xea24, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/euro.svg)
   static const IconData euro = IconData(0xea25, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/expand.svg)
   static const IconData expand = IconData(0xea26, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/external-link.svg)
   static const IconData external_link = IconData(0xea27, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/external-link-1.svg)
   static const IconData external_link_1 = IconData(0xea28, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/eye.svg)
   static const IconData eye = IconData(0xea29, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/eye-closed.svg)
   static const IconData eye_closed = IconData(0xea2a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/eye-off.svg)
   static const IconData eye_off = IconData(0xea2b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/facebook.svg)
   static const IconData facebook = IconData(0xea2c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/factory-icon.svg)
   static const IconData factory_icon = IconData(0xea2d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/fan.svg)
   static const IconData fan = IconData(0xea2e, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/fast-forward.svg)
   static const IconData fast_forward = IconData(0xea2f, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/feather.svg)
   static const IconData feather = IconData(0xea30, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/fence.svg)
   static const IconData fence = IconData(0xea31, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/ferris-wheel.svg)
   static const IconData ferris_wheel = IconData(0xea32, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/figma.svg)
   static const IconData figma = IconData(0xea33, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/file.svg)
   static const IconData file = IconData(0xea34, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/file-archive.svg)
   static const IconData file_archive = IconData(0xea35, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/file-audio.svg)
   static const IconData file_audio = IconData(0xea36, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/file-audio-2.svg)
   static const IconData file_audio_2 = IconData(0xea37, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/file-axis-3d.svg)
   static const IconData file_axis_3d = IconData(0xea38, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/file-badge.svg)
   static const IconData file_badge = IconData(0xea39, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/file-badge-2.svg)
   static const IconData file_badge_2 = IconData(0xea3a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/file-box.svg)
   static const IconData file_box = IconData(0xea3b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/file-chart-column.svg)
   static const IconData file_chart_column = IconData(0xea3c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/file-chart-column-increasing.svg)
   static const IconData file_chart_column_increasing = IconData(0xea3d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/file-chart-line.svg)
   static const IconData file_chart_line = IconData(0xea3e, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/file-chart-pie.svg)
   static const IconData file_chart_pie = IconData(0xea3f, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/file-check.svg)
   static const IconData file_check = IconData(0xea40, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/file-check-2.svg)
   static const IconData file_check_2 = IconData(0xea41, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/file-clock.svg)
   static const IconData file_clock = IconData(0xea42, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/file-code.svg)
   static const IconData file_code = IconData(0xea43, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/file-code-2.svg)
   static const IconData file_code_2 = IconData(0xea44, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/file-cog.svg)
   static const IconData file_cog = IconData(0xea45, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/file-diff.svg)
   static const IconData file_diff = IconData(0xea46, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/file-digit.svg)
   static const IconData file_digit = IconData(0xea47, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/file-down.svg)
   static const IconData file_down = IconData(0xea48, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/file-heart.svg)
   static const IconData file_heart = IconData(0xea49, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/file-image.svg)
   static const IconData file_image = IconData(0xea4a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/file-input.svg)
   static const IconData file_input = IconData(0xea4b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/file-json.svg)
   static const IconData file_json = IconData(0xea4c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/file-json-2.svg)
   static const IconData file_json_2 = IconData(0xea4d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/file-key.svg)
   static const IconData file_key = IconData(0xea4e, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/file-key-2.svg)
   static const IconData file_key_2 = IconData(0xea4f, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/file-lock.svg)
   static const IconData file_lock = IconData(0xea50, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/file-lock-2.svg)
   static const IconData file_lock_2 = IconData(0xea51, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/file-minus.svg)
   static const IconData file_minus = IconData(0xea52, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/file-minus-2.svg)
   static const IconData file_minus_2 = IconData(0xea53, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/file-music.svg)
   static const IconData file_music = IconData(0xea54, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/file-output.svg)
   static const IconData file_output = IconData(0xea55, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/file-pen.svg)
   static const IconData file_pen = IconData(0xea56, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/file-pen-line.svg)
   static const IconData file_pen_line = IconData(0xea57, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/file-plus.svg)
   static const IconData file_plus = IconData(0xea58, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/file-plus-2.svg)
   static const IconData file_plus_2 = IconData(0xea59, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/file-question.svg)
   static const IconData file_question = IconData(0xea5a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/files.svg)
   static const IconData files = IconData(0xea5b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/file-scan.svg)
   static const IconData file_scan = IconData(0xea5c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/file-search.svg)
   static const IconData file_search = IconData(0xea5d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/file-search-2.svg)
   static const IconData file_search_2 = IconData(0xea5e, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/file-sliders.svg)
   static const IconData file_sliders = IconData(0xea5f, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/file-spreadsheet.svg)
   static const IconData file_spreadsheet = IconData(0xea60, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/file-stack.svg)
   static const IconData file_stack = IconData(0xea61, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/file-symlink.svg)
   static const IconData file_symlink = IconData(0xea62, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/file-terminal.svg)
   static const IconData file_terminal = IconData(0xea63, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/file-text.svg)
   static const IconData file_text = IconData(0xea64, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/file-type.svg)
   static const IconData file_type = IconData(0xea65, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/file-type-2.svg)
   static const IconData file_type_2 = IconData(0xea66, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/file-up.svg)
   static const IconData file_up = IconData(0xea67, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/file-user.svg)
   static const IconData file_user = IconData(0xea68, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/file-video.svg)
   static const IconData file_video = IconData(0xea69, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/file-video-2.svg)
   static const IconData file_video_2 = IconData(0xea6a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/file-volume.svg)
   static const IconData file_volume = IconData(0xea6b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/file-volume-2.svg)
   static const IconData file_volume_2 = IconData(0xea6c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/file-warning.svg)
   static const IconData file_warning = IconData(0xea6d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/file-x.svg)
   static const IconData file_x = IconData(0xea6e, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/file-x-2.svg)
   static const IconData file_x_2 = IconData(0xea6f, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/film.svg)
   static const IconData film = IconData(0xea70, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/fingerprint.svg)
   static const IconData fingerprint = IconData(0xea71, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/fire-extinguisher.svg)
   static const IconData fire_extinguisher = IconData(0xea72, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/fish.svg)
   static const IconData fish = IconData(0xea73, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/fish-off.svg)
   static const IconData fish_off = IconData(0xea74, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/fish-symbol.svg)
   static const IconData fish_symbol = IconData(0xea75, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/flag.svg)
   static const IconData flag = IconData(0xea76, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/flag-off.svg)
   static const IconData flag_off = IconData(0xea77, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/flag-triangle-left.svg)
   static const IconData flag_triangle_left = IconData(0xea78, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/flag-triangle-right.svg)
   static const IconData flag_triangle_right = IconData(0xea79, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/flame.svg)
   static const IconData flame = IconData(0xea7a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/flame-kindling.svg)
   static const IconData flame_kindling = IconData(0xea7b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/flashlight.svg)
   static const IconData flashlight = IconData(0xea7c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/flashlight-off.svg)
   static const IconData flashlight_off = IconData(0xea7d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/flask-conical.svg)
   static const IconData flask_conical = IconData(0xea7e, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/flask-conical-off.svg)
   static const IconData flask_conical_off = IconData(0xea7f, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/flask-round.svg)
   static const IconData flask_round = IconData(0xea80, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/flip-horizontal.svg)
   static const IconData flip_horizontal = IconData(0xea81, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/flip-horizontal-2.svg)
   static const IconData flip_horizontal_2 = IconData(0xea82, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/flip-vertical.svg)
   static const IconData flip_vertical = IconData(0xea83, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/flip-vertical-2.svg)
   static const IconData flip_vertical_2 = IconData(0xea84, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/flower.svg)
   static const IconData flower = IconData(0xea85, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/flower-2.svg)
   static const IconData flower_2 = IconData(0xea86, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/focus.svg)
   static const IconData focus = IconData(0xea87, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/folder.svg)
   static const IconData folder = IconData(0xea88, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/folder-archive.svg)
   static const IconData folder_archive = IconData(0xea89, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/folder-check.svg)
   static const IconData folder_check = IconData(0xea8a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/folder-clock.svg)
   static const IconData folder_clock = IconData(0xea8b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/folder-closed.svg)
   static const IconData folder_closed = IconData(0xea8c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/folder-code.svg)
   static const IconData folder_code = IconData(0xea8d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/folder-cog.svg)
   static const IconData folder_cog = IconData(0xea8e, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/folder-dot.svg)
   static const IconData folder_dot = IconData(0xea8f, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/folder-down.svg)
   static const IconData folder_down = IconData(0xea90, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/folder-git.svg)
   static const IconData folder_git = IconData(0xea91, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/folder-git-2.svg)
   static const IconData folder_git_2 = IconData(0xea92, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/folder-heart.svg)
   static const IconData folder_heart = IconData(0xea93, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/folder-input.svg)
   static const IconData folder_input = IconData(0xea94, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/folder-kanban.svg)
   static const IconData folder_kanban = IconData(0xea95, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/folder-key.svg)
   static const IconData folder_key = IconData(0xea96, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/folder-lock.svg)
   static const IconData folder_lock = IconData(0xea97, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/folder-minus.svg)
   static const IconData folder_minus = IconData(0xea98, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/folder-open.svg)
   static const IconData folder_open = IconData(0xea99, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/folder-open-dot.svg)
   static const IconData folder_open_dot = IconData(0xea9a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/folder-output.svg)
   static const IconData folder_output = IconData(0xea9b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/folder-pen.svg)
   static const IconData folder_pen = IconData(0xea9c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/folder-plus.svg)
   static const IconData folder_plus = IconData(0xea9d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/folder-root.svg)
   static const IconData folder_root = IconData(0xea9e, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/folders.svg)
   static const IconData folders = IconData(0xea9f, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/folder-search.svg)
   static const IconData folder_search = IconData(0xeaa0, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/folder-search-2.svg)
   static const IconData folder_search_2 = IconData(0xeaa1, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/folder-symlink.svg)
   static const IconData folder_symlink = IconData(0xeaa2, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/folder-sync.svg)
   static const IconData folder_sync = IconData(0xeaa3, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/folder-tree.svg)
   static const IconData folder_tree = IconData(0xeaa4, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/folder-up.svg)
   static const IconData folder_up = IconData(0xeaa5, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/folder-x.svg)
   static const IconData folder_x = IconData(0xeaa6, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/fold-horizontal.svg)
   static const IconData fold_horizontal = IconData(0xeaa7, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/fold-vertical.svg)
   static const IconData fold_vertical = IconData(0xeaa8, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/footprints.svg)
   static const IconData footprints = IconData(0xeaa9, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/forklift.svg)
   static const IconData forklift = IconData(0xeaaa, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/forward.svg)
   static const IconData forward = IconData(0xeaab, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/frame.svg)
   static const IconData frame = IconData(0xeaac, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/framer.svg)
   static const IconData framer = IconData(0xeaad, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/frown.svg)
   static const IconData frown = IconData(0xeaae, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/fuel.svg)
   static const IconData fuel = IconData(0xeaaf, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/fullscreen.svg)
   static const IconData fullscreen = IconData(0xeab0, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/funnel.svg)
   static const IconData funnel = IconData(0xeab1, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/funnel-plus.svg)
   static const IconData funnel_plus = IconData(0xeab2, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/funnel-x.svg)
   static const IconData funnel_x = IconData(0xeab3, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/gallery-horizontal.svg)
   static const IconData gallery_horizontal = IconData(0xeab4, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/gallery-horizontal-end.svg)
   static const IconData gallery_horizontal_end = IconData(0xeab5, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/gallery-thumbnails.svg)
   static const IconData gallery_thumbnails = IconData(0xeab6, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/gallery-vertical.svg)
   static const IconData gallery_vertical = IconData(0xeab7, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/gallery-vertical-end.svg)
   static const IconData gallery_vertical_end = IconData(0xeab8, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/gamepad.svg)
   static const IconData gamepad = IconData(0xeab9, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/gamepad-2.svg)
   static const IconData gamepad_2 = IconData(0xeaba, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/gauge.svg)
   static const IconData gauge = IconData(0xeabb, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/gavel.svg)
   static const IconData gavel = IconData(0xeabc, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/gem.svg)
   static const IconData gem = IconData(0xeabd, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/ghost.svg)
   static const IconData ghost = IconData(0xeabe, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/gift.svg)
   static const IconData gift = IconData(0xeabf, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/git-branch.svg)
   static const IconData git_branch = IconData(0xeac0, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/git-branch-plus.svg)
   static const IconData git_branch_plus = IconData(0xeac1, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/git-commit-horizontal.svg)
   static const IconData git_commit_horizontal = IconData(0xeac2, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/git-commit-vertical.svg)
   static const IconData git_commit_vertical = IconData(0xeac3, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/git-compare.svg)
   static const IconData git_compare = IconData(0xeac4, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/git-compare-arrows.svg)
   static const IconData git_compare_arrows = IconData(0xeac5, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/git-fork.svg)
   static const IconData git_fork = IconData(0xeac6, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/git-graph.svg)
   static const IconData git_graph = IconData(0xeac7, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/github.svg)
   static const IconData github = IconData(0xeac8, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/gitlab.svg)
   static const IconData gitlab = IconData(0xeac9, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/git-merge.svg)
   static const IconData git_merge = IconData(0xeaca, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/git-pull-request.svg)
   static const IconData git_pull_request = IconData(0xeacb, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/git-pull-request-arrow.svg)
   static const IconData git_pull_request_arrow = IconData(0xeacc, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/git-pull-request-closed.svg)
   static const IconData git_pull_request_closed = IconData(0xeacd, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/git-pull-request-create.svg)
   static const IconData git_pull_request_create = IconData(0xeace, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/git-pull-request-create-arrow.svg)
   static const IconData git_pull_request_create_arrow = IconData(0xeacf, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/git-pull-request-draft.svg)
   static const IconData git_pull_request_draft = IconData(0xead0, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/glasses.svg)
   static const IconData glasses = IconData(0xead1, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/glass-water.svg)
   static const IconData glass_water = IconData(0xead2, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/globe.svg)
   static const IconData globe = IconData(0xead3, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/globe-lock.svg)
   static const IconData globe_lock = IconData(0xead4, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/goal.svg)
   static const IconData goal = IconData(0xead5, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/gpu.svg)
   static const IconData gpu = IconData(0xead6, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/grab.svg)
   static const IconData grab = IconData(0xead7, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/graduation-cap.svg)
   static const IconData graduation_cap = IconData(0xead8, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/grape.svg)
   static const IconData grape = IconData(0xead9, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/grid-2x2.svg)
   static const IconData grid_2x2 = IconData(0xeada, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/grid-2x2-check.svg)
   static const IconData grid_2x2_check = IconData(0xeadb, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/grid-2x2-plus.svg)
   static const IconData grid_2x2_plus = IconData(0xeadc, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/grid-2x2-x.svg)
   static const IconData grid_2x2_x = IconData(0xeadd, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/grid-3x3.svg)
   static const IconData grid_3x3 = IconData(0xeade, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/grip.svg)
   static const IconData grip = IconData(0xeadf, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/grip-horizontal.svg)
   static const IconData grip_horizontal = IconData(0xeae0, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/grip-vertical.svg)
   static const IconData grip_vertical = IconData(0xeae1, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/group.svg)
   static const IconData group = IconData(0xeae2, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/guitar.svg)
   static const IconData guitar = IconData(0xeae3, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/ham.svg)
   static const IconData ham = IconData(0xeae4, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/hamburger.svg)
   static const IconData hamburger = IconData(0xeae5, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/hammer.svg)
   static const IconData hammer = IconData(0xeae6, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/hand.svg)
   static const IconData hand = IconData(0xeae7, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/hand-coins.svg)
   static const IconData hand_coins = IconData(0xeae8, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/hand-heart.svg)
   static const IconData hand_heart = IconData(0xeae9, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/hand-helping.svg)
   static const IconData hand_helping = IconData(0xeaea, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/hand-metal.svg)
   static const IconData hand_metal = IconData(0xeaeb, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/hand-platter.svg)
   static const IconData hand_platter = IconData(0xeaec, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/handshake.svg)
   static const IconData handshake = IconData(0xeaed, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/hard-drive.svg)
   static const IconData hard_drive = IconData(0xeaee, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/hard-drive-download.svg)
   static const IconData hard_drive_download = IconData(0xeaef, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/hard-drive-upload.svg)
   static const IconData hard_drive_upload = IconData(0xeaf0, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/hard-hat.svg)
   static const IconData hard_hat = IconData(0xeaf1, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/hash.svg)
   static const IconData hash = IconData(0xeaf2, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/haze.svg)
   static const IconData haze = IconData(0xeaf3, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/hdmi-port.svg)
   static const IconData hdmi_port = IconData(0xeaf4, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/heading.svg)
   static const IconData heading = IconData(0xeaf5, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/heading-1.svg)
   static const IconData heading_1 = IconData(0xeaf6, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/heading-2.svg)
   static const IconData heading_2 = IconData(0xeaf7, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/heading-3.svg)
   static const IconData heading_3 = IconData(0xeaf8, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/heading-4.svg)
   static const IconData heading_4 = IconData(0xeaf9, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/heading-5.svg)
   static const IconData heading_5 = IconData(0xeafa, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/heading-6.svg)
   static const IconData heading_6 = IconData(0xeafb, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/headphone-off.svg)
   static const IconData headphone_off = IconData(0xeafc, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/headphones.svg)
   static const IconData headphones = IconData(0xeafd, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/headset.svg)
   static const IconData headset = IconData(0xeafe, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/heart.svg)
   static const IconData heart = IconData(0xeaff, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/heart-crack.svg)
   static const IconData heart_crack = IconData(0xeb00, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/heart-handshake.svg)
   static const IconData heart_handshake = IconData(0xeb01, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/heart-minus.svg)
   static const IconData heart_minus = IconData(0xeb02, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/heart-off.svg)
   static const IconData heart_off = IconData(0xeb03, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/heart-plus.svg)
   static const IconData heart_plus = IconData(0xeb04, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/heart-pulse.svg)
   static const IconData heart_pulse = IconData(0xeb05, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/heater.svg)
   static const IconData heater = IconData(0xeb06, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/hexagon.svg)
   static const IconData hexagon = IconData(0xeb07, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/highlighter.svg)
   static const IconData highlighter = IconData(0xeb08, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/history.svg)
   static const IconData history = IconData(0xeb09, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/hop.svg)
   static const IconData hop = IconData(0xeb0a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/hop-off.svg)
   static const IconData hop_off = IconData(0xeb0b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/hospital.svg)
   static const IconData hospital = IconData(0xeb0c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/hotel.svg)
   static const IconData hotel = IconData(0xeb0d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/hourglass.svg)
   static const IconData hourglass = IconData(0xeb0e, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/house.svg)
   static const IconData house = IconData(0xeb0f, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/house-plug.svg)
   static const IconData house_plug = IconData(0xeb10, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/house-plus.svg)
   static const IconData house_plus = IconData(0xeb11, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/house-wifi.svg)
   static const IconData house_wifi = IconData(0xeb12, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/ice-cream-bowl.svg)
   static const IconData ice_cream_bowl = IconData(0xeb13, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/ice-cream-cone.svg)
   static const IconData ice_cream_cone = IconData(0xeb14, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/id-card.svg)
   static const IconData id_card = IconData(0xeb15, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/id-card-lanyard.svg)
   static const IconData id_card_lanyard = IconData(0xeb16, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/image.svg)
   static const IconData image = IconData(0xeb17, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/image-down.svg)
   static const IconData image_down = IconData(0xeb18, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/image-minus.svg)
   static const IconData image_minus = IconData(0xeb19, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/image-off.svg)
   static const IconData image_off = IconData(0xeb1a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/image-play.svg)
   static const IconData image_play = IconData(0xeb1b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/image-plus.svg)
   static const IconData image_plus = IconData(0xeb1c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/images.svg)
   static const IconData images = IconData(0xeb1d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/image-up.svg)
   static const IconData image_up = IconData(0xeb1e, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/image-upscale.svg)
   static const IconData image_upscale = IconData(0xeb1f, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/import-icon.svg)
   static const IconData import_icon = IconData(0xeb20, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/inbox.svg)
   static const IconData inbox = IconData(0xeb21, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/indent-decrease.svg)
   static const IconData indent_decrease = IconData(0xeb22, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/indent-increase.svg)
   static const IconData indent_increase = IconData(0xeb23, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/indian-rupee.svg)
   static const IconData indian_rupee = IconData(0xeb24, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/infinity.svg)
   static const IconData infinity = IconData(0xeb25, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/info.svg)
   static const IconData info = IconData(0xeb26, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/inspection-panel.svg)
   static const IconData inspection_panel = IconData(0xeb27, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/instagram.svg)
   static const IconData instagram = IconData(0xeb28, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/italic.svg)
   static const IconData italic = IconData(0xeb29, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/iteration-ccw.svg)
   static const IconData iteration_ccw = IconData(0xeb2a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/iteration-cw.svg)
   static const IconData iteration_cw = IconData(0xeb2b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/japanese-yen.svg)
   static const IconData japanese_yen = IconData(0xeb2c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/joystick.svg)
   static const IconData joystick = IconData(0xeb2d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/kanban.svg)
   static const IconData kanban = IconData(0xeb2e, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/key.svg)
   static const IconData key = IconData(0xeb2f, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/keyboard.svg)
   static const IconData keyboard = IconData(0xeb30, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/keyboard-music.svg)
   static const IconData keyboard_music = IconData(0xeb31, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/keyboard-off.svg)
   static const IconData keyboard_off = IconData(0xeb32, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/key-round.svg)
   static const IconData key_round = IconData(0xeb33, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/key-square.svg)
   static const IconData key_square = IconData(0xeb34, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/lamp.svg)
   static const IconData lamp = IconData(0xeb35, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/lamp-ceiling.svg)
   static const IconData lamp_ceiling = IconData(0xeb36, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/lamp-desk.svg)
   static const IconData lamp_desk = IconData(0xeb37, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/lamp-floor.svg)
   static const IconData lamp_floor = IconData(0xeb38, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/lamp-wall-down.svg)
   static const IconData lamp_wall_down = IconData(0xeb39, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/lamp-wall-up.svg)
   static const IconData lamp_wall_up = IconData(0xeb3a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/landmark.svg)
   static const IconData landmark = IconData(0xeb3b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/land-plot.svg)
   static const IconData land_plot = IconData(0xeb3c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/languages.svg)
   static const IconData languages = IconData(0xeb3d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/laptop.svg)
   static const IconData laptop = IconData(0xeb3e, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/laptop-minimal.svg)
   static const IconData laptop_minimal = IconData(0xeb3f, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/laptop-minimal-check.svg)
   static const IconData laptop_minimal_check = IconData(0xeb40, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/lasso.svg)
   static const IconData lasso = IconData(0xeb41, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/lasso-select.svg)
   static const IconData lasso_select = IconData(0xeb42, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/laugh.svg)
   static const IconData laugh = IconData(0xeb43, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/layers.svg)
   static const IconData layers = IconData(0xeb44, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/layers-2.svg)
   static const IconData layers_2 = IconData(0xeb45, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/layout-dashboard.svg)
   static const IconData layout_dashboard = IconData(0xeb46, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/layout-grid.svg)
   static const IconData layout_grid = IconData(0xeb47, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/layout-list.svg)
   static const IconData layout_list = IconData(0xeb48, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/layout-panel-left.svg)
   static const IconData layout_panel_left = IconData(0xeb49, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/layout-panel-top.svg)
   static const IconData layout_panel_top = IconData(0xeb4a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/layout-template.svg)
   static const IconData layout_template = IconData(0xeb4b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/leaf.svg)
   static const IconData leaf = IconData(0xeb4c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/leafy-green.svg)
   static const IconData leafy_green = IconData(0xeb4d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/lectern.svg)
   static const IconData lectern = IconData(0xeb4e, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/letter-text.svg)
   static const IconData letter_text = IconData(0xeb4f, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/library-icon.svg)
   static const IconData library_icon = IconData(0xeb50, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/library-big.svg)
   static const IconData library_big = IconData(0xeb51, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/life-buoy.svg)
   static const IconData life_buoy = IconData(0xeb52, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/ligature.svg)
   static const IconData ligature = IconData(0xeb53, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/lightbulb.svg)
   static const IconData lightbulb = IconData(0xeb54, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/lightbulb-off.svg)
   static const IconData lightbulb_off = IconData(0xeb55, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/link.svg)
   static const IconData link = IconData(0xeb56, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/link-2.svg)
   static const IconData link_2 = IconData(0xeb57, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/link-2-off.svg)
   static const IconData link_2_off = IconData(0xeb58, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/linkedin.svg)
   static const IconData linkedin = IconData(0xeb59, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/list.svg)
   static const IconData list = IconData(0xeb5a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/list-check.svg)
   static const IconData list_check = IconData(0xeb5b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/list-checks.svg)
   static const IconData list_checks = IconData(0xeb5c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/list-collapse.svg)
   static const IconData list_collapse = IconData(0xeb5d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/list-end.svg)
   static const IconData list_end = IconData(0xeb5e, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/list-filter.svg)
   static const IconData list_filter = IconData(0xeb5f, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/list-filter-plus.svg)
   static const IconData list_filter_plus = IconData(0xeb60, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/list-minus.svg)
   static const IconData list_minus = IconData(0xeb61, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/list-music.svg)
   static const IconData list_music = IconData(0xeb62, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/list-ordered.svg)
   static const IconData list_ordered = IconData(0xeb63, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/list-plus.svg)
   static const IconData list_plus = IconData(0xeb64, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/list-restart.svg)
   static const IconData list_restart = IconData(0xeb65, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/list-start.svg)
   static const IconData list_start = IconData(0xeb66, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/list-todo.svg)
   static const IconData list_todo = IconData(0xeb67, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/list-tree.svg)
   static const IconData list_tree = IconData(0xeb68, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/list-video.svg)
   static const IconData list_video = IconData(0xeb69, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/list-x.svg)
   static const IconData list_x = IconData(0xeb6a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/loader.svg)
   static const IconData loader = IconData(0xeb6b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/loader-circle.svg)
   static const IconData loader_circle = IconData(0xeb6c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/loader-pinwheel.svg)
   static const IconData loader_pinwheel = IconData(0xeb6d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/locate.svg)
   static const IconData locate = IconData(0xeb6e, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/locate-fixed.svg)
   static const IconData locate_fixed = IconData(0xeb6f, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/locate-off.svg)
   static const IconData locate_off = IconData(0xeb70, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/location-edit.svg)
   static const IconData location_edit = IconData(0xeb71, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/lock.svg)
   static const IconData lock = IconData(0xeb72, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/lock-1.svg)
   static const IconData lock_1 = IconData(0xeb73, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/lock-keyhole.svg)
   static const IconData lock_keyhole = IconData(0xeb74, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/lock-keyhole-open.svg)
   static const IconData lock_keyhole_open = IconData(0xeb75, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/lock-open.svg)
   static const IconData lock_open = IconData(0xeb76, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/log-in.svg)
   static const IconData log_in = IconData(0xeb77, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/log-out.svg)
   static const IconData log_out = IconData(0xeb78, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/logs.svg)
   static const IconData logs = IconData(0xeb79, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/lollipop.svg)
   static const IconData lollipop = IconData(0xeb7a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/luggage.svg)
   static const IconData luggage = IconData(0xeb7b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/magnet.svg)
   static const IconData magnet = IconData(0xeb7c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/mail.svg)
   static const IconData mail = IconData(0xeb7d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/mailbox.svg)
   static const IconData mailbox = IconData(0xeb7e, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/mail-check.svg)
   static const IconData mail_check = IconData(0xeb7f, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/mail-minus.svg)
   static const IconData mail_minus = IconData(0xeb80, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/mail-open.svg)
   static const IconData mail_open = IconData(0xeb81, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/mail-plus.svg)
   static const IconData mail_plus = IconData(0xeb82, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/mail-question.svg)
   static const IconData mail_question = IconData(0xeb83, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/mails.svg)
   static const IconData mails = IconData(0xeb84, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/mail-search.svg)
   static const IconData mail_search = IconData(0xeb85, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/mail-warning.svg)
   static const IconData mail_warning = IconData(0xeb86, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/mail-x.svg)
   static const IconData mail_x = IconData(0xeb87, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/map.svg)
   static const IconData map = IconData(0xeb88, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/map-pin.svg)
   static const IconData map_pin = IconData(0xeb89, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/map-pin-check.svg)
   static const IconData map_pin_check = IconData(0xeb8a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/map-pin-check-inside.svg)
   static const IconData map_pin_check_inside = IconData(0xeb8b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/map-pin-house.svg)
   static const IconData map_pin_house = IconData(0xeb8c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/map-pin-minus.svg)
   static const IconData map_pin_minus = IconData(0xeb8d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/map-pin-minus-inside.svg)
   static const IconData map_pin_minus_inside = IconData(0xeb8e, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/map-pinned.svg)
   static const IconData map_pinned = IconData(0xeb8f, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/map-pin-off.svg)
   static const IconData map_pin_off = IconData(0xeb90, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/map-pin-plus.svg)
   static const IconData map_pin_plus = IconData(0xeb91, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/map-pin-plus-inside.svg)
   static const IconData map_pin_plus_inside = IconData(0xeb92, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/map-pin-x.svg)
   static const IconData map_pin_x = IconData(0xeb93, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/map-pin-x-inside.svg)
   static const IconData map_pin_x_inside = IconData(0xeb94, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/map-plus.svg)
   static const IconData map_plus = IconData(0xeb95, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/mars.svg)
   static const IconData mars = IconData(0xeb96, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/mars-stroke.svg)
   static const IconData mars_stroke = IconData(0xeb97, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/martini.svg)
   static const IconData martini = IconData(0xeb98, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/maximize.svg)
   static const IconData maximize = IconData(0xeb99, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/maximize-2.svg)
   static const IconData maximize_2 = IconData(0xeb9a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/medal.svg)
   static const IconData medal = IconData(0xeb9b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/megaphone.svg)
   static const IconData megaphone = IconData(0xeb9c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/megaphone-off.svg)
   static const IconData megaphone_off = IconData(0xeb9d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/meh.svg)
   static const IconData meh = IconData(0xeb9e, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/memory-stick.svg)
   static const IconData memory_stick = IconData(0xeb9f, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/menu.svg)
   static const IconData menu = IconData(0xeba0, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/merge.svg)
   static const IconData merge = IconData(0xeba1, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/message-circle.svg)
   static const IconData message_circle = IconData(0xeba2, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/message-circle-code.svg)
   static const IconData message_circle_code = IconData(0xeba3, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/message-circle-dashed.svg)
   static const IconData message_circle_dashed = IconData(0xeba4, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/message-circle-heart.svg)
   static const IconData message_circle_heart = IconData(0xeba5, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/message-circle-more.svg)
   static const IconData message_circle_more = IconData(0xeba6, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/message-circle-off.svg)
   static const IconData message_circle_off = IconData(0xeba7, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/message-circle-plus.svg)
   static const IconData message_circle_plus = IconData(0xeba8, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/message-circle-question.svg)
   static const IconData message_circle_question = IconData(0xeba9, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/message-circle-reply.svg)
   static const IconData message_circle_reply = IconData(0xebaa, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/message-circle-warning.svg)
   static const IconData message_circle_warning = IconData(0xebab, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/message-circle-x.svg)
   static const IconData message_circle_x = IconData(0xebac, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/message-square.svg)
   static const IconData message_square = IconData(0xebad, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/message-square-code.svg)
   static const IconData message_square_code = IconData(0xebae, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/message-square-dashed.svg)
   static const IconData message_square_dashed = IconData(0xebaf, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/message-square-diff.svg)
   static const IconData message_square_diff = IconData(0xebb0, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/message-square-dot.svg)
   static const IconData message_square_dot = IconData(0xebb1, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/message-square-heart.svg)
   static const IconData message_square_heart = IconData(0xebb2, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/message-square-lock.svg)
   static const IconData message_square_lock = IconData(0xebb3, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/message-square-more.svg)
   static const IconData message_square_more = IconData(0xebb4, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/message-square-off.svg)
   static const IconData message_square_off = IconData(0xebb5, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/message-square-plus.svg)
   static const IconData message_square_plus = IconData(0xebb6, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/message-square-quote.svg)
   static const IconData message_square_quote = IconData(0xebb7, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/message-square-reply.svg)
   static const IconData message_square_reply = IconData(0xebb8, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/message-square-share.svg)
   static const IconData message_square_share = IconData(0xebb9, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/message-square-text.svg)
   static const IconData message_square_text = IconData(0xebba, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/message-square-warning.svg)
   static const IconData message_square_warning = IconData(0xebbb, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/message-square-x.svg)
   static const IconData message_square_x = IconData(0xebbc, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/messages-square.svg)
   static const IconData messages_square = IconData(0xebbd, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/mic.svg)
   static const IconData mic = IconData(0xebbe, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/mic-off.svg)
   static const IconData mic_off = IconData(0xebbf, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/microchip.svg)
   static const IconData microchip = IconData(0xebc0, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/microscope.svg)
   static const IconData microscope = IconData(0xebc1, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/microwave.svg)
   static const IconData microwave = IconData(0xebc2, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/mic-vocal.svg)
   static const IconData mic_vocal = IconData(0xebc3, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/milestone.svg)
   static const IconData milestone = IconData(0xebc4, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/milk.svg)
   static const IconData milk = IconData(0xebc5, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/milk-off.svg)
   static const IconData milk_off = IconData(0xebc6, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/minimize.svg)
   static const IconData minimize = IconData(0xebc7, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/minimize-2.svg)
   static const IconData minimize_2 = IconData(0xebc8, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/minus.svg)
   static const IconData minus = IconData(0xebc9, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/monitor.svg)
   static const IconData monitor = IconData(0xebca, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/monitor-check.svg)
   static const IconData monitor_check = IconData(0xebcb, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/monitor-cog.svg)
   static const IconData monitor_cog = IconData(0xebcc, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/monitor-dot.svg)
   static const IconData monitor_dot = IconData(0xebcd, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/monitor-down.svg)
   static const IconData monitor_down = IconData(0xebce, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/monitor-off.svg)
   static const IconData monitor_off = IconData(0xebcf, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/monitor-pause.svg)
   static const IconData monitor_pause = IconData(0xebd0, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/monitor-play.svg)
   static const IconData monitor_play = IconData(0xebd1, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/monitor-smartphone.svg)
   static const IconData monitor_smartphone = IconData(0xebd2, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/monitor-speaker.svg)
   static const IconData monitor_speaker = IconData(0xebd3, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/monitor-stop.svg)
   static const IconData monitor_stop = IconData(0xebd4, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/monitor-up.svg)
   static const IconData monitor_up = IconData(0xebd5, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/monitor-x.svg)
   static const IconData monitor_x = IconData(0xebd6, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/moon.svg)
   static const IconData moon = IconData(0xebd7, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/moon-star.svg)
   static const IconData moon_star = IconData(0xebd8, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/mountain.svg)
   static const IconData mountain = IconData(0xebd9, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/mountain-snow.svg)
   static const IconData mountain_snow = IconData(0xebda, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/mouse.svg)
   static const IconData mouse = IconData(0xebdb, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/mouse-off.svg)
   static const IconData mouse_off = IconData(0xebdc, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/mouse-pointer.svg)
   static const IconData mouse_pointer = IconData(0xebdd, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/mouse-pointer-2.svg)
   static const IconData mouse_pointer_2 = IconData(0xebde, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/mouse-pointer-ban.svg)
   static const IconData mouse_pointer_ban = IconData(0xebdf, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/mouse-pointer-click.svg)
   static const IconData mouse_pointer_click = IconData(0xebe0, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/move.svg)
   static const IconData move = IconData(0xebe1, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/move-3d.svg)
   static const IconData move_3d = IconData(0xebe2, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/move-diagonal.svg)
   static const IconData move_diagonal = IconData(0xebe3, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/move-diagonal-2.svg)
   static const IconData move_diagonal_2 = IconData(0xebe4, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/move-down.svg)
   static const IconData move_down = IconData(0xebe5, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/move-down-left.svg)
   static const IconData move_down_left = IconData(0xebe6, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/move-down-right.svg)
   static const IconData move_down_right = IconData(0xebe7, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/move-horizontal.svg)
   static const IconData move_horizontal = IconData(0xebe8, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/move-left.svg)
   static const IconData move_left = IconData(0xebe9, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/move-right.svg)
   static const IconData move_right = IconData(0xebea, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/move-up.svg)
   static const IconData move_up = IconData(0xebeb, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/move-up-left.svg)
   static const IconData move_up_left = IconData(0xebec, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/move-up-right.svg)
   static const IconData move_up_right = IconData(0xebed, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/move-vertical.svg)
   static const IconData move_vertical = IconData(0xebee, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/music.svg)
   static const IconData music = IconData(0xebef, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/music-2.svg)
   static const IconData music_2 = IconData(0xebf0, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/music-3.svg)
   static const IconData music_3 = IconData(0xebf1, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/music-4.svg)
   static const IconData music_4 = IconData(0xebf2, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/navigation.svg)
   static const IconData navigation = IconData(0xebf3, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/navigation-2.svg)
   static const IconData navigation_2 = IconData(0xebf4, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/navigation-2-off.svg)
   static const IconData navigation_2_off = IconData(0xebf5, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/navigation-off.svg)
   static const IconData navigation_off = IconData(0xebf6, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/network.svg)
   static const IconData network = IconData(0xebf7, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/newspaper.svg)
   static const IconData newspaper = IconData(0xebf8, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/nfc.svg)
   static const IconData nfc = IconData(0xebf9, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/non-binary.svg)
   static const IconData non_binary = IconData(0xebfa, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/notebook.svg)
   static const IconData notebook = IconData(0xebfb, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/notebook-pen.svg)
   static const IconData notebook_pen = IconData(0xebfc, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/notebook-tabs.svg)
   static const IconData notebook_tabs = IconData(0xebfd, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/notebook-text.svg)
   static const IconData notebook_text = IconData(0xebfe, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/notepad-text.svg)
   static const IconData notepad_text = IconData(0xebff, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/notepad-text-dashed.svg)
   static const IconData notepad_text_dashed = IconData(0xec00, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/nut.svg)
   static const IconData nut = IconData(0xec01, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/nut-off.svg)
   static const IconData nut_off = IconData(0xec02, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/octagon.svg)
   static const IconData octagon = IconData(0xec03, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/octagon-alert.svg)
   static const IconData octagon_alert = IconData(0xec04, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/octagon-minus.svg)
   static const IconData octagon_minus = IconData(0xec05, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/octagon-pause.svg)
   static const IconData octagon_pause = IconData(0xec06, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/octagon-x.svg)
   static const IconData octagon_x = IconData(0xec07, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/omega.svg)
   static const IconData omega = IconData(0xec08, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/option.svg)
   static const IconData option = IconData(0xec09, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/orbit.svg)
   static const IconData orbit = IconData(0xec0a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/origami.svg)
   static const IconData origami = IconData(0xec0b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/package.svg)
   static const IconData package = IconData(0xec0c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/package-2.svg)
   static const IconData package_2 = IconData(0xec0d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/package-check.svg)
   static const IconData package_check = IconData(0xec0e, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/package-minus.svg)
   static const IconData package_minus = IconData(0xec0f, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/package-open.svg)
   static const IconData package_open = IconData(0xec10, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/package-plus.svg)
   static const IconData package_plus = IconData(0xec11, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/package-search.svg)
   static const IconData package_search = IconData(0xec12, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/package-x.svg)
   static const IconData package_x = IconData(0xec13, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/paintbrush.svg)
   static const IconData paintbrush = IconData(0xec14, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/paintbrush-vertical.svg)
   static const IconData paintbrush_vertical = IconData(0xec15, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/paint-bucket.svg)
   static const IconData paint_bucket = IconData(0xec16, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/paint-roller.svg)
   static const IconData paint_roller = IconData(0xec17, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/palette.svg)
   static const IconData palette = IconData(0xec18, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/panda.svg)
   static const IconData panda = IconData(0xec19, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/panel-bottom.svg)
   static const IconData panel_bottom = IconData(0xec1a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/panel-bottom-close.svg)
   static const IconData panel_bottom_close = IconData(0xec1b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/panel-bottom-dashed.svg)
   static const IconData panel_bottom_dashed = IconData(0xec1c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/panel-bottom-open.svg)
   static const IconData panel_bottom_open = IconData(0xec1d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/panel-left.svg)
   static const IconData panel_left = IconData(0xec1e, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/panel-left-close.svg)
   static const IconData panel_left_close = IconData(0xec1f, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/panel-left-dashed.svg)
   static const IconData panel_left_dashed = IconData(0xec20, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/panel-left-open.svg)
   static const IconData panel_left_open = IconData(0xec21, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/panel-right.svg)
   static const IconData panel_right = IconData(0xec22, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/panel-right-close.svg)
   static const IconData panel_right_close = IconData(0xec23, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/panel-right-dashed.svg)
   static const IconData panel_right_dashed = IconData(0xec24, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/panel-right-open.svg)
   static const IconData panel_right_open = IconData(0xec25, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/panels-left-bottom.svg)
   static const IconData panels_left_bottom = IconData(0xec26, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/panels-right-bottom.svg)
   static const IconData panels_right_bottom = IconData(0xec27, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/panels-top-left.svg)
   static const IconData panels_top_left = IconData(0xec28, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/panel-top.svg)
   static const IconData panel_top = IconData(0xec29, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/panel-top-close.svg)
   static const IconData panel_top_close = IconData(0xec2a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/panel-top-dashed.svg)
   static const IconData panel_top_dashed = IconData(0xec2b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/panel-top-open.svg)
   static const IconData panel_top_open = IconData(0xec2c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/paperclip.svg)
   static const IconData paperclip = IconData(0xec2d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/parentheses.svg)
   static const IconData parentheses = IconData(0xec2e, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/parking-meter.svg)
   static const IconData parking_meter = IconData(0xec2f, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/party-popper.svg)
   static const IconData party_popper = IconData(0xec30, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/pause.svg)
   static const IconData pause = IconData(0xec31, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/paw-print.svg)
   static const IconData paw_print = IconData(0xec32, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/pc-case.svg)
   static const IconData pc_case = IconData(0xec33, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/pen.svg)
   static const IconData pen = IconData(0xec34, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/pencil.svg)
   static const IconData pencil = IconData(0xec35, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/pencil-line.svg)
   static const IconData pencil_line = IconData(0xec36, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/pencil-off.svg)
   static const IconData pencil_off = IconData(0xec37, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/pencil-ruler.svg)
   static const IconData pencil_ruler = IconData(0xec38, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/pen-line.svg)
   static const IconData pen_line = IconData(0xec39, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/pen-off.svg)
   static const IconData pen_off = IconData(0xec3a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/pentagon.svg)
   static const IconData pentagon = IconData(0xec3b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/pen-tool.svg)
   static const IconData pen_tool = IconData(0xec3c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/percent.svg)
   static const IconData percent = IconData(0xec3d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/person-standing.svg)
   static const IconData person_standing = IconData(0xec3e, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/philippine-peso.svg)
   static const IconData philippine_peso = IconData(0xec3f, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/phone.svg)
   static const IconData phone = IconData(0xec40, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/phone-call.svg)
   static const IconData phone_call = IconData(0xec41, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/phone-forwarded.svg)
   static const IconData phone_forwarded = IconData(0xec42, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/phone-incoming.svg)
   static const IconData phone_incoming = IconData(0xec43, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/phone-missed.svg)
   static const IconData phone_missed = IconData(0xec44, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/phone-off.svg)
   static const IconData phone_off = IconData(0xec45, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/phone-outgoing.svg)
   static const IconData phone_outgoing = IconData(0xec46, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/pi.svg)
   static const IconData pi = IconData(0xec47, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/piano.svg)
   static const IconData piano = IconData(0xec48, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/pickaxe.svg)
   static const IconData pickaxe = IconData(0xec49, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/picture-in-picture.svg)
   static const IconData picture_in_picture = IconData(0xec4a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/picture-in-picture-2.svg)
   static const IconData picture_in_picture_2 = IconData(0xec4b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/piggy-bank.svg)
   static const IconData piggy_bank = IconData(0xec4c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/pilcrow.svg)
   static const IconData pilcrow = IconData(0xec4d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/pilcrow-left.svg)
   static const IconData pilcrow_left = IconData(0xec4e, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/pilcrow-right.svg)
   static const IconData pilcrow_right = IconData(0xec4f, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/pill.svg)
   static const IconData pill = IconData(0xec50, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/pill-bottle.svg)
   static const IconData pill_bottle = IconData(0xec51, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/pin.svg)
   static const IconData pin = IconData(0xec52, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/pin-off.svg)
   static const IconData pin_off = IconData(0xec53, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/pipette.svg)
   static const IconData pipette = IconData(0xec54, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/pizza.svg)
   static const IconData pizza = IconData(0xec55, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/plane.svg)
   static const IconData plane = IconData(0xec56, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/plane-landing.svg)
   static const IconData plane_landing = IconData(0xec57, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/plane-takeoff.svg)
   static const IconData plane_takeoff = IconData(0xec58, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/play.svg)
   static const IconData play = IconData(0xec59, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/plug.svg)
   static const IconData plug = IconData(0xec5a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/plug-2.svg)
   static const IconData plug_2 = IconData(0xec5b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/plug-zap.svg)
   static const IconData plug_zap = IconData(0xec5c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/plus.svg)
   static const IconData plus = IconData(0xec5d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/pocket.svg)
   static const IconData pocket = IconData(0xec5e, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/pocket-knife.svg)
   static const IconData pocket_knife = IconData(0xec5f, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/podcast.svg)
   static const IconData podcast = IconData(0xec60, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/pointer.svg)
   static const IconData pointer = IconData(0xec61, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/pointer-off.svg)
   static const IconData pointer_off = IconData(0xec62, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/popcorn.svg)
   static const IconData popcorn = IconData(0xec63, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/popsicle.svg)
   static const IconData popsicle = IconData(0xec64, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/pound-sterling.svg)
   static const IconData pound_sterling = IconData(0xec65, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/power.svg)
   static const IconData power = IconData(0xec66, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/power-off.svg)
   static const IconData power_off = IconData(0xec67, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/presentation.svg)
   static const IconData presentation = IconData(0xec68, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/printer.svg)
   static const IconData printer = IconData(0xec69, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/printer-check.svg)
   static const IconData printer_check = IconData(0xec6a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/projector.svg)
   static const IconData projector = IconData(0xec6b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/proportions.svg)
   static const IconData proportions = IconData(0xec6c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/puzzle.svg)
   static const IconData puzzle = IconData(0xec6d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/pyramid.svg)
   static const IconData pyramid = IconData(0xec6e, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/qr-code.svg)
   static const IconData qr_code = IconData(0xec6f, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/quote.svg)
   static const IconData quote = IconData(0xec70, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/rabbit.svg)
   static const IconData rabbit = IconData(0xec71, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/radar.svg)
   static const IconData radar = IconData(0xec72, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/radiation.svg)
   static const IconData radiation = IconData(0xec73, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/radical.svg)
   static const IconData radical = IconData(0xec74, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/radio.svg)
   static const IconData radio = IconData(0xec75, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/radio-receiver.svg)
   static const IconData radio_receiver = IconData(0xec76, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/radio-tower.svg)
   static const IconData radio_tower = IconData(0xec77, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/radius.svg)
   static const IconData radius = IconData(0xec78, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/rail-symbol.svg)
   static const IconData rail_symbol = IconData(0xec79, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/rainbow.svg)
   static const IconData rainbow = IconData(0xec7a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/rat.svg)
   static const IconData rat = IconData(0xec7b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/ratio.svg)
   static const IconData ratio = IconData(0xec7c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/receipt.svg)
   static const IconData receipt = IconData(0xec7d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/receipt-cent.svg)
   static const IconData receipt_cent = IconData(0xec7e, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/receipt-euro.svg)
   static const IconData receipt_euro = IconData(0xec7f, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/receipt-indian-rupee.svg)
   static const IconData receipt_indian_rupee = IconData(0xec80, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/receipt-japanese-yen.svg)
   static const IconData receipt_japanese_yen = IconData(0xec81, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/receipt-pound-sterling.svg)
   static const IconData receipt_pound_sterling = IconData(0xec82, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/receipt-russian-ruble.svg)
   static const IconData receipt_russian_ruble = IconData(0xec83, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/receipt-swiss-franc.svg)
   static const IconData receipt_swiss_franc = IconData(0xec84, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/receipt-text.svg)
   static const IconData receipt_text = IconData(0xec85, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/rectangle-ellipsis.svg)
   static const IconData rectangle_ellipsis = IconData(0xec86, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/rectangle-goggles.svg)
   static const IconData rectangle_goggles = IconData(0xec87, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/rectangle-horizontal.svg)
   static const IconData rectangle_horizontal = IconData(0xec88, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/rectangle-vertical.svg)
   static const IconData rectangle_vertical = IconData(0xec89, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/recycle.svg)
   static const IconData recycle = IconData(0xec8a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/redo.svg)
   static const IconData redo = IconData(0xec8b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/redo-2.svg)
   static const IconData redo_2 = IconData(0xec8c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/redo-dot.svg)
   static const IconData redo_dot = IconData(0xec8d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/refresh-ccw.svg)
   static const IconData refresh_ccw = IconData(0xec8e, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/refresh-ccw-dot.svg)
   static const IconData refresh_ccw_dot = IconData(0xec8f, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/refresh-cw.svg)
   static const IconData refresh_cw = IconData(0xec90, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/refresh-cw-off.svg)
   static const IconData refresh_cw_off = IconData(0xec91, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/refrigerator.svg)
   static const IconData refrigerator = IconData(0xec92, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/regex.svg)
   static const IconData regex = IconData(0xec93, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/remove-formatting.svg)
   static const IconData remove_formatting = IconData(0xec94, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/repeat.svg)
   static const IconData repeat = IconData(0xec95, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/repeat-1.svg)
   static const IconData repeat_1 = IconData(0xec96, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/repeat-2.svg)
   static const IconData repeat_2 = IconData(0xec97, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/replace.svg)
   static const IconData replace = IconData(0xec98, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/replace-all.svg)
   static const IconData replace_all = IconData(0xec99, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/reply.svg)
   static const IconData reply = IconData(0xec9a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/reply-all.svg)
   static const IconData reply_all = IconData(0xec9b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/rewind.svg)
   static const IconData rewind = IconData(0xec9c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/ribbon.svg)
   static const IconData ribbon = IconData(0xec9d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/rocket.svg)
   static const IconData rocket = IconData(0xec9e, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/rocking-chair.svg)
   static const IconData rocking_chair = IconData(0xec9f, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/roller-coaster.svg)
   static const IconData roller_coaster = IconData(0xeca0, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/rotate-3d.svg)
   static const IconData rotate_3d = IconData(0xeca1, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/rotate-ccw.svg)
   static const IconData rotate_ccw = IconData(0xeca2, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/rotate-ccw-key.svg)
   static const IconData rotate_ccw_key = IconData(0xeca3, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/rotate-ccw-square.svg)
   static const IconData rotate_ccw_square = IconData(0xeca4, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/rotate-cw.svg)
   static const IconData rotate_cw = IconData(0xeca5, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/rotate-cw-square.svg)
   static const IconData rotate_cw_square = IconData(0xeca6, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/route.svg)
   static const IconData route = IconData(0xeca7, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/route-off.svg)
   static const IconData route_off = IconData(0xeca8, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/router.svg)
   static const IconData router = IconData(0xeca9, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/rows-2.svg)
   static const IconData rows_2 = IconData(0xecaa, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/rows-3.svg)
   static const IconData rows_3 = IconData(0xecab, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/rows-4.svg)
   static const IconData rows_4 = IconData(0xecac, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/rss.svg)
   static const IconData rss = IconData(0xecad, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/ruler.svg)
   static const IconData ruler = IconData(0xecae, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/ruler-dimension-line.svg)
   static const IconData ruler_dimension_line = IconData(0xecaf, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/russian-ruble.svg)
   static const IconData russian_ruble = IconData(0xecb0, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/sailboat.svg)
   static const IconData sailboat = IconData(0xecb1, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/salad.svg)
   static const IconData salad = IconData(0xecb2, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/sandwich.svg)
   static const IconData sandwich = IconData(0xecb3, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/satellite.svg)
   static const IconData satellite = IconData(0xecb4, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/satellite-dish.svg)
   static const IconData satellite_dish = IconData(0xecb5, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/saudi-riyal.svg)
   static const IconData saudi_riyal = IconData(0xecb6, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/save.svg)
   static const IconData save = IconData(0xecb7, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/save-all.svg)
   static const IconData save_all = IconData(0xecb8, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/save-off.svg)
   static const IconData save_off = IconData(0xecb9, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/scale.svg)
   static const IconData scale = IconData(0xecba, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/scale-3d.svg)
   static const IconData scale_3d = IconData(0xecbb, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/scaling.svg)
   static const IconData scaling = IconData(0xecbc, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/scan.svg)
   static const IconData scan = IconData(0xecbd, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/scan-barcode.svg)
   static const IconData scan_barcode = IconData(0xecbe, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/scan-eye.svg)
   static const IconData scan_eye = IconData(0xecbf, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/scan-face.svg)
   static const IconData scan_face = IconData(0xecc0, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/scan-heart.svg)
   static const IconData scan_heart = IconData(0xecc1, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/scan-line.svg)
   static const IconData scan_line = IconData(0xecc2, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/scan-qr-code.svg)
   static const IconData scan_qr_code = IconData(0xecc3, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/scan-search.svg)
   static const IconData scan_search = IconData(0xecc4, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/scan-text.svg)
   static const IconData scan_text = IconData(0xecc5, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/school.svg)
   static const IconData school = IconData(0xecc6, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/scissors.svg)
   static const IconData scissors = IconData(0xecc7, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/scissors-line-dashed.svg)
   static const IconData scissors_line_dashed = IconData(0xecc8, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/screen-share.svg)
   static const IconData screen_share = IconData(0xecc9, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/screen-share-off.svg)
   static const IconData screen_share_off = IconData(0xecca, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/scroll.svg)
   static const IconData scroll = IconData(0xeccb, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/scroll-text.svg)
   static const IconData scroll_text = IconData(0xeccc, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/search.svg)
   static const IconData search = IconData(0xeccd, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/search-check.svg)
   static const IconData search_check = IconData(0xecce, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/search-code.svg)
   static const IconData search_code = IconData(0xeccf, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/search-slash.svg)
   static const IconData search_slash = IconData(0xecd0, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/search-x.svg)
   static const IconData search_x = IconData(0xecd1, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/section.svg)
   static const IconData section = IconData(0xecd2, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/send.svg)
   static const IconData send = IconData(0xecd3, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/send-horizontal.svg)
   static const IconData send_horizontal = IconData(0xecd4, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/send-to-back.svg)
   static const IconData send_to_back = IconData(0xecd5, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/separator-horizontal.svg)
   static const IconData separator_horizontal = IconData(0xecd6, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/separator-vertical.svg)
   static const IconData separator_vertical = IconData(0xecd7, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/server.svg)
   static const IconData server = IconData(0xecd8, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/server-cog.svg)
   static const IconData server_cog = IconData(0xecd9, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/server-crash.svg)
   static const IconData server_crash = IconData(0xecda, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/server-off.svg)
   static const IconData server_off = IconData(0xecdb, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/settings.svg)
   static const IconData settings = IconData(0xecdc, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/settings-2.svg)
   static const IconData settings_2 = IconData(0xecdd, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/shapes.svg)
   static const IconData shapes = IconData(0xecde, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/share.svg)
   static const IconData share = IconData(0xecdf, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/share-2.svg)
   static const IconData share_2 = IconData(0xece0, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/sheet.svg)
   static const IconData sheet = IconData(0xece1, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/shell.svg)
   static const IconData shell = IconData(0xece2, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/shield.svg)
   static const IconData shield = IconData(0xece3, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/shield-alert.svg)
   static const IconData shield_alert = IconData(0xece4, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/shield-ban.svg)
   static const IconData shield_ban = IconData(0xece5, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/shield-check.svg)
   static const IconData shield_check = IconData(0xece6, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/shield-ellipsis.svg)
   static const IconData shield_ellipsis = IconData(0xece7, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/shield-half.svg)
   static const IconData shield_half = IconData(0xece8, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/shield-minus.svg)
   static const IconData shield_minus = IconData(0xece9, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/shield-off.svg)
   static const IconData shield_off = IconData(0xecea, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/shield-plus.svg)
   static const IconData shield_plus = IconData(0xeceb, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/shield-question.svg)
   static const IconData shield_question = IconData(0xecec, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/shield-user.svg)
   static const IconData shield_user = IconData(0xeced, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/shield-x.svg)
   static const IconData shield_x = IconData(0xecee, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/ship.svg)
   static const IconData ship = IconData(0xecef, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/ship-wheel.svg)
   static const IconData ship_wheel = IconData(0xecf0, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/shirt.svg)
   static const IconData shirt = IconData(0xecf1, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/shopping-bag.svg)
   static const IconData shopping_bag = IconData(0xecf2, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/shopping-basket.svg)
   static const IconData shopping_basket = IconData(0xecf3, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/shopping-cart.svg)
   static const IconData shopping_cart = IconData(0xecf4, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/shovel.svg)
   static const IconData shovel = IconData(0xecf5, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/shower-head.svg)
   static const IconData shower_head = IconData(0xecf6, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/shredder.svg)
   static const IconData shredder = IconData(0xecf7, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/shrimp.svg)
   static const IconData shrimp = IconData(0xecf8, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/shrink.svg)
   static const IconData shrink = IconData(0xecf9, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/shrub.svg)
   static const IconData shrub = IconData(0xecfa, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/shuffle.svg)
   static const IconData shuffle = IconData(0xecfb, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/sigma.svg)
   static const IconData sigma = IconData(0xecfc, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/signal.svg)
   static const IconData signal = IconData(0xecfd, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/signal-high.svg)
   static const IconData signal_high = IconData(0xecfe, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/signal-low.svg)
   static const IconData signal_low = IconData(0xecff, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/signal-medium.svg)
   static const IconData signal_medium = IconData(0xed00, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/signal-zero.svg)
   static const IconData signal_zero = IconData(0xed01, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/signature.svg)
   static const IconData signature = IconData(0xed02, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/signpost.svg)
   static const IconData signpost = IconData(0xed03, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/signpost-big.svg)
   static const IconData signpost_big = IconData(0xed04, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/siren.svg)
   static const IconData siren = IconData(0xed05, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/skip-back.svg)
   static const IconData skip_back = IconData(0xed06, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/skip-forward.svg)
   static const IconData skip_forward = IconData(0xed07, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/skull.svg)
   static const IconData skull = IconData(0xed08, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/slack.svg)
   static const IconData slack = IconData(0xed09, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/slash.svg)
   static const IconData slash = IconData(0xed0a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/slice.svg)
   static const IconData slice = IconData(0xed0b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/sliders-horizontal.svg)
   static const IconData sliders_horizontal = IconData(0xed0c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/sliders-vertical.svg)
   static const IconData sliders_vertical = IconData(0xed0d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/smartphone.svg)
   static const IconData smartphone = IconData(0xed0e, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/smartphone-charging.svg)
   static const IconData smartphone_charging = IconData(0xed0f, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/smartphone-nfc.svg)
   static const IconData smartphone_nfc = IconData(0xed10, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/smile.svg)
   static const IconData smile = IconData(0xed11, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/smile-plus.svg)
   static const IconData smile_plus = IconData(0xed12, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/snail.svg)
   static const IconData snail = IconData(0xed13, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/snowflake.svg)
   static const IconData snowflake = IconData(0xed14, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/soap-dispenser-droplet.svg)
   static const IconData soap_dispenser_droplet = IconData(0xed15, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/sofa.svg)
   static const IconData sofa = IconData(0xed16, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/soup.svg)
   static const IconData soup = IconData(0xed17, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/space.svg)
   static const IconData space = IconData(0xed18, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/spade.svg)
   static const IconData spade = IconData(0xed19, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/sparkle.svg)
   static const IconData sparkle = IconData(0xed1a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/sparkles.svg)
   static const IconData sparkles = IconData(0xed1b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/speaker.svg)
   static const IconData speaker = IconData(0xed1c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/speech.svg)
   static const IconData speech = IconData(0xed1d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/spell-check.svg)
   static const IconData spell_check = IconData(0xed1e, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/spell-check-2.svg)
   static const IconData spell_check_2 = IconData(0xed1f, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/spline.svg)
   static const IconData spline = IconData(0xed20, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/spline-pointer.svg)
   static const IconData spline_pointer = IconData(0xed21, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/split.svg)
   static const IconData split = IconData(0xed22, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/spray-can.svg)
   static const IconData spray_can = IconData(0xed23, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/sprout.svg)
   static const IconData sprout = IconData(0xed24, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/square.svg)
   static const IconData square = IconData(0xed25, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/square-activity.svg)
   static const IconData square_activity = IconData(0xed26, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/square-arrow-down.svg)
   static const IconData square_arrow_down = IconData(0xed27, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/square-arrow-down-left.svg)
   static const IconData square_arrow_down_left = IconData(0xed28, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/square-arrow-down-right.svg)
   static const IconData square_arrow_down_right = IconData(0xed29, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/square-arrow-left.svg)
   static const IconData square_arrow_left = IconData(0xed2a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/square-arrow-out-down-left.svg)
   static const IconData square_arrow_out_down_left = IconData(0xed2b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/square-arrow-out-down-right.svg)
   static const IconData square_arrow_out_down_right = IconData(0xed2c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/square-arrow-out-up-left.svg)
   static const IconData square_arrow_out_up_left = IconData(0xed2d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/square-arrow-out-up-right.svg)
   static const IconData square_arrow_out_up_right = IconData(0xed2e, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/square-arrow-right.svg)
   static const IconData square_arrow_right = IconData(0xed2f, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/square-arrow-up.svg)
   static const IconData square_arrow_up = IconData(0xed30, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/square-arrow-up-left.svg)
   static const IconData square_arrow_up_left = IconData(0xed31, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/square-arrow-up-right.svg)
   static const IconData square_arrow_up_right = IconData(0xed32, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/square-asterisk.svg)
   static const IconData square_asterisk = IconData(0xed33, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/square-bottom-dashed-scissors.svg)
   static const IconData square_bottom_dashed_scissors = IconData(0xed34, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/square-chart-gantt.svg)
   static const IconData square_chart_gantt = IconData(0xed35, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/square-check.svg)
   static const IconData square_check = IconData(0xed36, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/square-check-big.svg)
   static const IconData square_check_big = IconData(0xed37, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/square-chevron-down.svg)
   static const IconData square_chevron_down = IconData(0xed38, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/square-chevron-left.svg)
   static const IconData square_chevron_left = IconData(0xed39, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/square-chevron-right.svg)
   static const IconData square_chevron_right = IconData(0xed3a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/square-chevron-up.svg)
   static const IconData square_chevron_up = IconData(0xed3b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/square-code.svg)
   static const IconData square_code = IconData(0xed3c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/square-dashed.svg)
   static const IconData square_dashed = IconData(0xed3d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/square-dashed-bottom.svg)
   static const IconData square_dashed_bottom = IconData(0xed3e, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/square-dashed-bottom-code.svg)
   static const IconData square_dashed_bottom_code = IconData(0xed3f, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/square-dashed-kanban.svg)
   static const IconData square_dashed_kanban = IconData(0xed40, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/square-dashed-mouse-pointer.svg)
   static const IconData square_dashed_mouse_pointer = IconData(0xed41, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/square-dashed-top-solid.svg)
   static const IconData square_dashed_top_solid = IconData(0xed42, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/square-divide.svg)
   static const IconData square_divide = IconData(0xed43, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/square-dot.svg)
   static const IconData square_dot = IconData(0xed44, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/square-equal.svg)
   static const IconData square_equal = IconData(0xed45, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/square-function.svg)
   static const IconData square_function = IconData(0xed46, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/square-kanban.svg)
   static const IconData square_kanban = IconData(0xed47, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/square-library.svg)
   static const IconData square_library = IconData(0xed48, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/square-m.svg)
   static const IconData square_m = IconData(0xed49, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/square-menu.svg)
   static const IconData square_menu = IconData(0xed4a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/square-minus.svg)
   static const IconData square_minus = IconData(0xed4b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/square-mouse-pointer.svg)
   static const IconData square_mouse_pointer = IconData(0xed4c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/square-parking.svg)
   static const IconData square_parking = IconData(0xed4d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/square-parking-off.svg)
   static const IconData square_parking_off = IconData(0xed4e, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/square-pen.svg)
   static const IconData square_pen = IconData(0xed4f, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/square-percent.svg)
   static const IconData square_percent = IconData(0xed50, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/square-pi.svg)
   static const IconData square_pi = IconData(0xed51, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/square-pilcrow.svg)
   static const IconData square_pilcrow = IconData(0xed52, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/square-play.svg)
   static const IconData square_play = IconData(0xed53, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/square-plus.svg)
   static const IconData square_plus = IconData(0xed54, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/square-power.svg)
   static const IconData square_power = IconData(0xed55, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/square-radical.svg)
   static const IconData square_radical = IconData(0xed56, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/square-round-corner.svg)
   static const IconData square_round_corner = IconData(0xed57, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/square-scissors.svg)
   static const IconData square_scissors = IconData(0xed58, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/squares-exclude.svg)
   static const IconData squares_exclude = IconData(0xed59, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/square-sigma.svg)
   static const IconData square_sigma = IconData(0xed5a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/squares-intersect.svg)
   static const IconData squares_intersect = IconData(0xed5b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/square-slash.svg)
   static const IconData square_slash = IconData(0xed5c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/square-split-horizontal.svg)
   static const IconData square_split_horizontal = IconData(0xed5d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/square-split-vertical.svg)
   static const IconData square_split_vertical = IconData(0xed5e, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/square-square.svg)
   static const IconData square_square = IconData(0xed5f, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/squares-subtract.svg)
   static const IconData squares_subtract = IconData(0xed60, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/square-stack.svg)
   static const IconData square_stack = IconData(0xed61, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/squares-unite.svg)
   static const IconData squares_unite = IconData(0xed62, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/square-terminal.svg)
   static const IconData square_terminal = IconData(0xed63, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/square-user.svg)
   static const IconData square_user = IconData(0xed64, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/square-user-round.svg)
   static const IconData square_user_round = IconData(0xed65, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/square-x.svg)
   static const IconData square_x = IconData(0xed66, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/squircle.svg)
   static const IconData squircle = IconData(0xed67, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/squirrel.svg)
   static const IconData squirrel = IconData(0xed68, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/stamp.svg)
   static const IconData stamp = IconData(0xed69, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/star.svg)
   static const IconData star = IconData(0xed6a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/star-half.svg)
   static const IconData star_half = IconData(0xed6b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/star-off.svg)
   static const IconData star_off = IconData(0xed6c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/step-back.svg)
   static const IconData step_back = IconData(0xed6d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/step-forward.svg)
   static const IconData step_forward = IconData(0xed6e, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/stethoscope.svg)
   static const IconData stethoscope = IconData(0xed6f, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/sticker.svg)
   static const IconData sticker = IconData(0xed70, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/sticky-note.svg)
   static const IconData sticky_note = IconData(0xed71, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/store.svg)
   static const IconData store = IconData(0xed72, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/stretch-horizontal.svg)
   static const IconData stretch_horizontal = IconData(0xed73, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/stretch-vertical.svg)
   static const IconData stretch_vertical = IconData(0xed74, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/strikethrough.svg)
   static const IconData strikethrough = IconData(0xed75, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/subscript.svg)
   static const IconData subscript = IconData(0xed76, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/sun.svg)
   static const IconData sun = IconData(0xed77, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/sun-dim.svg)
   static const IconData sun_dim = IconData(0xed78, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/sun-medium.svg)
   static const IconData sun_medium = IconData(0xed79, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/sun-moon.svg)
   static const IconData sun_moon = IconData(0xed7a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/sunrise.svg)
   static const IconData sunrise = IconData(0xed7b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/sunset.svg)
   static const IconData sunset = IconData(0xed7c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/sun-snow.svg)
   static const IconData sun_snow = IconData(0xed7d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/superscript.svg)
   static const IconData superscript = IconData(0xed7e, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/swatch-book.svg)
   static const IconData swatch_book = IconData(0xed7f, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/swiss-franc.svg)
   static const IconData swiss_franc = IconData(0xed80, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/switch-camera.svg)
   static const IconData switch_camera = IconData(0xed81, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/sword.svg)
   static const IconData sword = IconData(0xed82, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/swords.svg)
   static const IconData swords = IconData(0xed83, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/syringe.svg)
   static const IconData syringe = IconData(0xed84, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/table.svg)
   static const IconData table = IconData(0xed85, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/table-2.svg)
   static const IconData table_2 = IconData(0xed86, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/table-cells-merge.svg)
   static const IconData table_cells_merge = IconData(0xed87, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/table-cells-split.svg)
   static const IconData table_cells_split = IconData(0xed88, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/table-columns-split.svg)
   static const IconData table_columns_split = IconData(0xed89, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/table-of-contents.svg)
   static const IconData table_of_contents = IconData(0xed8a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/table-properties.svg)
   static const IconData table_properties = IconData(0xed8b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/table-rows-split.svg)
   static const IconData table_rows_split = IconData(0xed8c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/tablet.svg)
   static const IconData tablet = IconData(0xed8d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/tablets.svg)
   static const IconData tablets = IconData(0xed8e, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/tablet-smartphone.svg)
   static const IconData tablet_smartphone = IconData(0xed8f, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/tag.svg)
   static const IconData tag = IconData(0xed90, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/tags.svg)
   static const IconData tags = IconData(0xed91, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/tally-1.svg)
   static const IconData tally_1 = IconData(0xed92, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/tally-2.svg)
   static const IconData tally_2 = IconData(0xed93, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/tally-3.svg)
   static const IconData tally_3 = IconData(0xed94, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/tally-4.svg)
   static const IconData tally_4 = IconData(0xed95, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/tally-5.svg)
   static const IconData tally_5 = IconData(0xed96, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/tangent.svg)
   static const IconData tangent = IconData(0xed97, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/target.svg)
   static const IconData target = IconData(0xed98, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/telescope.svg)
   static const IconData telescope = IconData(0xed99, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/tent.svg)
   static const IconData tent = IconData(0xed9a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/tent-tree.svg)
   static const IconData tent_tree = IconData(0xed9b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/terminal.svg)
   static const IconData terminal = IconData(0xed9c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/test-tube.svg)
   static const IconData test_tube = IconData(0xed9d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/test-tube-diagonal.svg)
   static const IconData test_tube_diagonal = IconData(0xed9e, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/test-tubes.svg)
   static const IconData test_tubes = IconData(0xed9f, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/text.svg)
   static const IconData text = IconData(0xeda0, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/text-cursor.svg)
   static const IconData text_cursor = IconData(0xeda1, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/text-cursor-input.svg)
   static const IconData text_cursor_input = IconData(0xeda2, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/text-quote.svg)
   static const IconData text_quote = IconData(0xeda3, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/text-search.svg)
   static const IconData text_search = IconData(0xeda4, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/text-select.svg)
   static const IconData text_select = IconData(0xeda5, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/theater.svg)
   static const IconData theater = IconData(0xeda6, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/thermometer.svg)
   static const IconData thermometer = IconData(0xeda7, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/thermometer-snowflake.svg)
   static const IconData thermometer_snowflake = IconData(0xeda8, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/thermometer-sun.svg)
   static const IconData thermometer_sun = IconData(0xeda9, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/thumbs-down.svg)
   static const IconData thumbs_down = IconData(0xedaa, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/thumbs-up.svg)
   static const IconData thumbs_up = IconData(0xedab, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/ticket.svg)
   static const IconData ticket = IconData(0xedac, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/ticket-check.svg)
   static const IconData ticket_check = IconData(0xedad, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/ticket-minus.svg)
   static const IconData ticket_minus = IconData(0xedae, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/ticket-percent.svg)
   static const IconData ticket_percent = IconData(0xedaf, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/ticket-plus.svg)
   static const IconData ticket_plus = IconData(0xedb0, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/tickets.svg)
   static const IconData tickets = IconData(0xedb1, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/ticket-slash.svg)
   static const IconData ticket_slash = IconData(0xedb2, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/tickets-plane.svg)
   static const IconData tickets_plane = IconData(0xedb3, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/ticket-x.svg)
   static const IconData ticket_x = IconData(0xedb4, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/timer.svg)
   static const IconData timer = IconData(0xedb5, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/timer-off.svg)
   static const IconData timer_off = IconData(0xedb6, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/timer-reset.svg)
   static const IconData timer_reset = IconData(0xedb7, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/toggle-left.svg)
   static const IconData toggle_left = IconData(0xedb8, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/toggle-right.svg)
   static const IconData toggle_right = IconData(0xedb9, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/toilet.svg)
   static const IconData toilet = IconData(0xedba, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/tornado.svg)
   static const IconData tornado = IconData(0xedbb, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/torus.svg)
   static const IconData torus = IconData(0xedbc, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/touchpad.svg)
   static const IconData touchpad = IconData(0xedbd, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/touchpad-off.svg)
   static const IconData touchpad_off = IconData(0xedbe, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/tower-control.svg)
   static const IconData tower_control = IconData(0xedbf, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/toy-brick.svg)
   static const IconData toy_brick = IconData(0xedc0, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/tractor.svg)
   static const IconData tractor = IconData(0xedc1, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/traffic-cone.svg)
   static const IconData traffic_cone = IconData(0xedc2, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/train-front.svg)
   static const IconData train_front = IconData(0xedc3, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/train-front-tunnel.svg)
   static const IconData train_front_tunnel = IconData(0xedc4, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/train-track.svg)
   static const IconData train_track = IconData(0xedc5, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/tram-front.svg)
   static const IconData tram_front = IconData(0xedc6, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/transgender.svg)
   static const IconData transgender = IconData(0xedc7, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/trash.svg)
   static const IconData trash = IconData(0xedc8, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/trash-2.svg)
   static const IconData trash_2 = IconData(0xedc9, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/tree-deciduous.svg)
   static const IconData tree_deciduous = IconData(0xedca, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/tree-palm.svg)
   static const IconData tree_palm = IconData(0xedcb, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/tree-pine.svg)
   static const IconData tree_pine = IconData(0xedcc, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/trees.svg)
   static const IconData trees = IconData(0xedcd, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/trello.svg)
   static const IconData trello = IconData(0xedce, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/trending-down.svg)
   static const IconData trending_down = IconData(0xedcf, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/trending-up.svg)
   static const IconData trending_up = IconData(0xedd0, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/trending-up-down.svg)
   static const IconData trending_up_down = IconData(0xedd1, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/triangle.svg)
   static const IconData triangle = IconData(0xedd2, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/triangle-alert.svg)
   static const IconData triangle_alert = IconData(0xedd3, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/triangle-dashed.svg)
   static const IconData triangle_dashed = IconData(0xedd4, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/triangle-right.svg)
   static const IconData triangle_right = IconData(0xedd5, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/trophy.svg)
   static const IconData trophy = IconData(0xedd6, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/truck.svg)
   static const IconData truck = IconData(0xedd7, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/truck-electric.svg)
   static const IconData truck_electric = IconData(0xedd8, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/turtle.svg)
   static const IconData turtle = IconData(0xedd9, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/tv.svg)
   static const IconData tv = IconData(0xedda, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/tv-minimal.svg)
   static const IconData tv_minimal = IconData(0xeddb, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/tv-minimal-play.svg)
   static const IconData tv_minimal_play = IconData(0xeddc, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/twitch.svg)
   static const IconData twitch = IconData(0xeddd, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/twitter.svg)
   static const IconData twitter = IconData(0xedde, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/type.svg)
   static const IconData type = IconData(0xeddf, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/type-outline.svg)
   static const IconData type_outline = IconData(0xede0, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/umbrella.svg)
   static const IconData umbrella = IconData(0xede1, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/umbrella-off.svg)
   static const IconData umbrella_off = IconData(0xede2, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/underline.svg)
   static const IconData underline = IconData(0xede3, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/undo.svg)
   static const IconData undo = IconData(0xede4, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/undo-2.svg)
   static const IconData undo_2 = IconData(0xede5, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/undo-dot.svg)
   static const IconData undo_dot = IconData(0xede6, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/unfold-horizontal.svg)
   static const IconData unfold_horizontal = IconData(0xede7, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/unfold-vertical.svg)
   static const IconData unfold_vertical = IconData(0xede8, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/ungroup.svg)
   static const IconData ungroup = IconData(0xede9, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/university.svg)
   static const IconData university = IconData(0xedea, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/unlink.svg)
   static const IconData unlink = IconData(0xedeb, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/unlink-2.svg)
   static const IconData unlink_2 = IconData(0xedec, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/unplug.svg)
   static const IconData unplug = IconData(0xeded, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/upload.svg)
   static const IconData upload = IconData(0xedee, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/usb.svg)
   static const IconData usb = IconData(0xedef, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/user.svg)
   static const IconData user = IconData(0xedf0, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/user-check.svg)
   static const IconData user_check = IconData(0xedf1, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/user-cog.svg)
   static const IconData user_cog = IconData(0xedf2, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/user-lock.svg)
   static const IconData user_lock = IconData(0xedf3, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/user-minus.svg)
   static const IconData user_minus = IconData(0xedf4, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/user-pen.svg)
   static const IconData user_pen = IconData(0xedf5, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/user-plus.svg)
   static const IconData user_plus = IconData(0xedf6, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/user-round.svg)
   static const IconData user_round = IconData(0xedf7, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/user-round-check.svg)
   static const IconData user_round_check = IconData(0xedf8, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/user-round-cog.svg)
   static const IconData user_round_cog = IconData(0xedf9, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/user-round-minus.svg)
   static const IconData user_round_minus = IconData(0xedfa, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/user-round-pen.svg)
   static const IconData user_round_pen = IconData(0xedfb, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/user-round-plus.svg)
   static const IconData user_round_plus = IconData(0xedfc, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/user-round-search.svg)
   static const IconData user_round_search = IconData(0xedfd, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/user-round-x.svg)
   static const IconData user_round_x = IconData(0xedfe, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/users.svg)
   static const IconData users = IconData(0xedff, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/user-search.svg)
   static const IconData user_search = IconData(0xee00, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/users-round.svg)
   static const IconData users_round = IconData(0xee01, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/user-x.svg)
   static const IconData user_x = IconData(0xee02, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/utensils.svg)
   static const IconData utensils = IconData(0xee03, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/utensils-crossed.svg)
   static const IconData utensils_crossed = IconData(0xee04, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/utility-pole.svg)
   static const IconData utility_pole = IconData(0xee05, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/variable.svg)
   static const IconData variable = IconData(0xee06, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/vault.svg)
   static const IconData vault = IconData(0xee07, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/vegan.svg)
   static const IconData vegan = IconData(0xee08, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/venetian-mask.svg)
   static const IconData venetian_mask = IconData(0xee09, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/venus.svg)
   static const IconData venus = IconData(0xee0a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/venus-and-mars.svg)
   static const IconData venus_and_mars = IconData(0xee0b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/vibrate.svg)
   static const IconData vibrate = IconData(0xee0c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/vibrate-off.svg)
   static const IconData vibrate_off = IconData(0xee0d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/video.svg)
   static const IconData video = IconData(0xee0e, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/video-off.svg)
   static const IconData video_off = IconData(0xee0f, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/videotape.svg)
   static const IconData videotape = IconData(0xee10, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/view.svg)
   static const IconData view = IconData(0xee11, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/voicemail.svg)
   static const IconData voicemail = IconData(0xee12, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/volleyball.svg)
   static const IconData volleyball = IconData(0xee13, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/volume.svg)
   static const IconData volume = IconData(0xee14, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/volume-1.svg)
   static const IconData volume_1 = IconData(0xee15, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/volume-2.svg)
   static const IconData volume_2 = IconData(0xee16, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/volume-off.svg)
   static const IconData volume_off = IconData(0xee17, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/volume-x.svg)
   static const IconData volume_x = IconData(0xee18, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/vote.svg)
   static const IconData vote = IconData(0xee19, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/wallet.svg)
   static const IconData wallet = IconData(0xee1a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/wallet-cards.svg)
   static const IconData wallet_cards = IconData(0xee1b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/wallet-minimal.svg)
   static const IconData wallet_minimal = IconData(0xee1c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/wallpaper.svg)
   static const IconData wallpaper = IconData(0xee1d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/wand.svg)
   static const IconData wand = IconData(0xee1e, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/wand-sparkles.svg)
   static const IconData wand_sparkles = IconData(0xee1f, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/warehouse.svg)
   static const IconData warehouse = IconData(0xee20, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/washing-machine.svg)
   static const IconData washing_machine = IconData(0xee21, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/watch.svg)
   static const IconData watch = IconData(0xee22, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/waves.svg)
   static const IconData waves = IconData(0xee23, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/waves-ladder.svg)
   static const IconData waves_ladder = IconData(0xee24, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/waypoints.svg)
   static const IconData waypoints = IconData(0xee25, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/webcam.svg)
   static const IconData webcam = IconData(0xee26, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/webhook.svg)
   static const IconData webhook = IconData(0xee27, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/webhook-off.svg)
   static const IconData webhook_off = IconData(0xee28, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/weight.svg)
   static const IconData weight = IconData(0xee29, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/wheat.svg)
   static const IconData wheat = IconData(0xee2a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/wheat-off.svg)
   static const IconData wheat_off = IconData(0xee2b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/whole-word.svg)
   static const IconData whole_word = IconData(0xee2c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/wifi.svg)
   static const IconData wifi = IconData(0xee2d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/wifi-high.svg)
   static const IconData wifi_high = IconData(0xee2e, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/wifi-low.svg)
   static const IconData wifi_low = IconData(0xee2f, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/wifi-off.svg)
   static const IconData wifi_off = IconData(0xee30, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/wifi-pen.svg)
   static const IconData wifi_pen = IconData(0xee31, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/wifi-zero.svg)
   static const IconData wifi_zero = IconData(0xee32, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/wind.svg)
   static const IconData wind = IconData(0xee33, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/wind-arrow-down.svg)
   static const IconData wind_arrow_down = IconData(0xee34, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/wine.svg)
   static const IconData wine = IconData(0xee35, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/wine-off.svg)
   static const IconData wine_off = IconData(0xee36, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/workflow.svg)
   static const IconData workflow = IconData(0xee37, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/worm.svg)
   static const IconData worm = IconData(0xee38, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/wrap-text.svg)
   static const IconData wrap_text = IconData(0xee39, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/wrench.svg)
   static const IconData wrench = IconData(0xee3a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/x.svg)
   static const IconData x = IconData(0xee3b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/youtube.svg)
   static const IconData youtube = IconData(0xee3c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/zap.svg)
   static const IconData zap = IconData(0xee3d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/zap-off.svg)
   static const IconData zap_off = IconData(0xee3e, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/zoom-in.svg)
   static const IconData zoom_in = IconData(0xee3f, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
+  /// ![](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/zoom-out.svg)
   static const IconData zoom_out = IconData(0xee40, fontFamily: _kFontFam, fontPackage: _kFontPkg);
 }
