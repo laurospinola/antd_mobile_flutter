@@ -40,11 +40,10 @@ class AdmTabs extends StatefulWidget {
   final ValueChanged<int>? onChange;
 
   /// Legacy single-child below the tab bar (no swipe support).
-  final Widget? child;
 
   /// When provided, renders a [TabBarView] enabling swipe-to-switch.
   /// Must have the same length as [tabs].
-  final List<Widget>? children;
+  final List<Widget> children;
 
   /// Height of the [TabBarView] area. Required when [children] is set and the
   /// widget lives inside a scroll view. Defaults to 200.
@@ -62,8 +61,7 @@ class AdmTabs extends StatefulWidget {
     required this.tabs,
     required this.activeIndex,
     this.onChange,
-    this.child,
-    this.children,
+    required this.children,
     this.tabViewHeight = 200,
     this.scrollable = false,
     this.tabWidth,
@@ -188,28 +186,17 @@ class _AdmTabsState extends State<AdmTabs> with SingleTickerProviderStateMixin {
     );
 
     // --- TabBarView (swipe) mode ---
-    if (widget.children != null) {
-      return Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          tabBar,
-          SizedBox(
-            height: widget.tabViewHeight,
-            child: TabBarView(
-              controller: _controller,
-              children: widget.children!,
-            ),
-          ),
-        ],
-      );
-    }
-
-    // --- Legacy single-child mode ---
-    if (widget.child == null) return tabBar;
-
     return Column(
       mainAxisSize: MainAxisSize.min,
-      children: [tabBar, widget.child!],
+      children: [
+        tabBar,
+        Expanded(
+          child: TabBarView(
+            controller: _controller,
+            children: widget.children!,
+          ),
+        ),
+      ],
     );
   }
 }
