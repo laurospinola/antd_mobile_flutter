@@ -13,6 +13,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_svg: ^2.2.4
   qr_flutter:
 
 dev_dependencies:
@@ -21,4 +22,9 @@ dev_dependencies:
   flutter_lints: ^3.0.0
 
 flutter:
+  fonts:
+    - family: AdmIcons
+      fonts:
+        - asset: assets/fonts/AdmIcons.ttf
+        - asset: assets/fonts/config.json
   # No assets by default — add your own fonts/icons here

@@ -68,39 +68,49 @@ class _ShowcaseHomeState extends State<ShowcaseHome> {
               onTap: widget.onToggleDark,
               child: Padding(
                 padding: const EdgeInsets.only(right: 16),
-                child: Icon(
-                  widget.darkMode ? Icons.light_mode_outlined : Icons.dark_mode_outlined,
-                  color: tokens.colorTextBase,
-                  size: 22,
-                ),
+                child: Icon(AdmIcons.airplay),
               ),
             ),
           ),
+          // AdmNavBar(
+          //   title: const Text('ADM Flutter'),
+          //   right: GestureDetector(
+          //     onTap: widget.onToggleDark,
+          //     child: Padding(
+          //       padding: const EdgeInsets.only(right: 16),
+          //       child: AdmIcon(
+          //         widget.darkMode ? AppSvgIcons.sun : AppSvgIcons.moon,
+          //         size: 22,
+          //         color: tokens.colorTextBase,
+          //       ),
+          //     ),
+          //   ),
+          // ),
           Expanded(child: _pages[_tabIndex]),
           AdmTabBar(
             activeIndex: _tabIndex,
             onChange: (i) => setState(() => _tabIndex = i),
-            items: const [
+            items: [
               AdmTabBarItem(
-                icon: Icon(Icons.widgets_outlined),
-                activeIcon: Icon(Icons.widgets),
-                title: Text('Components'),
+                icon: Icon(AdmIcons.layout_grid),
+                activeIcon: Icon(AdmIcons.layout_grid),
+                title: const Text('Components'),
               ),
               AdmTabBarItem(
-                icon: Icon(Icons.edit_note_outlined),
-                activeIcon: Icon(Icons.edit_note),
-                title: Text('Forms'),
+                icon: Icon(AdmIcons.pencil),
+                activeIcon: Icon(AdmIcons.pencil),
+                title: const Text('Forms'),
               ),
               AdmTabBarItem(
-                icon: Icon(Icons.notifications_outlined),
-                activeIcon: Icon(Icons.notifications),
-                title: Text('Feedback'),
+                icon: Icon(AdmIcons.bell),
+                activeIcon: Icon(AdmIcons.bell_ring),
+                title: const Text('Feedback'),
                 dot: true,
               ),
               AdmTabBarItem(
-                icon: Icon(Icons.person_outline),
-                activeIcon: Icon(Icons.person),
-                title: Text('Profile'),
+                icon: Icon(AdmIcons.user),
+                activeIcon: Icon(AdmIcons.user),
+                title: const Text('Profile'),
               ),
             ],
           ),
@@ -175,18 +185,18 @@ class _ComponentsPageState extends State<_ComponentsPage> {
             AdmTag(closeable: true, color: AdmTagColor.primary, child: Text('Close me')),
           ]),
           SizedBox(height: tokens.spaceMd),
-          AdmSpace(gap: tokens.spaceXl, children: const [
+          AdmSpace(gap: tokens.spaceXl, children: [
             AdmBadge(
-              content: Text('5'),
-              child: Icon(Icons.notifications_outlined, size: 28),
+              content: const Text('5'),
+              child: Icon(AdmIcons.bell, size: 28),
             ),
             AdmBadge(
-              content: Text('99+'),
-              child: Icon(Icons.mail_outline, size: 28),
+              content: const Text('99+'),
+              child: Icon(AdmIcons.mail, size: 28),
             ),
             AdmBadge(
               content: AdmBadge.dot,
-              child: Icon(Icons.message_outlined, size: 28),
+              child: Icon(AdmIcons.message_circle, size: 28),
             ),
           ]),
           SizedBox(height: tokens.spaceXl),
@@ -196,7 +206,7 @@ class _ComponentsPageState extends State<_ComponentsPage> {
             AdmAvatar(text: 'BC', backgroundColor: tokens.colorSuccess, size: AdmAvatarSize.middle),
             AdmAvatar(text: 'DE', backgroundColor: tokens.colorWarning, size: AdmAvatarSize.large),
             AdmAvatar(text: 'FG', backgroundColor: tokens.colorDanger, size: AdmAvatarSize.xl),
-            const AdmAvatar(icon: Icon(Icons.person), backgroundColor: AdmColors.grey6, size: AdmAvatarSize.large),
+            AdmAvatar(icon: Icon(AdmIcons.user), backgroundColor: AdmColors.grey6, size: AdmAvatarSize.large),
             AdmAvatar(
                 text: 'SQ',
                 shape: AdmAvatarShape.square,
@@ -206,7 +216,7 @@ class _ComponentsPageState extends State<_ComponentsPage> {
           SizedBox(height: tokens.spaceXl),
           const _SectionTitle('Tabs'),
           SizedBox(
-           
+            height: 300,
             child: AdmTabs(
               tabs: const [
                 AdmTabItem(title: Text('All')),
@@ -296,26 +306,26 @@ class _ComponentsPageState extends State<_ComponentsPage> {
             footer: const Text('Version 1.0.0'),
             children: [
               AdmListItem(
-                prefix: const Icon(Icons.person_outline),
+                prefix: Icon(AdmIcons.user, size: 20),
                 title: const Text('Profile'),
                 extra: const Text('Edit'),
                 arrow: true,
                 onTap: () {},
               ),
               AdmListItem(
-                prefix: const Icon(Icons.notifications_outlined),
+                prefix: Icon(AdmIcons.bell, size: 20),
                 title: const Text('Notifications'),
                 extra: AdmSwitch(checked: true, onChange: (_) {}),
               ),
               AdmListItem(
-                prefix: const Icon(Icons.language_outlined),
+                prefix: Icon(AdmIcons.globe, size: 20),
                 title: const Text('Language'),
                 extra: const Text('English'),
                 arrow: true,
                 onTap: () {},
               ),
               AdmListItem(
-                prefix: const Icon(Icons.help_outline),
+                prefix: Icon(AdmIcons.circle_help, size: 20),
                 title: const Text('Help Center'),
                 arrow: true,
                 disabled: false,
@@ -340,10 +350,10 @@ class _ComponentsPageState extends State<_ComponentsPage> {
                     onPress: () {},
                   ),
                 ],
-                child: const AdmListItem(
-                  prefix: Icon(Icons.email_outlined),
-                  title: Text('Swipe me left'),
-                  description: Text('Reveal archive & delete actions'),
+                child: AdmListItem(
+                  prefix: Icon(AdmIcons.mail, size: 20),
+                  title: const Text('Swipe me left'),
+                  description: const Text('Reveal archive & delete actions'),
                 ),
               ),
               AdmSwipeAction(
@@ -361,10 +371,10 @@ class _ComponentsPageState extends State<_ComponentsPage> {
                     onPress: () {},
                   ),
                 ],
-                child: const AdmListItem(
-                  prefix: Icon(Icons.star_outline),
-                  title: Text('Swipe either way'),
-                  description: Text('Left or right'),
+                child: AdmListItem(
+                  prefix: Icon(AdmIcons.star, size: 20),
+                  title: const Text('Swipe either way'),
+                  description: const Text('Left or right'),
                 ),
               ),
             ],
@@ -435,7 +445,7 @@ class _FormsPageState extends State<_FormsPage> {
               rules: [(v) => (v == null || v.isEmpty) ? 'Email is required' : null],
               child: AdmInput(
                 placeholder: 'Enter your email',
-                prefix: const Icon(Icons.email_outlined),
+                prefix: Icon(AdmIcons.mail, size: 20),
                 clearable: true,
                 keyboardType: TextInputType.emailAddress,
                 onChanged: (v) => _formCtrl.setField('email', v),
@@ -447,7 +457,7 @@ class _FormsPageState extends State<_FormsPage> {
               required: true,
               child: AdmInput(
                 placeholder: 'Enter password',
-                prefix: const Icon(Icons.lock_outline),
+                prefix: Icon(AdmIcons.lock, size: 20),
                 password: true,
                 onChanged: (v) => _formCtrl.setField('password', v),
               ),
@@ -589,7 +599,7 @@ class _FeedbackPage extends StatelessWidget {
           const AdmNoticeBar(content: Text('System upgrade scheduled for tonight 10 PM.')),
           SizedBox(height: tokens.spaceSm),
           AdmNoticeBar(
-            icon: const Icon(Icons.info_outline),
+            icon: Icon(AdmIcons.info, size: 16),
             content: const Text('Your verification is pending review.'),
             closeable: true,
             color: tokens.colorPrimary,
@@ -597,7 +607,7 @@ class _FeedbackPage extends StatelessWidget {
           ),
           SizedBox(height: tokens.spaceSm),
           AdmNoticeBar(
-            icon: const Icon(Icons.error_outline),
+            icon: Icon(AdmIcons.circle_alert, size: 16),
             content: const Text('Payment failed. Please update your card.'),
             closeable: true,
             color: tokens.colorDanger,
@@ -840,20 +850,20 @@ class _ProfilePage extends StatelessWidget {
             header: const Text('Account'),
             children: [
               AdmListItem(
-                prefix: const Icon(Icons.person_outline),
+                prefix: Icon(AdmIcons.user, size: 20),
                 title: const Text('Edit Profile'),
                 arrow: true,
                 onTap: () {},
               ),
               AdmListItem(
-                prefix: const Icon(Icons.location_on_outlined),
+                prefix: Icon(AdmIcons.map_pin, size: 20),
                 title: const Text('Saved Addresses'),
                 extra: const Text('3'),
                 arrow: true,
                 onTap: () {},
               ),
               AdmListItem(
-                prefix: const Icon(Icons.credit_card_outlined),
+                prefix: Icon(AdmIcons.credit_card, size: 20),
                 title: const Text('Payment Methods'),
                 arrow: true,
                 onTap: () {},
@@ -867,19 +877,19 @@ class _ProfilePage extends StatelessWidget {
             header: const Text('Preferences'),
             children: [
               AdmListItem(
-                prefix: const Icon(Icons.notifications_outlined),
+                prefix: Icon(AdmIcons.bell, size: 20),
                 title: const Text('Push Notifications'),
                 extra: AdmSwitch(checked: true, onChange: (_) {}),
               ),
               AdmListItem(
-                prefix: const Icon(Icons.language_outlined),
+                prefix: Icon(AdmIcons.globe, size: 20),
                 title: const Text('Language'),
                 extra: const Text('English'),
                 arrow: true,
                 onTap: () {},
               ),
               AdmListItem(
-                prefix: const Icon(Icons.privacy_tip_outlined),
+                prefix: Icon(AdmIcons.shield, size: 20),
                 title: const Text('Privacy Settings'),
                 arrow: true,
                 onTap: () {},

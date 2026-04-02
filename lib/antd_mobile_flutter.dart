@@ -3,6 +3,7 @@ library antd_mobile_flutter;
 
 // ─── Theme ─────────────────────────────────────────────────────────────────
 export 'src/theme/adm_theme.dart';
+export 'src/theme/adm_icons.dart';
 export 'src/theme/adm_theme_data.dart';
 export 'src/theme/adm_colors.dart';
 export 'src/theme/adm_typography.dart';

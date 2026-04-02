@@ -4,7 +4,9 @@
       "Bash(xargs grep:*)",
       "WebSearch",
       "WebFetch(domain:www.antforfigma.com)",
-      "WebFetch(domain:app.studyraid.com)"
+      "WebFetch(domain:app.studyraid.com)",
+      "Bash(ls assets/icons/*.svg)",
+      "Read(//c/Users/lauro.spinola/Documents/sita/antd_mobile_flutter/{name=$0; gsub\\(/-/,\"_\",name\\); print \"  static const String \" name \" = 'assets/icons/**)"
     ]
   }
 }
