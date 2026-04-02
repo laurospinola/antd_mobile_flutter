@@ -118,7 +118,6 @@ class _IconCell extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            AdmIcon(path, size: 24, color: tokens.colorTextBase),
             SizedBox(height: tokens.spaceXs),
             Text(
               name,
