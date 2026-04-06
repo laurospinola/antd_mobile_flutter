@@ -23,7 +23,7 @@ class AdmIcons {
   AdmIcons._();
 
   static const _kFontFam = 'AdmIcons';
-  static const String? _kFontPkg = null;
+  static const String _kFontPkg = 'antd_mobile_flutter';
 
   /// ![clear](data:image/svg+xml;base64,PHN2ZwogIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICB3aWR0aD0iMjQiCiAgaGVpZ2h0PSIyNCIKICB2aWV3Qm94PSIwIDAgMjQgMjQiCiAgZmlsbD0ibm9uZSIKICBzdHJva2U9ImN1cnJlbnRDb2xvciIKICBzdHJva2Utd2lkdGg9IjIiCiAgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIgogIHN0cm9rZS1saW5lam9pbj0icm91bmQiCj4KICA8cGF0aCBkPSJtMTQgMTIgNCA0IDQtNCIgLz4KICA8cGF0aCBkPSJNMTggMTZWNyIgLz4KICA8cGF0aCBkPSJtMiAxNiA0LjAzOS05LjY5YS41LjUgMCAwIDEgLjkyMyAwTDExIDE2IiAvPgogIDxwYXRoIGQ9Ik0zLjMwNCAxM2g2LjM5MiIgLz4KPC9zdmc+Cg==)
   static const IconData a_arrow_down = IconData(0xe800, fontFamily: _kFontFam, fontPackage: _kFontPkg);

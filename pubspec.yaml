@@ -3,7 +3,7 @@ description: >
   Ant Design Mobile for Flutter — an internal UI component library inspired by
   ant-design-mobile (antd-mobile), providing fast, customizable, and atomic
   mobile UI components built on Flutter.
-version: 0.1.0
+version: 0.1.1
 homepage: https://github.com/your-org/antd_mobile_flutter
 
 environment:
