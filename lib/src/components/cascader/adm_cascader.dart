@@ -1,7 +1,5 @@
+import 'package:antd_mobile_flutter/antd_mobile_flutter.dart';
 import 'package:flutter/material.dart';
-
-import '../../theme/adm_theme.dart';
-import '../../theme/adm_tokens.dart';
 
 // ─────────────────────────────────────────────────────────────────────────────
 // AdmCascaderOption
@@ -310,7 +308,7 @@ class _AdmCascaderSheetState extends State<_AdmCascaderSheet> {
       child: Row(
         children: [
           _HeaderButton(
-            label: 'Cancel',
+            label: const Icon(Icons.close),
             color: t.colorTextSecondary,
             fontSize: t.fontSizeMd,
             onTap: _cancel,
@@ -328,7 +326,7 @@ class _AdmCascaderSheetState extends State<_AdmCascaderSheet> {
             ),
           ),
           _HeaderButton(
-            label: 'OK',
+            label: const Icon(AdmIcons.check),
             color: t.colorPrimary,
             fontWeight: t.fontWeightMedium,
             fontSize: t.fontSizeMd,
@@ -661,7 +659,7 @@ class _DragHandle extends StatelessWidget {
 // ─────────────────────────────────────────────────────────────────────────────
 
 class _HeaderButton extends StatefulWidget {
-  final String label;
+  final Widget label;
   final Color color;
   final double fontSize;
   final FontWeight? fontWeight;
@@ -694,14 +692,7 @@ class _HeaderButtonState extends State<_HeaderButton> {
         duration: const Duration(milliseconds: 80),
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 10),
-          child: Text(
-            widget.label,
-            style: TextStyle(
-              fontSize: widget.fontSize,
-              color: widget.color,
-              fontWeight: widget.fontWeight,
-            ),
-          ),
+          child: widget.label,
         ),
       ),
     );

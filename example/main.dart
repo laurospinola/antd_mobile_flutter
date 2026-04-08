@@ -549,6 +549,7 @@ class _FormsPageState extends State<_FormsPage> {
                 onChange: (v) => setState(() => _qty = v),
               ),
             ),
+            
             const _SectionTitle('Cascader'),
             GestureDetector(
               onTap: () async {
@@ -680,6 +681,7 @@ class _FormsPageState extends State<_FormsPage> {
                 ),
               ),
             ),
+            
             SizedBox(height: tokens.spaceLg),
             Row(children: [
               Expanded(
