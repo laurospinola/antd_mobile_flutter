@@ -1,5 +1,5 @@
+import 'package:antd_mobile_flutter/antd_mobile_flutter.dart';
 import 'package:flutter/material.dart';
-import '../../theme/adm_theme.dart';
 
 /// [AdmBadge] — equivalent to ant-design-mobile's `<Badge>`.
 ///
