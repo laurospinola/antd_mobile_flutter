@@ -7,9 +7,17 @@ import 'package:flutter/material.dart';
 
 /// A single node in the cascader option tree.
 class AdmCascaderOption {
+  /// Unique identifier submitted to [AdmCascader.show]'s `onConfirm` callback.
   final String value;
+
+  /// Human-readable text displayed in the list and the tab bar.
   final String label;
+
+  /// Nested options shown in the next column when this node is selected.
+  /// A `null` or empty list marks this node as a leaf (no further drilling).
   final List<AdmCascaderOption>? children;
+
+  /// When `true` the option is shown but cannot be tapped.
   final bool disabled;
 
   const AdmCascaderOption({
