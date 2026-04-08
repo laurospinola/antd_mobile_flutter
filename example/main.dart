@@ -90,27 +90,27 @@ class _ShowcaseHomeState extends State<ShowcaseHome> {
           AdmTabBar(
             activeIndex: _tabIndex,
             onChange: (i) => setState(() => _tabIndex = i),
-            items: [
+            items: const [
               AdmTabBarItem(
                 icon: Icon(AdmIcons.layout_grid),
                 activeIcon: Icon(AdmIcons.layout_grid),
-                title: const Text('Components'),
+                title: Text('Components'),
               ),
               AdmTabBarItem(
                 icon: Icon(AdmIcons.pencil),
                 activeIcon: Icon(AdmIcons.pencil),
-                title: const Text('Forms'),
+                title: Text('Forms'),
               ),
               AdmTabBarItem(
                 icon: Icon(AdmIcons.bell),
                 activeIcon: Icon(AdmIcons.bell_ring),
-                title: const Text('Feedback'),
+                title: Text('Feedback'),
                 dot: true,
               ),
               AdmTabBarItem(
                 icon: Icon(AdmIcons.user),
                 activeIcon: Icon(AdmIcons.user),
-                title: const Text('Profile'),
+                title: Text('Profile'),
               ),
             ],
           ),
@@ -185,13 +185,13 @@ class _ComponentsPageState extends State<_ComponentsPage> {
             AdmTag(closeable: true, color: AdmTagColor.primary, child: Text('Close me')),
           ]),
           SizedBox(height: tokens.spaceMd),
-          AdmSpace(gap: tokens.spaceXl, children: [
+          AdmSpace(gap: tokens.spaceXl, children: const [
             AdmBadge(
-              content: const Text('5'),
+              content: Text('5'),
               child: Icon(AdmIcons.bell, size: 28),
             ),
             AdmBadge(
-              content: const Text('99+'),
+              content: Text('99+'),
               child: Icon(AdmIcons.mail, size: 28),
             ),
             AdmBadge(
@@ -425,6 +425,8 @@ class _FormsPageState extends State<_FormsPage> {
   bool _checkB = true;
   String _radio = 'option1';
   int _qty = 1;
+  List<String> _cascaderLabels = [];
+  List<String> _cascaderValues = [];
 
   @override
   Widget build(BuildContext context) {
@@ -545,6 +547,137 @@ class _FormsPageState extends State<_FormsPage> {
                 min: 1,
                 max: 10,
                 onChange: (v) => setState(() => _qty = v),
+              ),
+            ),
+            const _SectionTitle('Cascader'),
+            GestureDetector(
+              onTap: () async {
+                final result = await AdmCascader.show(
+                  context,
+                  title: const Text('Select Category'),
+                  defaultValue: _cascaderValues.isEmpty ? null : _cascaderValues,
+                  options: const [
+                    AdmCascaderOption(
+                      value: 'electronics',
+                      label: 'Electronics',
+                      children: [
+                        AdmCascaderOption(
+                          value: 'phones',
+                          label: 'Phones',
+                          children: [
+                            AdmCascaderOption(value: 'apple', label: 'Apple'),
+                            AdmCascaderOption(value: 'samsung', label: 'Samsung'),
+                            AdmCascaderOption(value: 'google', label: 'Google'),
+                          ],
+                        ),
+                        AdmCascaderOption(
+                          value: 'computers',
+                          label: 'Computers',
+                          children: [
+                            AdmCascaderOption(value: 'laptops', label: 'Laptops'),
+                            AdmCascaderOption(value: 'desktops', label: 'Desktops'),
+                          ],
+                        ),
+                        AdmCascaderOption(
+                          value: 'audio',
+                          label: 'Audio',
+                          children: [
+                            AdmCascaderOption(value: 'headphones', label: 'Headphones'),
+                            AdmCascaderOption(value: 'speakers', label: 'Speakers'),
+                          ],
+                        ),
+                      ],
+                    ),
+                    AdmCascaderOption(
+                      value: 'clothing',
+                      label: 'Clothing',
+                      children: [
+                        AdmCascaderOption(
+                          value: 'men',
+                          label: 'Men',
+                          children: [
+                            AdmCascaderOption(value: 'shirts', label: 'Shirts'),
+                            AdmCascaderOption(value: 'pants', label: 'Pants'),
+                            AdmCascaderOption(value: 'shoes', label: 'Shoes'),
+                          ],
+                        ),
+                        AdmCascaderOption(
+                          value: 'women',
+                          label: 'Women',
+                          children: [
+                            AdmCascaderOption(value: 'dresses', label: 'Dresses'),
+                            AdmCascaderOption(value: 'tops', label: 'Tops'),
+                            AdmCascaderOption(value: 'shoes_w', label: 'Shoes'),
+                          ],
+                        ),
+                      ],
+                    ),
+                    AdmCascaderOption(
+                      value: 'sports',
+                      label: 'Sports',
+                      children: [
+                        AdmCascaderOption(
+                          value: 'outdoor',
+                          label: 'Outdoor',
+                          children: [
+                            AdmCascaderOption(value: 'camping', label: 'Camping'),
+                            AdmCascaderOption(value: 'hiking', label: 'Hiking'),
+                          ],
+                        ),
+                        AdmCascaderOption(
+                          value: 'fitness',
+                          label: 'Fitness',
+                          children: [
+                            AdmCascaderOption(value: 'gym', label: 'Gym'),
+                            AdmCascaderOption(value: 'yoga', label: 'Yoga'),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ],
+                  onConfirm: (values, items) {
+                    setState(() {
+                      _cascaderValues = values;
+                      _cascaderLabels = items.map((e) => e.label).toList();
+                    });
+                  },
+                );
+                if (result != null && mounted) {
+                  // result already handled in onConfirm
+                }
+              },
+              child: Container(
+                padding: EdgeInsets.symmetric(
+                  horizontal: tokens.spaceMd,
+                  vertical: tokens.spaceMd,
+                ),
+                decoration: BoxDecoration(
+                  color: tokens.colorBackground,
+                  border: Border.all(color: tokens.colorBorder),
+                  borderRadius: BorderRadius.circular(tokens.radiusSm),
+                ),
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: Text(
+                        _cascaderLabels.isEmpty
+                            ? 'Select category...'
+                            : _cascaderLabels.join(' / '),
+                        style: TextStyle(
+                          fontSize: tokens.fontSizeMd,
+                          color: _cascaderLabels.isEmpty
+                              ? tokens.colorTextPlaceholder
+                              : tokens.colorTextBase,
+                        ),
+                      ),
+                    ),
+                    Icon(
+                      Icons.keyboard_arrow_right,
+                      size: 18,
+                      color: tokens.colorTextTertiary,
+                    ),
+                  ],
+                ),
               ),
             ),
             SizedBox(height: tokens.spaceLg),
