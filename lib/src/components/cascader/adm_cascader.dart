@@ -57,6 +57,8 @@ class AdmCascader {
     required List<AdmCascaderOption> options,
     List<String>? defaultValue,
     Widget? title,
+    Widget? closeWidget,
+    Widget? acceptWidget,
     void Function(List<String> values, List<AdmCascaderOption> items)? onConfirm,
     void Function(List<String> values, List<AdmCascaderOption> items)? onChange,
     VoidCallback? onClose,
@@ -80,6 +82,8 @@ class AdmCascader {
             child: Align(
               alignment: Alignment.bottomCenter,
               child: _AdmCascaderSheet(
+                acceptWidget: acceptWidget,
+                closetWidget: closeWidget,
                 options: options,
                 defaultValue: defaultValue,
                 title: title,
@@ -106,6 +110,8 @@ class _AdmCascaderSheet extends StatefulWidget {
   final void Function(List<String>, List<AdmCascaderOption>)? onConfirm;
   final void Function(List<String>, List<AdmCascaderOption>)? onChange;
   final VoidCallback? onClose;
+  final Widget? acceptWidget;
+  final Widget? closetWidget;
 
   const _AdmCascaderSheet({
     required this.options,
@@ -114,6 +120,8 @@ class _AdmCascaderSheet extends StatefulWidget {
     this.onConfirm,
     this.onChange,
     this.onClose,
+    this.acceptWidget,
+    this.closetWidget,
   });
 
   @override
@@ -273,7 +281,7 @@ class _AdmCascaderSheetState extends State<_AdmCascaderSheet> {
           mainAxisSize: MainAxisSize.min,
           children: [
             _DragHandle(tokens: t),
-            _buildHeader(t),
+            _buildHeader(t, acceptWidget: widget.acceptWidget, closeWidget: widget.closetWidget),
             Divider(height: 1, thickness: 0.5, color: t.colorBorder),
             _buildTabBar(t),
             Divider(height: 1, thickness: 0.5, color: t.colorBorder),
@@ -302,13 +310,13 @@ class _AdmCascaderSheetState extends State<_AdmCascaderSheet> {
     );
   }
 
-  Widget _buildHeader(AdmTokens t) {
+  Widget _buildHeader(AdmTokens t, {Widget? closeWidget, Widget? acceptWidget}) {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: t.spaceMd, vertical: t.spaceXs),
       child: Row(
         children: [
           _HeaderButton(
-            label: const Icon(Icons.close),
+            label: closeWidget ?? const Icon(Icons.close),
             color: t.colorTextSecondary,
             fontSize: t.fontSizeMd,
             onTap: _cancel,
@@ -326,7 +334,7 @@ class _AdmCascaderSheetState extends State<_AdmCascaderSheet> {
             ),
           ),
           _HeaderButton(
-            label: const Icon(AdmIcons.check),
+            label: acceptWidget ?? const Icon(AdmIcons.check),
             color: t.colorPrimary,
             fontWeight: t.fontWeightMedium,
             fontSize: t.fontSizeMd,
