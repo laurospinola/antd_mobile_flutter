@@ -174,6 +174,9 @@ class _ComponentsPageState extends State<_ComponentsPage> {
                 block: true, size: AdmButtonSize.large, child: const Text('Block Button'), onPressed: () {}),
           ]),
           SizedBox(height: tokens.spaceXl),
+          const _SectionTitle('Dropdown'),
+          const _DropdownDemo(),
+          SizedBox(height: tokens.spaceXl),
           const _SectionTitle('Tags & Badges'),
           AdmSpace(wrap: true, gap: tokens.spaceSm, children: const [
             AdmTag(color: AdmTagColor.primary, child: Text('Primary')),
@@ -403,6 +406,130 @@ class _ComponentsPageState extends State<_ComponentsPage> {
           SizedBox(height: tokens.spaceXxl),
         ],
       ),
+    );
+  }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Dropdown Demo
+// ─────────────────────────────────────────────────────────────────────────────
+
+class _DropdownDemo extends StatefulWidget {
+  const _DropdownDemo();
+
+  @override
+  State<_DropdownDemo> createState() => _DropdownDemoState();
+}
+
+class _DropdownDemoState extends State<_DropdownDemo> {
+  String? _activeKey;
+  String? _lastAction;
+
+  static const _menuItems = [
+    AdmDropdownItem(
+      key: 'edit',
+      title: 'Edit',
+      brief: 'Modify this item',
+      icon: Icon(Icons.edit_outlined),
+    ),
+    AdmDropdownItem(
+      key: 'share',
+      title: 'Share',
+      brief: 'Send to others',
+      icon: Icon(Icons.share_outlined),
+    ),
+    AdmDropdownItem(
+      key: 'archive',
+      title: 'Archive',
+      icon: Icon(Icons.archive_outlined),
+    ),
+    AdmDropdownItem(
+      key: 'delete',
+      title: 'Delete',
+      icon: Icon(Icons.delete_outline),
+      danger: true,
+    ),
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    final tokens = AdmTheme.tokensOf(context);
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text("adfasdfasdfdsf"),
+        AdmSpace(wrap: true, gap: tokens.spaceSm, children: [
+          AdmDropdown(
+            items: _menuItems,
+            activeKey: _activeKey,
+            onAction: (key) => setState(() {
+              _activeKey = key;
+              _lastAction = key;
+            }),
+            child: AdmButton(
+              onPressed: null,
+              child: const Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Text('Options'),
+                  SizedBox(width: 4),
+                  Icon(Icons.keyboard_arrow_down, size: 16),
+                ],
+              ),
+            ),
+          ),
+          SizedBox(
+            width: double.infinity,
+            child: AdmDropdown(
+              placement: AdmDropdownPlacement.bottomRight,
+              items: const [
+                AdmDropdownItem(key: 'profile', title: 'My Profile', icon: Icon(Icons.person_outline)),
+                AdmDropdownItem(key: 'settings', title: 'Settings', icon: Icon(Icons.settings_outlined)),
+                AdmDropdownItem(key: 'logout', title: 'Sign out', icon: Icon(Icons.logout), danger: true),
+              ],
+              onAction: (key) => setState(() => _lastAction = key),
+              child: AdmButton.primary(
+                onPressed: null,
+                child: const Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Icon(Icons.account_circle_outlined, size: 16),
+                    SizedBox(width: 6),
+                    Text('Account'),
+                    SizedBox(width: 4),
+                    Icon(Icons.keyboard_arrow_down, size: 16),
+                  ],
+                ),
+              ),
+            ),
+          ),
+          AdmDropdown(
+            items: const [
+              AdmDropdownItem(key: 'copy', title: 'Copy', icon: Icon(Icons.copy_outlined)),
+              AdmDropdownItem(key: 'paste', title: 'Paste', icon: Icon(Icons.paste_outlined)),
+              AdmDropdownItem(key: 'cut', title: 'Cut', icon: Icon(Icons.cut_outlined), disabled: true),
+            ],
+            onAction: (key) => setState(() => _lastAction = key),
+            child: Container(
+              width: 40,
+              height: 40,
+              decoration: BoxDecoration(
+                border: Border.all(color: tokens.colorBorder),
+                borderRadius: BorderRadius.circular(tokens.radiusSm),
+              ),
+              child: Icon(Icons.more_horiz, size: 20, color: tokens.colorTextSecondary),
+            ),
+          ),
+        ]),
+        if (_lastAction != null) ...[
+          SizedBox(height: tokens.spaceMd),
+          Text(
+            'Last action: $_lastAction',
+            style: TextStyle(fontSize: tokens.fontSizeSm, color: tokens.colorTextTertiary),
+          ),
+        ],
+      ],
     );
   }
 }

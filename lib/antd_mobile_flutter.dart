@@ -34,6 +34,9 @@ export 'src/components/result/adm_result.dart';
 export 'src/components/image/adm_image.dart';
 export 'src/components/collapse/adm_collapse.dart';
 
+// ─── Overlay / Navigation helpers ─────────────────────────────────────────
+export 'src/components/dropdown/adm_dropdown.dart';
+
 // ─── Data Entry ────────────────────────────────────────────────────────────
 export 'src/components/input/adm_input.dart';
 export 'src/components/search_bar/adm_search_bar.dart';
