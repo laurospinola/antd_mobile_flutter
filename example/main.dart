@@ -443,7 +443,7 @@ class _FormsPageState extends State<_FormsPage> {
             AdmFormItem(
               name: 'email',
               label: const Text('Email'),
-              required: true,
+              isRequired: true,
               rules: [(v) => (v == null || v.isEmpty) ? 'Email is required' : null],
               child: AdmInput(
                 placeholder: 'Enter your email',
@@ -456,7 +456,7 @@ class _FormsPageState extends State<_FormsPage> {
             AdmFormItem(
               name: 'password',
               label: const Text('Password'),
-              required: true,
+              isRequired: true,
               child: AdmInput(
                 placeholder: 'Enter password',
                 prefix: Icon(AdmIcons.lock, size: 20),
@@ -549,7 +549,6 @@ class _FormsPageState extends State<_FormsPage> {
                 onChange: (v) => setState(() => _qty = v),
               ),
             ),
-            
             const _SectionTitle('Cascader'),
             GestureDetector(
               onTap: () async {
@@ -661,14 +660,10 @@ class _FormsPageState extends State<_FormsPage> {
                   children: [
                     Expanded(
                       child: Text(
-                        _cascaderLabels.isEmpty
-                            ? 'Select category...'
-                            : _cascaderLabels.join(' / '),
+                        _cascaderLabels.isEmpty ? 'Select category...' : _cascaderLabels.join(' / '),
                         style: TextStyle(
                           fontSize: tokens.fontSizeMd,
-                          color: _cascaderLabels.isEmpty
-                              ? tokens.colorTextPlaceholder
-                              : tokens.colorTextBase,
+                          color: _cascaderLabels.isEmpty ? tokens.colorTextPlaceholder : tokens.colorTextBase,
                         ),
                       ),
                     ),
@@ -681,7 +676,6 @@ class _FormsPageState extends State<_FormsPage> {
                 ),
               ),
             ),
-            
             SizedBox(height: tokens.spaceLg),
             Row(children: [
               Expanded(

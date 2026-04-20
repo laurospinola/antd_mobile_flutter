@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../../theme/adm_theme.dart';
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -76,9 +77,7 @@ class AdmForm extends InheritedNotifier<AdmFormController> {
   }) : super(notifier: controller);
 
   static AdmFormController? of(BuildContext context) {
-    return context
-        .dependOnInheritedWidgetOfExactType<AdmForm>()
-        ?.notifier;
+    return context.dependOnInheritedWidgetOfExactType<AdmForm>()?.notifier;
   }
 
   @override
@@ -94,7 +93,7 @@ class AdmFormItem extends StatelessWidget {
   final String? name;
   final Widget? label;
   final Widget child;
-  final bool required;
+  final bool isRequired;
   final String? help;
   final List<String? Function(dynamic)>? rules;
   final bool noStyle;
@@ -104,7 +103,7 @@ class AdmFormItem extends StatelessWidget {
     this.name,
     this.label,
     required this.child,
-    this.required = false,
+    this.isRequired = false,
     this.help,
     this.rules,
     this.noStyle = false,
@@ -127,9 +126,7 @@ class AdmFormItem extends StatelessWidget {
 
     if (noStyle) return child;
 
-    final error = (name != null && controller != null)
-        ? controller.getError(name!)
-        : null;
+    final error = (name != null && controller != null) ? controller.getError(name!) : null;
 
     return Padding(
       padding: EdgeInsets.only(bottom: tokens.spaceMd),
@@ -139,12 +136,10 @@ class AdmFormItem extends StatelessWidget {
           if (label != null) ...[
             Row(
               children: [
-                if (required)
+                if (isRequired)
                   Text(
                     '* ',
-                    style: TextStyle(
-                        color: tokens.colorDanger,
-                        fontSize: tokens.fontSizeMd),
+                    style: TextStyle(color: tokens.colorDanger, fontSize: tokens.fontSizeMd),
                   ),
                 DefaultTextStyle(
                   style: TextStyle(
@@ -163,17 +158,14 @@ class AdmFormItem extends StatelessWidget {
             SizedBox(height: tokens.spaceXs),
             Text(
               error,
-              style: TextStyle(
-                  fontSize: tokens.fontSizeSm, color: tokens.colorDanger),
+              style: TextStyle(fontSize: tokens.fontSizeSm, color: tokens.colorDanger),
             ),
           ],
           if (help != null && error == null) ...[
             SizedBox(height: tokens.spaceXs),
             Text(
               help!,
-              style: TextStyle(
-                  fontSize: tokens.fontSizeSm,
-                  color: tokens.colorTextTertiary),
+              style: TextStyle(fontSize: tokens.fontSizeSm, color: tokens.colorTextTertiary),
             ),
           ],
         ],

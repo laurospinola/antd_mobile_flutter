@@ -431,7 +431,7 @@ class _FormsPageState extends State<_FormsPage> {
             AdmFormItem(
               name: 'email',
               label: const Text('Email'),
-              required: true,
+              isRequired: true,
               rules: [(v) => (v == null || v.isEmpty) ? 'Email is required' : null],
               child: AdmInput(
                 placeholder: 'Enter your email',
@@ -444,7 +444,7 @@ class _FormsPageState extends State<_FormsPage> {
             AdmFormItem(
               name: 'password',
               label: const Text('Password'),
-              required: true,
+              isRequired: true,
               child: AdmInput(
                 placeholder: 'Enter password',
                 prefix: const Icon(Icons.lock_outline),
