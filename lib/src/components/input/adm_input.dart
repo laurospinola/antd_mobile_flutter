@@ -119,6 +119,7 @@ class AdmInput extends StatefulWidget {
 class AdmInputState extends State<AdmInput> {
   late TextEditingController _controller;
   late FocusNode _focusNode;
+  late VoidCallback _controllerListener;
   bool _hasFocus = false;
   bool _obscure = true;
 
@@ -136,12 +137,14 @@ class AdmInputState extends State<AdmInput> {
     _focusNode = widget.focusNode ?? FocusNode();
 
     _focusNode.addListener(_onFocusChange);
-    _controller.addListener(() => setState(() {}));
+    _controllerListener = () { if (mounted) setState(() {}); };
+    _controller.addListener(_controllerListener);
   }
 
   @override
   void dispose() {
     _focusNode.removeListener(_onFocusChange);
+    _controller.removeListener(_controllerListener);
     if (widget.controller == null) _controller.dispose();
     if (widget.focusNode == null) _focusNode.dispose();
     super.dispose();
