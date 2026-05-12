@@ -9,11 +9,15 @@ class AdmTabItem {
   final bool dot;
   final bool disabled;
 
+  /// Background color of this tab cell. Defaults to [Colors.transparent].
+  final Color? backgroundColor;
+
   const AdmTabItem({
     required this.title,
     this.badge,
     this.dot = false,
     this.disabled = false,
+    this.backgroundColor,
   });
 }
 
@@ -207,6 +211,14 @@ class _AdmTabsState extends State<AdmTabs> with SingleTickerProviderStateMixin {
       content = AdmBadge(content: AdmBadge.dot, child: _padForBadge(content));
     } else if (tab.badge != null) {
       content = AdmBadge(content: tab.badge, child: _padForBadge(content));
+    }
+    if (tab.backgroundColor != null) {
+      content = Container(
+        color: tab.backgroundColor,
+        alignment: Alignment.center,
+        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+        child: content,
+      );
     }
     return Tab(child: content);
   }
