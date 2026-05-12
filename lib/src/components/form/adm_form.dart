@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import '../../theme/adm_theme.dart';
 
@@ -11,6 +12,7 @@ class AdmFormController extends ChangeNotifier {
   final Map<String, dynamic> _values = {};
   final Map<String, String?> _errors = {};
   final Map<String, String? Function(dynamic)?> _validators = {};
+  final Map<String, ValueChanged<dynamic>?> _submitters = {};
 
   T? getField<T>(String name) => _values[name] as T?;
 
@@ -22,6 +24,24 @@ class AdmFormController extends ChangeNotifier {
 
   void setValidator(String name, String? Function(dynamic value)? validator) {
     _validators[name] = validator;
+  }
+
+  void setSubmitter(String name, ValueChanged<dynamic>? onSubmit) {
+    _submitters[name] = onSubmit;
+  }
+
+  /// Invokes the [AdmFormItem.onSubmit] handler registered for [name],
+  /// passing the field's current value. No-op if no handler is registered.
+  void submitField(String name) {
+    _submitters[name]?.call(_values[name]);
+  }
+
+  /// Invokes every registered [AdmFormItem.onSubmit] handler with each
+  /// field's current value.
+  void submitAll() {
+    for (final entry in _submitters.entries) {
+      entry.value?.call(_values[entry.key]);
+    }
   }
 
   String? getError(String name) => _errors[name];
@@ -98,6 +118,14 @@ class AdmFormItem extends StatelessWidget {
   final List<String? Function(dynamic)>? rules;
   final bool noStyle;
 
+  /// Fires when the field is submitted — either by pressing Enter while the
+  /// child is focused (hardware keyboard) or imperatively via
+  /// [AdmFormController.submitField] / [AdmFormController.submitAll].
+  ///
+  /// Receives the field's current value from the controller, or `null` if
+  /// [name] is unset.
+  final ValueChanged<dynamic>? onSubmit;
+
   const AdmFormItem({
     super.key,
     this.name,
@@ -107,6 +135,7 @@ class AdmFormItem extends StatelessWidget {
     this.help,
     this.rules,
     this.noStyle = false,
+    this.onSubmit,
   });
 
   @override
@@ -124,7 +153,28 @@ class AdmFormItem extends StatelessWidget {
       });
     }
 
-    if (noStyle) return child;
+    if (name != null && controller != null) {
+      controller.setSubmitter(name!, onSubmit);
+    }
+
+    Widget content = child;
+    if (onSubmit != null) {
+      content = Focus(
+        canRequestFocus: false,
+        onKeyEvent: (node, event) {
+          if (event is KeyDownEvent &&
+              (event.logicalKey == LogicalKeyboardKey.enter || event.logicalKey == LogicalKeyboardKey.numpadEnter)) {
+            final value = (name != null && controller != null) ? controller.getField(name!) : null;
+            onSubmit!(value);
+            return KeyEventResult.handled;
+          }
+          return KeyEventResult.ignored;
+        },
+        child: child,
+      );
+    }
+
+    if (noStyle) return content;
 
     final error = (name != null && controller != null) ? controller.getError(name!) : null;
 
@@ -153,7 +203,7 @@ class AdmFormItem extends StatelessWidget {
             ),
             SizedBox(height: tokens.spaceXs),
           ],
-          child,
+          content,
           if (error != null) ...[
             SizedBox(height: tokens.spaceXs),
             Text(

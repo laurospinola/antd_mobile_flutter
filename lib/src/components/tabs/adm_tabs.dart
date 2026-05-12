@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../theme/adm_theme.dart';
+import '../badge/adm_badge.dart';
 
 class AdmTabItem {
   final Widget title;
@@ -25,13 +26,12 @@ class AdmTabItem {
 /// AdmTabs(
 ///   tabs: const [
 ///     AdmTabItem(title: Text('Fruit')),
-///     AdmTabItem(title: Text('Vegetables')),
-///     AdmTabItem(title: Text('Meat')),
+///     AdmTabItem(title: Text('Vegetables'), badge: Text('5')),
+///     AdmTabItem(title: Text('Meat'), dot: true),
 ///   ],
 ///   activeIndex: _index,
 ///   onChange: (i) => setState(() => _index = i),
 ///   children: const [Text('Fruit content'), Text('Veg content'), Text('Meat content')],
-///   tabViewHeight: 200,
 /// )
 /// ```
 class AdmTabs extends StatefulWidget {
@@ -39,15 +39,13 @@ class AdmTabs extends StatefulWidget {
   final int activeIndex;
   final ValueChanged<int>? onChange;
 
-  /// Legacy single-child below the tab bar (no swipe support).
-
-  /// When provided, renders a [TabBarView] enabling swipe-to-switch.
+  /// Rendered below the tab bar in a [TabBarView] for swipe-to-switch.
   /// Must have the same length as [tabs].
   final List<Widget> children;
 
-  /// Height of the [TabBarView] area. Required when [children] is set and the
-  /// widget lives inside a scroll view. Defaults to 200.
-  final double tabViewHeight;
+  /// Fixed height of the [TabBarView] area. When `null`, the tab view expands
+  /// to fill available space (requires a bounded parent).
+  final double? tabViewHeight;
 
   final bool scrollable;
   final double? tabWidth;
@@ -56,21 +54,25 @@ class AdmTabs extends StatefulWidget {
   final Color? indicatorColor;
   final double indicatorHeight;
 
+  /// Background color of the tab bar strip. Defaults to [Colors.transparent].
+  final Color? backgroundColor;
+
   const AdmTabs({
     super.key,
     required this.tabs,
     required this.activeIndex,
     this.onChange,
     required this.children,
-    this.tabViewHeight = 200,
+    this.tabViewHeight,
     this.scrollable = false,
     this.tabWidth,
     this.activeColor,
     this.inactiveColor,
     this.indicatorColor,
     this.indicatorHeight = 2.0,
+    this.backgroundColor,
   }) : assert(
-          children == null || children.length == tabs.length,
+          children.length == tabs.length,
           'children length must match tabs length',
         );
 
@@ -146,7 +148,7 @@ class _AdmTabsState extends State<AdmTabs> with SingleTickerProviderStateMixin {
     final indicatorColor = widget.indicatorColor ?? tokens.colorPrimary;
 
     final tabBar = ColoredBox(
-      color: tokens.colorBackground,
+      color: widget.backgroundColor ?? Colors.transparent,
       child: TabBar(
         controller: _controller,
         isScrollable: widget.scrollable || widget.tabs.length > 4,
@@ -179,24 +181,40 @@ class _AdmTabsState extends State<AdmTabs> with SingleTickerProviderStateMixin {
           _lastReportedIndex = i;
           widget.onChange?.call(i);
         },
-        tabs: widget.tabs.map((tab) {
-          return Tab(child: tab.title);
-        }).toList(),
+        tabs: widget.tabs.map(_buildTab).toList(),
       ),
     );
 
-    // --- TabBarView (swipe) mode ---
+    final tabView = TabBarView(
+      controller: _controller,
+      children: widget.children,
+    );
+
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
         tabBar,
-        Expanded(
-          child: TabBarView(
-            controller: _controller,
-            children: widget.children!,
-          ),
-        ),
+        widget.tabViewHeight != null
+            ? SizedBox(height: widget.tabViewHeight, child: tabView)
+            : Expanded(child: tabView),
       ],
     );
   }
+
+  Widget _buildTab(AdmTabItem tab) {
+    Widget content = tab.title;
+    if (tab.dot) {
+      content = AdmBadge(content: AdmBadge.dot, child: _padForBadge(content));
+    } else if (tab.badge != null) {
+      content = AdmBadge(content: tab.badge, child: _padForBadge(content));
+    }
+    return Tab(child: content);
+  }
+
+  /// Adds trailing padding so the overlaid badge doesn't clip past the Tab's
+  /// hit area or get cropped by neighbors.
+  Widget _padForBadge(Widget child) => Padding(
+        padding: const EdgeInsets.only(right: 6, top: 2),
+        child: child,
+      );
 }
