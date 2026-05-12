@@ -23,12 +23,16 @@ class AdmList extends StatelessWidget {
   final List<Widget> children;
   final EdgeInsets? padding;
 
+  /// Background color of the list body. Defaults to [Colors.transparent].
+  final Color? backgroundColor;
+
   const AdmList({
     super.key,
     this.header,
     this.footer,
     this.children = const [],
     this.padding,
+    this.backgroundColor,
   });
 
   @override
@@ -56,7 +60,7 @@ class AdmList extends StatelessWidget {
             ),
           ),
         Container(
-          color: tokens.colorBackground,
+          color: backgroundColor ?? Colors.transparent,
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: List.generate(children.length, (i) {
@@ -109,6 +113,10 @@ class AdmListItem extends StatefulWidget {
   final EdgeInsets? padding;
   final Widget? children; // expandable inner content
 
+  /// Idle background color. Defaults to [Colors.transparent]. The pressed and
+  /// disabled overlays still take precedence over this color.
+  final Color? backgroundColor;
+
   const AdmListItem({
     super.key,
     this.prefix,
@@ -120,6 +128,7 @@ class AdmListItem extends StatefulWidget {
     this.onTap,
     this.padding,
     this.children,
+    this.backgroundColor,
   });
 
   @override
@@ -144,7 +153,9 @@ class _AdmListItemState extends State<AdmListItem> {
         duration: tokens.animationDurationFast,
         color: _pressed
             ? tokens.colorFill
-            : (widget.disabled ? tokens.colorFillSecondary : Colors.transparent),
+            : (widget.disabled
+                ? tokens.colorFillSecondary
+                : (widget.backgroundColor ?? Colors.transparent)),
         constraints:
             BoxConstraints(minHeight: tokens.listItemMinHeight),
         padding: widget.padding ??
