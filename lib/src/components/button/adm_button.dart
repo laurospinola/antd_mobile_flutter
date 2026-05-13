@@ -32,6 +32,11 @@ enum AdmButtonSize { mini, small, middle, large }
 ///   child: const Text('Primary'),
 /// )
 ///
+/// AdmButton.secondary(
+///   onPressed: () {},
+///   child: const Text('Cancel'),
+/// )
+///
 /// AdmButton.link(
 ///   onPressed: () {},
 ///   child: const Text('Learn more'),
@@ -95,6 +100,40 @@ class AdmButton extends StatefulWidget {
       AdmButton(
         key: key,
         color: AdmButtonColor.primary,
+        size: size,
+        disabled: disabled,
+        loading: loading,
+        block: block,
+        onPressed: onPressed,
+        padding: padding,
+        child: child,
+      );
+
+  /// A secondary action button — outlined primary color, transparent background.
+  ///
+  /// Use alongside [AdmButton.primary] when you need a less prominent action
+  /// (e.g. "Cancel" next to "Submit").
+  ///
+  /// ```dart
+  /// AdmButton.secondary(
+  ///   onPressed: () {},
+  ///   child: const Text('Cancel'),
+  /// )
+  /// ```
+  factory AdmButton.secondary(
+          {Key? key,
+          Widget? child,
+          VoidCallback? onPressed,
+          AdmButtonColor color = AdmButtonColor.primary,
+          AdmButtonSize size = AdmButtonSize.middle,
+          bool disabled = false,
+          bool loading = false,
+          bool block = false,
+          EdgeInsets? padding}) =>
+      AdmButton(
+        key: key,
+        fill: AdmButtonFill.outline,
+        color: color,
         size: size,
         disabled: disabled,
         loading: loading,
