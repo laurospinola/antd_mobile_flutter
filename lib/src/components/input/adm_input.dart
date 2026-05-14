@@ -63,6 +63,7 @@ class AdmInput extends StatefulWidget {
   final List<TextInputFormatter>? inputFormatters;
   final TextInputAction? textInputAction;
   final FocusNode? focusNode;
+  final TextAlign textAlign;
 
   /// Static error message shown unconditionally (no validator needed).
   final String? errorMessage;
@@ -109,6 +110,7 @@ class AdmInput extends StatefulWidget {
     this.validator,
     this.validateTrigger = const {AdmInputValidateTrigger.onBlur},
     this.autovalidateMode = AutovalidateMode.disabled,
+    this.textAlign = TextAlign.start,
   });
 
   @override
@@ -249,6 +251,7 @@ class AdmInputState extends State<AdmInput> {
                   onChanged: _onChanged,
                   validator: widget.validator,
                   autovalidateMode: widget.autovalidateMode,
+                  textAlign: widget.textAlign,
                   style: TextStyle(
                     fontSize: tokens.fontSizeMd,
                     color: widget.disabled
