@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import '../../theme/adm_theme.dart';
+import '../form/adm_form.dart';
 
 /// When validation is triggered automatically.
 ///
@@ -86,6 +87,32 @@ class AdmInput extends StatefulWidget {
   /// [Form] auto-validation.
   final AutovalidateMode autovalidateMode;
 
+  /// Field key used to auto-register with an enclosing [AdmForm].
+  ///
+  /// When set and an [AdmForm] is in scope, the input:
+  ///  * pushes its value to [AdmFormController.setField] on every change,
+  ///  * registers a combined validator built from [rules] + [validator]
+  ///    (run on [AdmFormController.validate]), and
+  ///  * registers [onSubmit] so it fires from
+  ///    [AdmFormController.submitField] / [AdmFormController.submitAll].
+  ///
+  /// Outside a form (or when null), behaves like a plain input.
+  final String? name;
+
+  /// Shows a leading `*` indicator in danger color next to [label].
+  final bool isRequired;
+
+  /// Validation rules. Run in order; the first non-null return is the error.
+  ///
+  /// Combined with [validator] (rules run first). When used inside an
+  /// [AdmForm] via [name], these are evaluated by
+  /// [AdmFormController.validate].
+  final List<String? Function(String?)>? rules;
+
+  /// Called when the user submits the field — via the keyboard action key,
+  /// or via [AdmFormController.submitField] when registered through [name].
+  final ValueChanged<String>? onSubmit;
+
   const AdmInput({
     super.key,
     this.placeholder,
@@ -111,6 +138,10 @@ class AdmInput extends StatefulWidget {
     this.validateTrigger = const {AdmInputValidateTrigger.onBlur},
     this.autovalidateMode = AutovalidateMode.disabled,
     this.textAlign = TextAlign.start,
+    this.name,
+    this.isRequired = false,
+    this.rules,
+    this.onSubmit,
   });
 
   @override
@@ -128,9 +159,22 @@ class AdmInputState extends State<AdmInput> {
   /// Validation error set by [validator] runs. `null` means valid / not yet run.
   String? _validationError;
 
-  /// The error string to display — validator result takes priority over the
+  AdmFormController? _formController;
+
+  bool get _isInForm => _formController != null && widget.name != null;
+
+  bool get _hasLocalValidation =>
+      widget.validator != null || (widget.rules?.isNotEmpty ?? false);
+
+  /// The error string to display — when registered with an [AdmForm], the
+  /// form's error wins; otherwise the local validator result; finally the
   /// static [AdmInput.errorMessage].
-  String? get _displayError => _validationError ?? widget.errorMessage;
+  String? get _displayError {
+    if (_isInForm) {
+      return _formController!.getError(widget.name!) ?? widget.errorMessage;
+    }
+    return _validationError ?? widget.errorMessage;
+  }
 
   @override
   void initState() {
@@ -144,6 +188,24 @@ class AdmInputState extends State<AdmInput> {
   }
 
   @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    _formController = AdmForm.of(context);
+    _registerWithForm();
+  }
+
+  @override
+  void didUpdateWidget(AdmInput oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (widget.name != oldWidget.name ||
+        widget.rules != oldWidget.rules ||
+        widget.validator != oldWidget.validator ||
+        widget.onSubmit != oldWidget.onSubmit) {
+      _registerWithForm();
+    }
+  }
+
+  @override
   void dispose() {
     _focusNode.removeListener(_onFocusChange);
     _controller.removeListener(_controllerListener);
@@ -152,29 +214,68 @@ class AdmInputState extends State<AdmInput> {
     super.dispose();
   }
 
+  void _registerWithForm() {
+    if (!_isInForm) return;
+    _formController!.setValidator(widget.name!, _combinedValidator);
+    _formController!.setSubmitter(
+      widget.name!,
+      widget.onSubmit == null
+          ? null
+          : (v) => widget.onSubmit!((v as String?) ?? ''),
+    );
+  }
+
+  String? _combinedValidator(dynamic value) {
+    final s = value as String?;
+    if (widget.rules != null) {
+      for (final rule in widget.rules!) {
+        final err = rule(s);
+        if (err != null) return err;
+      }
+    }
+    return widget.validator?.call(s);
+  }
+
   void _onFocusChange() {
     final hasFocus = _focusNode.hasFocus;
     setState(() => _hasFocus = hasFocus);
-    if (!hasFocus &&
-        widget.validator != null &&
+    if (!_isInForm &&
+        !hasFocus &&
+        _hasLocalValidation &&
         widget.validateTrigger.contains(AdmInputValidateTrigger.onBlur)) {
       _runValidator(_controller.text);
     }
   }
 
-  void _onChanged(String value) {
+  void _propagateChange(String value) {
+    if (_isInForm) {
+      _formController!.setField(widget.name!, value);
+    }
     widget.onChanged?.call(value);
-    if (widget.validator != null &&
+  }
+
+  void _onChanged(String value) {
+    _propagateChange(value);
+    if (!_isInForm &&
+        _hasLocalValidation &&
         widget.validateTrigger.contains(AdmInputValidateTrigger.onChange)) {
       _runValidator(value);
-    } else if (_validationError != null) {
+    } else if (!_isInForm && _validationError != null) {
       // Clear stale error as the user types, even when onChange isn't a trigger.
       setState(() => _validationError = null);
     }
   }
 
+  void _handleSubmit(String value) {
+    if (_isInForm && widget.onSubmit != null) {
+      _formController!.submitField(widget.name!);
+    } else {
+      widget.onSubmit?.call(value);
+    }
+  }
+
   void _runValidator(String value) {
-    final error = widget.validator?.call(value.isEmpty ? null : value);
+    final error = _combinedValidator(value.isEmpty ? null : value);
     setState(() => _validationError = error);
   }
 
@@ -185,7 +286,7 @@ class AdmInputState extends State<AdmInput> {
   /// final isValid = _inputKey.currentState?.validate() ?? false;
   /// ```
   bool validate() {
-    if (widget.validator == null) return true;
+    if (!_hasLocalValidation) return true;
     _runValidator(_controller.text);
     return _validationError == null;
   }
@@ -206,13 +307,25 @@ class AdmInputState extends State<AdmInput> {
       mainAxisSize: MainAxisSize.min,
       children: [
         if (widget.label != null) ...[
-          DefaultTextStyle(
-            style: TextStyle(
-              fontSize: tokens.fontSizeSm,
-              color: tokens.colorTextSecondary,
-              fontWeight: tokens.fontWeightMedium,
-            ),
-            child: widget.label!,
+          Row(
+            children: [
+              if (widget.isRequired)
+                Text(
+                  '* ',
+                  style: TextStyle(
+                    color: tokens.colorDanger,
+                    fontSize: tokens.fontSizeSm,
+                  ),
+                ),
+              DefaultTextStyle(
+                style: TextStyle(
+                  fontSize: tokens.fontSizeSm,
+                  color: tokens.colorTextSecondary,
+                  fontWeight: tokens.fontWeightMedium,
+                ),
+                child: widget.label!,
+              ),
+            ],
           ),
           SizedBox(height: tokens.spaceXs),
         ],
@@ -249,6 +362,8 @@ class AdmInputState extends State<AdmInput> {
                   inputFormatters: widget.inputFormatters,
                   textInputAction: widget.textInputAction,
                   onChanged: _onChanged,
+                  onFieldSubmitted:
+                      widget.onSubmit == null ? null : _handleSubmit,
                   validator: widget.validator,
                   autovalidateMode: widget.autovalidateMode,
                   textAlign: widget.textAlign,
@@ -287,8 +402,8 @@ class AdmInputState extends State<AdmInput> {
                   onTap: () {
                     _controller.clear();
                     widget.onClear?.call();
-                    widget.onChanged?.call('');
-                    if (widget.validator != null) _runValidator('');
+                    _propagateChange('');
+                    if (!_isInForm && _hasLocalValidation) _runValidator('');
                   },
                   child: Padding(
                     padding:
