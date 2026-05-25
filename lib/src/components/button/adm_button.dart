@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../../theme/adm_theme.dart';
 import '../../theme/adm_tokens.dart';
 
@@ -266,9 +267,7 @@ class _AdmButtonState extends State<AdmButton> {
     final bgColor = _resolveBackgroundColor(tokens);
     final borderColor = _resolveBorderColor(tokens);
     final height = _isLink ? null : _resolveHeight(tokens);
-    final padding = _isIcon
-        ? EdgeInsets.zero
-        : widget.padding ?? (_isLink ? EdgeInsets.zero : _resolvePadding());
+    final padding = _isIcon ? EdgeInsets.zero : widget.padding ?? (_isLink ? EdgeInsets.zero : _resolvePadding());
     final fontSize = _resolveFontSize(tokens);
     final br = widget.borderRadius ??
         (_isIcon
@@ -286,7 +285,7 @@ class _AdmButtonState extends State<AdmButton> {
               child: CircularProgressIndicator(
                 strokeWidth: 2,
                 valueColor: AlwaysStoppedAnimation(
-                  isDisabled ? tokens.colorTextDisabled : fgColor,
+                  fgColor,
                 ),
               ),
             )
@@ -349,8 +348,7 @@ class _AdmButtonState extends State<AdmButton> {
               fontSize: fontSize,
               color: isDisabled ? tokens.colorTextDisabled : fgColor,
               fontWeight: tokens.fontWeightMedium,
-              decoration:
-                  _isLink ? TextDecoration.underline : TextDecoration.none,
+              decoration: _isLink ? TextDecoration.underline : TextDecoration.none,
               decorationColor: isDisabled ? tokens.colorTextDisabled : fgColor,
             ),
             child: Center(
@@ -391,8 +389,7 @@ class _AdmButtonState extends State<AdmButton> {
 
   Color _resolveForegroundColor(AdmTokens t) {
     if (widget.fill == AdmButtonFill.ghost) return t.colorTextWhite;
-    if (widget.fill == AdmButtonFill.solid &&
-        widget.color != AdmButtonColor.defaultColor) {
+    if (widget.fill == AdmButtonFill.solid && widget.color != AdmButtonColor.defaultColor) {
       return t.colorTextWhite;
     }
     return switch (widget.color) {
@@ -405,8 +402,7 @@ class _AdmButtonState extends State<AdmButton> {
   }
 
   Color? _resolveBorderColor(AdmTokens t) {
-    if (widget.fill == AdmButtonFill.none ||
-        widget.fill == AdmButtonFill.link) {
+    if (widget.fill == AdmButtonFill.none || widget.fill == AdmButtonFill.link) {
       return null;
     }
     if (widget.fill == AdmButtonFill.ghost) return t.colorTextWhite;
@@ -419,8 +415,7 @@ class _AdmButtonState extends State<AdmButton> {
     };
   }
 
-  Color _disabledBg(AdmTokens t) =>
-      widget.fill == AdmButtonFill.solid ? t.colorFill : Colors.transparent;
+  Color _disabledBg(AdmTokens t) => widget.fill == AdmButtonFill.solid ? t.colorFill : Colors.transparent;
 
   double _resolveHeight(AdmTokens t) => switch (widget.size) {
         AdmButtonSize.mini => t.buttonMiniHeight,
