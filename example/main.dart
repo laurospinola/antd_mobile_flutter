@@ -618,6 +618,43 @@ class _FormsPageState extends State<_FormsPage> {
                 child: AdmOtpInput(
                   length: 6,
                 )),
+            const _SectionTitle('Input Group'),
+            AdmInputGroup(
+              borderRadius: 16,
+              children: [
+                const Expanded(
+                  child: AdmInputGroupInput(placeholder: 'Enter search query'),
+                ),
+                AdmInputGroupAddon(
+                  align: AdmAddonAlign.inlineEnd,
+                  child: AdmInputGroupButton(
+                    'Search In...',
+                    icon: AdmIcons.chevron_down,
+                    onPressed: () => AdmToast.show(context,
+                        content: 'Choose where to search'),
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: tokens.spaceMd),
+            AdmInputGroup(
+              children: [
+                const AdmInputGroupAddon(child: Text('https://')),
+                const Expanded(
+                  child: AdmInputGroupInput(placeholder: 'example.com'),
+                ),
+                AdmInputGroupAddon(
+                  align: AdmAddonAlign.inlineEnd,
+                  child: AdmInputGroupButton(
+                    'Send',
+                    filled: true,
+                    onPressed: () =>
+                        AdmToast.show(context, content: 'Sent!'),
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: tokens.spaceXl),
             const _SectionTitle('Switch'),
             AdmFormItem(
               label: const Text('Enable notifications'),

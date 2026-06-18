@@ -39,6 +39,7 @@ export 'src/components/dropdown/adm_dropdown.dart';
 
 // ─── Data Entry ────────────────────────────────────────────────────────────
 export 'src/components/input/adm_input.dart';
+export 'src/components/input_group/adm_input_group.dart';
 export 'src/components/search_bar/adm_search_bar.dart';
 export 'src/components/checkbox/adm_checkbox.dart';
 export 'src/components/radio/adm_radio.dart';
