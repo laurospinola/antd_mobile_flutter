@@ -26,5 +26,5 @@ flutter:
     - family: AdmIcons
       fonts:
         - asset: assets/fonts/AdmIcons.ttf
-        - asset: assets/fonts/config.json
+        # - asset: assets/fonts/config.json
   # No assets by default — add your own fonts/icons here
